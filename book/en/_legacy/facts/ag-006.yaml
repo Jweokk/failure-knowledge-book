@@ -1,0 +1,25 @@
+# Fact layer — language-neutral per bilingual spec (numbers, dates, institution names,
+# document titles kept in original language). Canonical headline kept in Chinese;
+# English narrative lives in the chapter texts that reference this id.
+id: ag-006
+domain: ag
+date: 2025-05
+country: US
+toll: 召回8箱（Class I）
+subject: Salad and Go 即食黄瓜切片
+headline: 即食黄瓜切片李斯特菌一级召回
+mechanisms:
+- 连带失效
+evidence_grade: E
+source_type: 召回公告
+source:
+  org: FDA
+  title: FDA Enforcement Report event 97011
+  year: '2025'
+  url: https://api.fda.gov/food/enforcement.json?search=event_id:%2297011%22
+opened_and_verified: true
+referenced_in_en:
+- 07-appendices/appendix-a-matrix.md
+- 07-appendices/appendix-b-case-table.md
+- facts/INDEX.md
+- facts/ag-006.yaml

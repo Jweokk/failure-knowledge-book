@@ -1,0 +1,12 @@
+dist/
+site/build/
+site/build-en/
+site/docs/
+site/docs-en/
+site/mkdocs.yml
+site/mkdocs-en.yml
+site/manifest.json
+book/_evidence/
+.DS_Store
+._*
+__pycache__/

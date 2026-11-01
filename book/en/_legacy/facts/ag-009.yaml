@@ -1,0 +1,28 @@
+# Fact layer — language-neutral per bilingual spec (numbers, dates, institution names,
+# document titles kept in original language). Canonical headline kept in Chinese;
+# English narrative lives in the chapter texts that reference this id.
+id: ag-009
+domain: ag
+date: 2025-04
+country: US
+toll: 召回18,000单位（Class II）
+subject: The 19th Hole Snack Mix
+headline: 零食混装未申报杏仁与芝麻
+mechanisms:
+- 交接断层
+- 程序漂移
+evidence_grade: E
+source_type: 召回公告
+source:
+  org: FDA
+  title: FDA Enforcement Report event 96758
+  year: '2025'
+  url: https://api.fda.gov/food/enforcement.json?search=event_id:%2296758%22
+opened_and_verified: true
+referenced_in_en:
+- 07-appendices/appendix-a-matrix.md
+- 07-appendices/appendix-b-case-table.md
+- 03-mechanisms/ch30-handover-rupture.md
+- facts/ag-009.yaml
+- facts/INDEX.md
+- 04-domains/agriculture-food.md

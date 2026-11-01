@@ -1,0 +1,25 @@
+# Fact layer — language-neutral per bilingual spec (numbers, dates, institution names,
+# document titles kept in original language). Canonical headline kept in Chinese;
+# English narrative lives in the chapter texts that reference this id.
+id: av-024
+domain: av
+date: 2022-08
+country: US
+toll: 机上4人轻伤；机体重大损坏
+subject: Robinson R44（N7048C，观光飞行）
+headline: 观光直升机进近着陆时硬着陆侧翻
+mechanisms:
+- 专家直觉的失效区
+evidence_grade: A
+source_type: 独立调查报告
+source:
+  org: NTSB
+  title: Aviation Investigation Final Report CEN22LA404
+  year: '2023'
+  url: https://data.ntsb.gov/carol-repgen/api/Aviation/ReportMain/GenerateNewestReport/105846/pdf
+opened_and_verified: true
+referenced_in_en:
+- 07-appendices/appendix-a-matrix.md
+- 07-appendices/appendix-b-case-table.md
+- facts/INDEX.md
+- facts/av-024.yaml

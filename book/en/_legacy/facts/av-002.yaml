@@ -1,0 +1,28 @@
+# Fact layer — language-neutral per bilingual spec (numbers, dates, institution names,
+# document titles kept in original language). Canonical headline kept in Chinese;
+# English narrative lives in the chapter texts that reference this id.
+id: av-002
+domain: av
+date: 2013-01
+country: US
+toll: 死亡0；伤1轻（消防员）；机上无人
+subject: 日本航空 波音787-8（JA829J）
+headline: 停机787辅助动力单元锂电池起火冒烟
+mechanisms:
+- 监管滞后与俘获
+- 隐蔽耦合
+evidence_grade: A
+source_type: 独立调查报告
+source:
+  org: NTSB
+  title: Auxiliary Power Unit Battery Fire, Japan Airlines Boeing 787-8, JA829J (NTSB/AIR-14/01)
+  year: '2014'
+  url: https://www.ntsb.gov/investigations/accidentreports/reports/air1401.pdf
+opened_and_verified: true
+referenced_in_en:
+- 07-appendices/appendix-a-matrix.md
+- 07-appendices/appendix-b-case-table.md
+- 03-mechanisms/ch20-failure-of-success.md
+- facts/av-002.yaml
+- facts/INDEX.md
+- 04-domains/aviation.md

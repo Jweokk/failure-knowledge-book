@@ -1,0 +1,26 @@
+# Fact layer — language-neutral per bilingual spec (numbers, dates, institution names,
+# document titles kept in original language). Canonical headline kept in Chinese;
+# English narrative lives in the chapter texts that reference this id.
+id: ag-005
+domain: ag
+date: 2025-09
+country: US
+toll: 召回3,252箱（Class I）
+subject: Reser's Fine Foods（Basil Pesto Bowtie Pasta Kit）
+headline: 青酱意面沙拉套组李斯特菌一级召回
+mechanisms:
+- 连带失效
+- 维护的不可见
+evidence_grade: E
+source_type: 召回公告
+source:
+  org: FDA
+  title: FDA Enforcement Report event 97713
+  year: '2026'
+  url: https://api.fda.gov/food/enforcement.json?search=event_id:%2297713%22
+opened_and_verified: true
+referenced_in_en:
+- 07-appendices/appendix-a-matrix.md
+- 07-appendices/appendix-b-case-table.md
+- facts/ag-005.yaml
+- facts/INDEX.md

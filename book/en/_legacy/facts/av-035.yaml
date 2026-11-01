@@ -1,0 +1,28 @@
+# Fact layer — language-neutral per bilingual spec (numbers, dates, institution names,
+# document titles kept in original language). Canonical headline kept in Chinese;
+# English narrative lives in the chapter texts that reference this id.
+id: av-035
+domain: av
+date: 1996-05
+country: US
+toll: 机上110人全部死亡（2名飞行员、3名乘务员、105名乘客）
+subject: ValuJet航空592 DC-9-32（N904VJ）
+headline: 货舱氧气发生器起火坠入沼泽
+mechanisms:
+- 维护的不可见
+- 监管滞后与俘获
+evidence_grade: A
+source_type: 独立调查报告
+source:
+  org: NTSB
+  title: In-Flight Fire and Impact with Terrain, ValuJet Airlines Flight 592, DC-9-32, N904VJ (AAR-97/06)
+  year: '1997'
+  url: https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR9706.pdf
+opened_and_verified: true
+referenced_in_en:
+- 07-appendices/appendix-a-matrix.md
+- 07-appendices/appendix-b-case-table.md
+- 03-mechanisms/ch29-invisible-maintenance.md
+- 01-meta/ch01-why-failure-knowledge-is-expensive.md
+- facts/INDEX.md
+- facts/av-035.yaml

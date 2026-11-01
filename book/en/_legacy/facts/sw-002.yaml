@@ -1,0 +1,29 @@
+# Fact layer — language-neutral per bilingual spec (numbers, dates, institution names,
+# document titles kept in original language). Canonical headline kept in Chinese;
+# English narrative lives in the chapter texts that reference this id.
+id: sw-002
+domain: sw
+date: 2025-11
+country: US
+toll: 核心流量大面积中断约3小时（11:20–14:30 UTC）；17:06全系统恢复
+subject: Cloudflare 全球边缘网络
+headline: 数据库权限变更致特征文件超限，核心流量中断
+mechanisms:
+- 隐蔽耦合
+- 规模跨越阈值
+evidence_grade: E
+source_type: 当事方公开复盘
+source:
+  org: Cloudflare
+  title: Cloudflare outage on November 18, 2025
+  year: '2025'
+  url: https://blog.cloudflare.com/18-november-2025-outage/
+opened_and_verified: true
+referenced_in_en:
+- 07-appendices/appendix-e-mechanism-genealogy.md
+- 07-appendices/appendix-a-matrix.md
+- 07-appendices/appendix-b-case-table.md
+- 03-mechanisms/ch21-hidden-coupling.md
+- facts/INDEX.md
+- facts/sw-002.yaml
+- 04-domains/software-internet.md

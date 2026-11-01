@@ -1,0 +1,28 @@
+# Fact layer — language-neutral per bilingual spec (numbers, dates, institution names,
+# document titles kept in original language). Canonical headline kept in Chinese;
+# English narrative lives in the chapter texts that reference this id.
+id: nu-002
+domain: nu
+date: 2026-10
+country: FR
+toll: INES 1级；设备不可用7小时45分
+subject: 格拉沃利讷核电站3号机组
+headline: 挂牌失误致补偿措施失效，设备不可用7小时45分
+mechanisms:
+- 偏差的正常化
+- 冗余的假象
+- 交接断层
+evidence_grade: B
+source_type: 官方通报
+source:
+  org: ASNR（法国核安全与辐射防护局）
+  title: Non-respect d'une mesure compensatoire associée à une modification temporaire des RGE
+  year: '2026'
+  url: https://reglementation-controle.asnr.fr/controle/actualites-du-controle/installations-nucleaires/avis-d-incident-des-installations-nucleaires/non-respect-d-une-mesure-compensatoire-associee-a-une-modification-temporaire-des-rge
+opened_and_verified: true
+referenced_in_en:
+- 05-usage/ch37-review-questions.md
+- 07-appendices/appendix-a-matrix.md
+- 07-appendices/appendix-b-case-table.md
+- facts/INDEX.md
+- facts/nu-002.yaml

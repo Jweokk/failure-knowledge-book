@@ -1,0 +1,28 @@
+# Fact layer — language-neutral per bilingual spec (numbers, dates, institution names,
+# document titles kept in original language). Canonical headline kept in Chinese;
+# English narrative lives in the chapter texts that reference this id.
+id: ag-008
+domain: ag
+date: 2024-05
+country: US
+toll: 召回7,257.6公斤（Class I）
+subject: Danisco USA（Grindsted 肉桂卷稳定乳化剂）
+headline: 稳定剂配料带菌波及多州食品厂
+mechanisms:
+- 隐蔽耦合
+- 连带失效
+evidence_grade: E
+source_type: 召回公告
+source:
+  org: FDA
+  title: FDA Enforcement Report event 94565
+  year: '2024'
+  url: https://api.fda.gov/food/enforcement.json?search=event_id:%2294565%22
+opened_and_verified: true
+referenced_in_en:
+- 07-appendices/appendix-a-matrix.md
+- 07-appendices/appendix-b-case-table.md
+- 03-mechanisms/ch33-cascading-failure.md
+- facts/ag-008.yaml
+- facts/INDEX.md
+- 04-domains/agriculture-food.md

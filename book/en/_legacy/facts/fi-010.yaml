@@ -1,0 +1,26 @@
+# Fact layer — language-neutral per bilingual spec (numbers, dates, institution names,
+# document titles kept in original language). Canonical headline kept in Chinese;
+# English narrative lives in the chapter texts that reference this id.
+id: fi-010
+domain: fi
+date: 2026-08
+country: US
+toll: 罚没11.5万美元并申诫
+subject: Webull Financial LLC
+headline: 期权订单来源代码账簿记录长期不准确
+mechanisms:
+- 指标替代目标
+- 程序漂移
+evidence_grade: E
+source_type: 监管处罚
+source:
+  org: FINRA
+  title: Disciplinary and Other FINRA Actions – October 2026
+  year: '2026'
+  url: https://www.finra.org/sites/default/files/2026-10/disciplinary-actions-october-2026.pdf
+opened_and_verified: true
+referenced_in_en:
+- 07-appendices/appendix-a-matrix.md
+- 07-appendices/appendix-b-case-table.md
+- facts/fi-010.yaml
+- facts/INDEX.md

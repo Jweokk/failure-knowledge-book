@@ -1,0 +1,26 @@
+# Fact layer — language-neutral per bilingual spec (numbers, dates, institution names,
+# document titles kept in original language). Canonical headline kept in Chinese;
+# English narrative lives in the chapter texts that reference this id.
+id: mn-008
+domain: mn
+date: 2026-10
+country: US
+toll: 召回约25,541件（加拿大另5,534件）；29起吊钩分离报告、14起受伤（2起脑震荡、1起手臂骨折）
+subject: Harkla 儿童感官秋千（Base Products）
+headline: 儿童感官秋千吊钩脱落，29起报告14伤
+mechanisms:
+- 隐蔽耦合
+- 安全边际被吃掉
+evidence_grade: E
+source_type: 召回公告
+source:
+  org: CPSC
+  title: Harkla Recalls Children's Sensory Swings Due to Fall Hazard
+  year: '2026'
+  url: https://www.cpsc.gov/Recalls/2027/Harkla-Recalls-Childrens-Sensory-Swings-Due-to-Risk-of-Serious-Injury-from-Fall-Hazard
+opened_and_verified: true
+referenced_in_en:
+- 07-appendices/appendix-a-matrix.md
+- 07-appendices/appendix-b-case-table.md
+- facts/INDEX.md
+- facts/mn-008.yaml

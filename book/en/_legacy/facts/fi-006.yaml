@@ -1,0 +1,27 @@
+# Fact layer — language-neutral per bilingual spec (numbers, dates, institution names,
+# document titles kept in original language). Canonical headline kept in Chinese;
+# English narrative lives in the chapter texts that reference this id.
+id: fi-006
+domain: fi
+date: 2026-10
+country: CN
+toll: 罚款合计17,188万元（欺诈发行16,488万+信披700万）
+subject: 苏州清越光电科技股份有限公司
+headline: 发行文件与年报编造重大虚假内容构成欺诈发行
+mechanisms:
+- 叙事先于证据
+- 激励错位
+evidence_grade: E
+source_type: 监管处罚
+source:
+  org: 中国证监会
+  title: 中国证券监督管理委员会行政处罚决定书（〔2026〕57号）
+  year: '2026'
+  url: http://www.csrc.gov.cn/csrc/c101928/c7665091/content.shtml
+opened_and_verified: true
+referenced_in_en:
+- 07-appendices/appendix-a-matrix.md
+- 07-appendices/appendix-b-case-table.md
+- 03-mechanisms/ch18-diffusion-of-responsibility.md
+- facts/fi-006.yaml
+- facts/INDEX.md

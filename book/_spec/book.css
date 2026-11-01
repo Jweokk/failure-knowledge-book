@@ -1,0 +1,175 @@
+@page {
+  size: 152mm 220mm;
+  margin: 18mm 16mm 18mm 16mm;
+  @bottom-center {
+    content: counter(page);
+    font-family: "Noto Serif SC", serif;
+    font-size: 8pt;
+    color: #777;
+  }
+  @top-center {
+    content: string(chapter);
+    font-family: "Noto Serif SC", serif;
+    font-size: 7.5pt;
+    color: #999;
+    letter-spacing: 0.05em;
+  }
+}
+@page :first { @bottom-center { content: ""; } }
+
+html { font-size: 10pt; }
+body {
+  font-family: "Noto Serif SC", "Noto Serif CJK SC", serif;
+  line-height: 1.75;
+  color: #1a1a1a;
+  text-align: justify;
+  hyphens: auto;
+}
+
+h1 {
+  font-size: 17pt;
+  font-weight: 600;
+  margin: 0 0 6mm 0;
+  padding-bottom: 3mm;
+  border-bottom: 0.6pt solid #999;
+  page-break-before: always;
+  page-break-after: avoid;
+  line-height: 1.35;
+}
+h1.title, header h1 { border: none; page-break-before: avoid; string-set: none; }
+h1 { string-set: chapter content(); }
+
+h2 {
+  font-size: 12.5pt;
+  font-weight: 600;
+  margin: 7mm 0 3mm 0;
+  page-break-after: avoid;
+}
+h3 {
+  font-size: 11pt;
+  font-weight: 600;
+  margin: 6mm 0 2.5mm 0;
+  page-break-after: avoid;
+}
+h4 { font-size: 10pt; font-weight: 600; margin: 4mm 0 2mm 0; page-break-after: avoid; }
+
+p { margin: 0 0 2.2mm 0; text-indent: 0; }
+blockquote {
+  margin: 3mm 0 3mm 4mm;
+  padding-left: 3mm;
+  border-left: 2pt solid #ccc;
+  color: #333;
+  font-size: 9.5pt;
+}
+ul, ol { margin: 0 0 2.5mm 0; padding-left: 6mm; }
+li { margin-bottom: 1mm; }
+
+strong { font-weight: 600; }
+
+hr { border: none; border-top: 0.5pt solid #ddd; margin: 5mm 0; }
+
+.pagebreak { page-break-after: always; }
+
+/* 封面 */
+.cover {
+  page-break-after: always;
+  text-align: center;
+  padding-top: 52mm;
+}
+.cover h1.covertitle {
+  string-set: none;
+  font-size: 40pt;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  border: none;
+  page-break-before: avoid;
+  margin: 0 0 6mm 0;
+}
+.cover .coversub {
+  font-size: 13pt;
+  color: #444;
+  letter-spacing: 0.18em;
+  margin: 0 0 26mm 0;
+}
+.cover .coverline {
+  font-size: 10pt;
+  color: #666;
+  margin: 0 0 4mm 0;
+}
+.cover .covermeta {
+  font-size: 9pt;
+  color: #888;
+}
+
+/* 目录 */
+nav#TOC {
+  page-break-after: always;
+  font-size: 9.5pt;
+}
+nav#TOC ul { list-style: none; padding-left: 0; }
+nav#TOC > ul > li { margin: 1.4mm 0; }
+nav#TOC ul ul { padding-left: 5mm; font-size: 9pt; color: #333; }
+nav#TOC a { text-decoration: none; color: #1a1a1a; }
+nav#TOC a::after {
+  content: leader('.') target-counter(attr(href), page);
+  color: #666;
+}
+nav#TOC::before {
+  content: "目 录";
+  display: block;
+  font-size: 17pt;
+  font-weight: 600;
+  margin-bottom: 6mm;
+  border-bottom: 0.6pt solid #999;
+  padding-bottom: 3mm;
+}
+
+/* 附录大表：横排页 */
+@page wide {
+  size: 220mm 152mm;
+  margin: 14mm 12mm 14mm 12mm;
+}
+.landscape { page: wide; }
+.landscape table { font-size: 6.2pt; }
+.landscape th, .landscape td { padding: 0.6mm 0.8mm; }
+
+/* 表格（附录矩阵、案例总表） */
+table {
+  border-collapse: collapse;
+  width: 100%;
+  font-size: 7.5pt;
+  margin: 3mm 0;
+  page-break-inside: auto;
+}
+th, td {
+  border: 0.4pt solid #bbb;
+  padding: 1mm 1.4mm;
+  vertical-align: top;
+  text-align: left;
+}
+th { background: #f2f2f2; font-weight: 600; }
+th, td { hyphens: manual; word-break: break-word; }
+tr { page-break-inside: avoid; }
+a { color: #1a4a7a; text-decoration: none; word-break: break-all; }
+
+code, pre {
+  font-family: "Noto Sans Mono CJK SC", monospace;
+  font-size: 8pt;
+}
+
+/* 版本页 */
+.colophon {
+  page-break-after: always;
+  padding-top: 40mm;
+  font-size: 9.5pt;
+  color: #333;
+}
+.colophon .ct {
+  font-size: 8pt;
+  letter-spacing: 0.2em;
+  color: #999;
+  margin: 6mm 0 1.5mm 0;
+}
+.colophon p { margin: 0 0 2mm 0; }
+
+header { display: none; }

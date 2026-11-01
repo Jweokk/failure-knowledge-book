@@ -1,0 +1,26 @@
+# Fact layer — language-neutral per bilingual spec (numbers, dates, institution names,
+# document titles kept in original language). Canonical headline kept in Chinese;
+# English narrative lives in the chapter texts that reference this id.
+id: av-014
+domain: av
+date: 2021-02
+country: DE
+toll: 1人死亡（飞行员）；机毁
+subject: Cessna FR 182（私人调机飞行）
+headline: 通航小飞机目视飞行闯入云中空间迷失失控坠地
+mechanisms:
+- 边界条件外推
+- 专家直觉的失效区
+evidence_grade: A
+source_type: 独立调查报告
+source:
+  org: BFU
+  title: Untersuchungsbericht BFU21-0041-3X, Unfall Cessna FR 182, Sefferweich, 05.02.2021
+  year: '2022'
+  url: https://www.bfu-web.de/DE/Publikationen/Untersuchungsberichte/2021/Bericht_21-0041-3X_Cessna182_Sefferweich.pdf?__blob=publicationFile
+opened_and_verified: true
+referenced_in_en:
+- 07-appendices/appendix-a-matrix.md
+- 07-appendices/appendix-b-case-table.md
+- facts/INDEX.md
+- facts/av-014.yaml

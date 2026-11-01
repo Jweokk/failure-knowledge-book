@@ -1,0 +1,27 @@
+# Fact layer — language-neutral per bilingual spec (numbers, dates, institution names,
+# document titles kept in original language). Canonical headline kept in Chinese;
+# English narrative lives in the chapter texts that reference this id.
+id: av-029
+domain: av
+date: 2024-10
+country: ES
+toll: 无公开量化
+subject: 装ROTAX二冲程发动机（火花塞朝下）的超轻型机
+headline: ROTAX二冲程发动机滑油系统装错致多起失效
+mechanisms:
+- 维护的不可见
+- 偏差的正常化
+evidence_grade: B
+source_type: 官方通报
+source:
+  org: AESA
+  title: Boletín Informativo de Seguridad BIS 01/24 – motores ROTAX de dos tiempos con bujías hacia abajo
+  year: '2024'
+  url: https://www.seguridadaerea.gob.es/sites/default/files/BIS%2001-24.pdf
+opened_and_verified: true
+referenced_in_en:
+- 07-appendices/appendix-a-matrix.md
+- 07-appendices/appendix-b-case-table.md
+- 03-mechanisms/ch34-path-dependence.md
+- facts/INDEX.md
+- facts/av-029.yaml

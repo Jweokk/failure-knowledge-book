@@ -1,0 +1,26 @@
+# Fact layer — language-neutral per bilingual spec (numbers, dates, institution names,
+# document titles kept in original language). Canonical headline kept in Chinese;
+# English narrative lives in the chapter texts that reference this id.
+id: me-015
+domain: me
+date: 2020-01
+country: GB
+toll: 英格兰年约2500例；约半数死于到达专科中心前（页面已核）
+subject: 英国急诊·急性主动脉夹层
+headline: 主动脉夹层延迟识别，转送途中死亡
+mechanisms:
+- 专家直觉的失效区
+- 叙事先于证据
+evidence_grade: A
+source_type: 独立调查报告
+source:
+  org: HSIB（HSSIB 前身）
+  title: Delayed recognition of acute aortic dissection
+  year: '2020'
+  url: https://web.archive.org/web/2022/https://www.hsib.org.uk/investigations-and-reports/delayed-recognition-of-acute-aortic-dissection/
+opened_and_verified: true
+referenced_in_en:
+- 07-appendices/appendix-a-matrix.md
+- 07-appendices/appendix-b-case-table.md
+- facts/INDEX.md
+- facts/me-015.yaml

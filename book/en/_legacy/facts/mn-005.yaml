@@ -1,0 +1,25 @@
+# Fact layer — language-neutral per bilingual spec (numbers, dates, institution names,
+# document titles kept in original language). Canonical headline kept in Chinese;
+# English narrative lives in the chapter texts that reference this id.
+id: mn-005
+domain: mn
+date: 2026-10
+country: US
+toll: 召回约25,762件；无伤亡报告
+subject: PILLANI哺乳枕
+headline: 哺乳枕可能阻碍婴儿呼吸，违反强制标准
+mechanisms:
+- 安全边际被吃掉
+evidence_grade: E
+source_type: 召回公告
+source:
+  org: CPSC
+  title: PILLANI Recalls Nursing Pillows (Violate Mandatory Standards)
+  year: '2026'
+  url: https://www.cpsc.gov/Recalls/2027/PILLANI-Recalls-Nursing-Pillows-Due-to-Risk-of-Serious-Injury-or-Death-from-Suffocation-Violate-Mandatory-Standards-for-Nursing-Pillows
+opened_and_verified: true
+referenced_in_en:
+- 07-appendices/appendix-a-matrix.md
+- 07-appendices/appendix-b-case-table.md
+- facts/INDEX.md
+- facts/mn-005.yaml

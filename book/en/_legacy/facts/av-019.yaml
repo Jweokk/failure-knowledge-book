@@ -1,0 +1,26 @@
+# Fact layer — language-neutral per bilingual spec (numbers, dates, institution names,
+# document titles kept in original language). Canonical headline kept in Chinese;
+# English narrative lives in the chapter texts that reference this id.
+id: av-019
+domain: av
+date: 2025-09
+country: CN
+toll: 机上3人死亡
+subject: 新疆亚心通用航空 AS350B3（B-70ZU）
+headline: 通航直升机液压失效违规调机起飞后坠毁
+mechanisms:
+- 激励错位
+- 维护的不可见
+evidence_grade: B
+source_type: 官方通报
+source:
+  org: 中国民航局
+  title: 亚心通航直升机事故调查处理报告公布
+  year: '2025'
+  url: https://www.caac.gov.cn/XWZX/HYDT/202512/t20251215_229409.html
+opened_and_verified: true
+referenced_in_en:
+- 07-appendices/appendix-a-matrix.md
+- 07-appendices/appendix-b-case-table.md
+- facts/INDEX.md
+- facts/av-019.yaml

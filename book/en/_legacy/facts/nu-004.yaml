@@ -1,0 +1,26 @@
+# Fact layer — language-neutral per bilingual spec (numbers, dates, institution names,
+# document titles kept in original language). Canonical headline kept in Chinese;
+# English narrative lives in the chapter texts that reference this id.
+id: nu-004
+domain: nu
+date: 2026-10
+country: US
+toll: 拟罚36,000美元；4项违规
+subject: Acuren Inspection Inc.（阿拉斯加场址）
+headline: NRC对工业射线照相公司四项安全违规拟处罚款
+mechanisms:
+- 程序漂移
+- 责任稀释
+evidence_grade: E
+source_type: 监管处罚
+source:
+  org: NRC（美国核管理委员会）
+  title: NRC Proposes $36,000 Civil Penalty Against Industrial Radiography Company for Safety Violations
+  year: '2026'
+  url: https://www.nrc.gov/about-nrc/news-releases/2026/26-016-iii
+opened_and_verified: true
+referenced_in_en:
+- 07-appendices/appendix-a-matrix.md
+- 07-appendices/appendix-b-case-table.md
+- facts/INDEX.md
+- facts/nu-004.yaml

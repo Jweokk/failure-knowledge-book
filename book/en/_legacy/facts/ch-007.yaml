@@ -1,0 +1,29 @@
+# Fact layer — language-neutral per bilingual spec (numbers, dates, institution names,
+# document titles kept in original language). Canonical headline kept in Chinese;
+# English narrative lives in the chapter texts that reference this id.
+id: ch-007
+domain: ch
+date: 2013-11
+country: CN
+toll: 死亡62人；受伤136人；直接经济损失75,172万元
+subject: 中石化东黄输油管道（青岛段）
+headline: 输油管道泄漏原油入暗渠，处置点火爆炸
+mechanisms:
+- 信息在层级中衰减
+- 隐蔽耦合
+- 程序漂移
+evidence_grade: A
+source_type: 独立调查报告
+source:
+  org: 国务院"11·22"事故调查组（应急管理部网站发布）
+  title: 山东省青岛市"11·22"中石化东黄输油管道泄漏爆炸特别重大事故调查报告
+  year: '2014'
+  url: https://www.mem.gov.cn/gk/sgcc/tbzdsgdcbg/2013/201401/t20140110_245228.shtml
+opened_and_verified: true
+referenced_in_en:
+- 07-appendices/appendix-a-matrix.md
+- 07-appendices/appendix-b-case-table.md
+- 03-mechanisms/ch16-information-attenuation.md
+- facts/ch-007.yaml
+- facts/INDEX.md
+- 04-domains/chemical.md

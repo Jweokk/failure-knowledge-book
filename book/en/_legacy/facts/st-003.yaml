@@ -1,0 +1,27 @@
+# Fact layer — language-neutral per bilingual spec (numbers, dates, institution names,
+# document titles kept in original language). Canonical headline kept in Chinese;
+# English narrative lives in the chapter texts that reference this id.
+id: st-003
+domain: st
+date: 2020-06
+country: US
+toll: 融资1.03亿美元（7轮）；关闭前ARR约700万美元
+subject: ScaleFactor（中小企业财务软件）
+headline: 会计软件公司融资1.03亿美元后关闭
+mechanisms:
+- 叙事先于证据
+- 激励错位
+evidence_grade: E
+source_type: 当事方公开复盘
+source:
+  org: Failory Cemetery（引 CEO Kurt Rathmann 原话）
+  title: ScaleFactor — Failory Startup Cemetery
+  year: '2020'
+  url: https://failory.com/cemetery/scalefactor
+opened_and_verified: true
+referenced_in_en:
+- 07-appendices/appendix-a-matrix.md
+- 07-appendices/appendix-b-case-table.md
+- facts/st-003.yaml
+- facts/INDEX.md
+- 04-domains/startups-products.md

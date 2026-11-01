@@ -1,0 +1,28 @@
+# Fact layer — language-neutral per bilingual spec (numbers, dates, institution names,
+# document titles kept in original language). Canonical headline kept in Chinese;
+# English narrative lives in the chapter texts that reference this id.
+id: mn-003
+domain: mn
+date: 2026-10
+country: US
+toll: 召回约338,800台（33.8万台；加拿大另约36,300台）；17起点燃、1起手部烧伤、3起财产损失
+subject: DR-HSH015电暖器（Hesung Innovation/DREO）
+headline: 电暖器过热起火，上市一年即大规模召回
+mechanisms:
+- 安全边际被吃掉
+- 规模跨越阈值
+evidence_grade: E
+source_type: 召回公告
+source:
+  org: CPSC
+  title: DREO Recalls DR-HSH015 Space Heaters Due to Fire and Burn Hazards
+  year: '2026'
+  url: https://www.cpsc.gov/Recalls/2027/DREO-Recalls-DR-HSH015-Space-Heaters-Due-to-Fire-and-Burn-Hazards
+opened_and_verified: true
+referenced_in_en:
+- 07-appendices/appendix-a-matrix.md
+- 07-appendices/appendix-b-case-table.md
+- 03-mechanisms/ch24-nonlinear-scaling.md
+- facts/INDEX.md
+- facts/mn-003.yaml
+- 04-domains/manufacturing-supply-chain.md

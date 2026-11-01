@@ -1,0 +1,28 @@
+# Fact layer — language-neutral per bilingual spec (numbers, dates, institution names,
+# document titles kept in original language). Canonical headline kept in Chinese;
+# English narrative lives in the chapter texts that reference this id.
+id: av-038
+domain: av
+date: 2022-03
+country: CN
+toll: 机上123名旅客、9名机组成员全部遇难
+subject: 东方航空MU5735 波音737-800（B-1791）
+headline: 737-800巡航中急速下降坠毁
+mechanisms:
+- 监管滞后与俘获
+evidence_grade: B
+source_type: 官方通报
+source:
+  org: 中国民航局
+  title: 关于"3·21"东航MU5735航空器飞行事故调查进展情况的通报
+  year: '2024'
+  url: https://www.caac.gov.cn/XXGK/XXGK/TZTG/202403/t20240320_223268.html
+opened_and_verified: true
+referenced_in_en:
+- 07-appendices/appendix-a-matrix.md
+- 07-appendices/appendix-b-case-table.md
+- 03-mechanisms/ch31-regulatory-capture.md
+- 01-meta/ch03-five-domains.md
+- facts/av-038.yaml
+- facts/INDEX.md
+- 04-domains/aviation.md

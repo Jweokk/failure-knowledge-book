@@ -1,0 +1,33 @@
+# Fact layer — language-neutral per bilingual spec (numbers, dates, institution names,
+# document titles kept in original language). Canonical headline kept in Chinese;
+# English narrative lives in the chapter texts that reference this id.
+id: av-030
+domain: av
+date: 2024-01
+country: US
+toll: 死亡0；伤7轻（均为乘客）；169人未受伤；机上共176人；机体实质损坏
+subject: 阿拉斯加航空1282 波音737-9（N704AL）
+headline: 737-9门塞爬升中脱落急泄压返航
+mechanisms:
+- 维护的不可见
+- 程序漂移
+- 监管滞后与俘获
+evidence_grade: A
+source_type: 独立调查报告
+source:
+  org: NTSB
+  title: In-Flight Separation of Left Mid Exit Door Plug, Alaska Airlines Flight 1282, Boeing 737-9, N704AL
+    (AIR-25-04)
+  year: '2025'
+  url: https://www.ntsb.gov/investigations/AccidentReports/Reports/AIR2504.pdf
+opened_and_verified: true
+referenced_in_en:
+- 02-anatomy/ch05-twelve-fields.md
+- 02-anatomy/ch06-visible-at-the-time.md
+- 02-anatomy/ch07-decision-irreversible.md
+- 07-appendices/appendix-a-matrix.md
+- 07-appendices/appendix-b-case-table.md
+- 03-mechanisms/ch29-invisible-maintenance.md
+- facts/av-030.yaml
+- facts/INDEX.md
+- 04-domains/aviation.md

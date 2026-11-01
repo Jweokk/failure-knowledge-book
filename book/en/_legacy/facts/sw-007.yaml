@@ -1,0 +1,28 @@
+# Fact layer — language-neutral per bilingual spec (numbers, dates, institution names,
+# document titles kept in original language). Canonical headline kept in Chinese;
+# English narrative lives in the chapter texts that reference this id.
+id: sw-007
+domain: sw
+date: 2025-09
+country: FR
+toll: 罚款3.25亿欧元（2亿+1.25亿）
+subject: Google LLC 与 Google Ireland
+headline: CNIL罚谷歌3.25亿欧：邮件间广告与无效cookie同意
+mechanisms:
+- 激励错位
+- 合规但不安全
+evidence_grade: E
+source_type: 监管处罚
+source:
+  org: CNIL
+  title: 'Cookies and advertisements inserted between emails: Google fined 325 million euros by the CNIL'
+  year: '2025'
+  url: https://www.cnil.fr/en/cookies-and-advertisements-inserted-between-emails-google-fined-325-million-euros-cnil
+opened_and_verified: true
+referenced_in_en:
+- 07-appendices/appendix-a-matrix.md
+- 07-appendices/appendix-b-case-table.md
+- 03-mechanisms/ch32-compliance-without-safety.md
+- facts/sw-007.yaml
+- facts/INDEX.md
+- 04-domains/software-internet.md

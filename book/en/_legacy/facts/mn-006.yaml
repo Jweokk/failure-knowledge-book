@@ -1,0 +1,29 @@
+# Fact layer — language-neutral per bilingual spec (numbers, dates, institution names,
+# document titles kept in original language). Canonical headline kept in Chinese;
+# English narrative lives in the chapter texts that reference this id.
+id: mn-006
+domain: mn
+date: 2026-10
+country: US
+toll: 召回590万个；70起破裂报告、48起烫伤
+subject: Bodum USA 法压咖啡壶（1974年起销售）
+headline: 法压壶玻璃杯胆使用中碎裂，48起烫伤
+mechanisms:
+- 规模跨越阈值
+- 维护的不可见
+evidence_grade: E
+source_type: 召回公告
+source:
+  org: CPSC
+  title: Bodum USA Recalls 5.9 Million French Press Coffee Makers
+  year: '2026'
+  url: https://www.cpsc.gov/Recalls/2027/Bodum-USA-Recalls-5-9-Million-French-Press-Coffee-Makers-with-Replaceable-Glass-Carafes-Due-to-Risk-of-Serious-Burn-Injury
+opened_and_verified: true
+referenced_in_en:
+- 07-appendices/appendix-a-matrix.md
+- 07-appendices/appendix-b-case-table.md
+- 03-mechanisms/ch34-path-dependence.md
+- facts/mn-006.yaml
+- facts/INDEX.md
+- 04-domains/pharma-devices.md
+- 04-domains/manufacturing-supply-chain.md

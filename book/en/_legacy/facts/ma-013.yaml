@@ -1,0 +1,29 @@
+# Fact layer — language-neutral per bilingual spec (numbers, dates, institution names,
+# document titles kept in original language). Canonical headline kept in Chinese;
+# English narrative lives in the chapter texts that reference this id.
+id: ma-013
+domain: ma
+date: 2023-10
+country: GB
+toll: 1人死亡
+subject: 扇贝耙网渔船 Honeybourne III (PD905)
+headline: 吊链断裂，甲板船员被拖曳块击中身亡
+mechanisms:
+- 维护的不可见
+- 安全边际被吃掉
+evidence_grade: A
+source_type: 独立调查报告
+source:
+  org: MAIB
+  title: Fatal injury to a deckhand following a chain failure on the scallop dredger Honeybourne III (PD905)
+    (Report 1/2026)
+  year: '2026'
+  url: https://www.gov.uk/maib-reports/fatal-injury-to-a-deckhand-following-a-chain-failure-on-the-scallop-dredger-honeybourne-iii-pd905
+opened_and_verified: true
+referenced_in_en:
+- 07-appendices/appendix-a-matrix.md
+- 07-appendices/appendix-b-case-table.md
+- 03-mechanisms/ch27-escalation-of-commitment.md
+- facts/ma-013.yaml
+- facts/INDEX.md
+- 04-domains/maritime-transport.md

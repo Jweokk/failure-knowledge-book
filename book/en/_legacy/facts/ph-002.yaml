@@ -1,0 +1,25 @@
+# Fact layer — language-neutral per bilingual spec (numbers, dates, institution names,
+# document titles kept in original language). Canonical headline kept in Chinese;
+# English narrative lives in the chapter texts that reference this id.
+id: ph-002
+domain: ph
+date: 2024-06
+country: US
+toll: 召回788罐
+subject: Crampy Belly Rub／Little Moon Essentials
+headline: 樟脑按摩膏CGMP违规被召回
+mechanisms:
+- 合规但不安全
+evidence_grade: E
+source_type: 召回公告
+source:
+  org: FDA
+  title: openFDA drug enforcement record D-0572-2024 (Crampy Belly Rub)
+  year: '2024'
+  url: https://api.fda.gov/drug/enforcement.json?search=recall_number:%22D-0572-2024%22
+opened_and_verified: true
+referenced_in_en:
+- 07-appendices/appendix-a-matrix.md
+- 07-appendices/appendix-b-case-table.md
+- facts/ph-002.yaml
+- facts/INDEX.md

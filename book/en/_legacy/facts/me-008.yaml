@@ -1,0 +1,28 @@
+# Fact layer — language-neutral per bilingual spec (numbers, dates, institution names,
+# document titles kept in original language). Canonical headline kept in Chinese;
+# English narrative lives in the chapter texts that reference this id.
+id: me-008
+domain: me
+date: '2017'
+country: GB
+toll: 1例（62岁患者）
+subject: 英国骨科
+headline: 髋关节置换误植不兼容假体
+mechanisms:
+- 责任稀释
+- 隐蔽耦合
+evidence_grade: A
+source_type: 独立调查报告
+source:
+  org: HSIB（HSSIB前身）
+  title: Implantation of wrong prostheses during joint replacement surgery
+  year: '2018'
+  url: https://web.archive.org/web/20211204024124/https://www.hsib.org.uk/investigations-and-reports/implantation-of-wrong-prostheses-during-joint-replacement-surgery/
+opened_and_verified: true
+referenced_in_en:
+- 07-appendices/appendix-a-matrix.md
+- 07-appendices/appendix-b-case-table.md
+- 03-mechanisms/ch18-diffusion-of-responsibility.md
+- facts/INDEX.md
+- facts/me-008.yaml
+- 04-domains/healthcare.md

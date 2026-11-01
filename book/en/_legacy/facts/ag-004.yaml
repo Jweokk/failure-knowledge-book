@@ -1,0 +1,28 @@
+# Fact layer — language-neutral per bilingual spec (numbers, dates, institution names,
+# document titles kept in original language). Canonical headline kept in Chinese;
+# English narrative lives in the chapter texts that reference this id.
+id: ag-004
+domain: ag
+date: 2025-10
+country: US
+toll: 召回411磅（Class I）
+subject: Whole Foods（Whatcom Blue 散装切片）
+headline: 零售端跟进召回同源STEC奶酪
+mechanisms:
+- 连带失效
+- 责任稀释
+evidence_grade: E
+source_type: 召回公告
+source:
+  org: FDA
+  title: FDA Enforcement Report event 97931 (Whatcom Blue Sliced cheese)
+  year: '2026'
+  url: https://api.fda.gov/food/enforcement.json?search=event_id:%2297931%22
+opened_and_verified: true
+referenced_in_en:
+- 07-appendices/appendix-a-matrix.md
+- 07-appendices/appendix-b-case-table.md
+- 03-mechanisms/ch13-narrative-before-evidence.md
+- facts/ag-004.yaml
+- facts/INDEX.md
+- 04-domains/agriculture-food.md

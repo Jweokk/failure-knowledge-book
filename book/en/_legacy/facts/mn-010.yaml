@@ -1,0 +1,27 @@
+# Fact layer — language-neutral per bilingual spec (numbers, dates, institution names,
+# document titles kept in original language). Canonical headline kept in Chinese;
+# English narrative lives in the chapter texts that reference this id.
+id: mn-010
+domain: mn
+date: 2013-04
+country: US
+toll: 召回约2,100台；106起燃油渗漏报告、1起火灾、无伤亡
+subject: Cub Cadet 商用割草机（MTD Products）
+headline: 商用割草机油箱渗漏，106起报告含1起火灾
+mechanisms:
+- 隐蔽耦合
+- 安全边际被吃掉
+evidence_grade: E
+source_type: 召回公告
+source:
+  org: CPSC
+  title: MTD Products Recalls Cub Cadet Commercial Lawn Mowers Due to Risk of Fire
+  year: '2013'
+  url: https://www.cpsc.gov/Recalls/2013/mtd-products-recalls-cub-cadet-commercial-lawn-mowers-recall-alert
+opened_and_verified: true
+referenced_in_en:
+- 07-appendices/appendix-a-matrix.md
+- 07-appendices/appendix-b-case-table.md
+- 01-meta/ch02-three-biases.md
+- facts/mn-010.yaml
+- facts/INDEX.md

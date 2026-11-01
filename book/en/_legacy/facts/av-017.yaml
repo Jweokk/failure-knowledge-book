@@ -1,0 +1,28 @@
+# Fact layer — language-neutral per bilingual spec (numbers, dates, institution names,
+# document titles kept in original language). Canonical headline kept in Chinese;
+# English narrative lives in the chapter texts that reference this id.
+id: av-017
+domain: av
+date: 2024-08
+country: JP
+toll: 无公开量化
+subject: Eurocopter EC135P2+（JA824H，学园所属）
+headline: 直升机获准降直升机坪却误降在跑道上
+mechanisms:
+- 自动化与技能退化
+- 信息在层级中衰减
+evidence_grade: A
+source_type: 独立调查报告
+source:
+  org: JTSB
+  title: 航空重大インシデント調査報告書（ユーロコプター式ＥＣ１３５Ｐ２＋型ＪＡ８２４Ｈ）
+  year: '2025'
+  url: https://jtsb.mlit.go.jp/aircraft/rep-inci/AI2025-8-1-JA824H.pdf
+opened_and_verified: true
+referenced_in_en:
+- 07-appendices/appendix-a-matrix.md
+- 07-appendices/appendix-b-case-table.md
+- 03-mechanisms/ch19-whistleblower-suppression.md
+- facts/av-017.yaml
+- facts/INDEX.md
+- 04-domains/aviation.md

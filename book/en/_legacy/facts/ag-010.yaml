@@ -1,0 +1,25 @@
+# Fact layer — language-neutral per bilingual spec (numbers, dates, institution names,
+# document titles kept in original language). Canonical headline kept in Chinese;
+# English narrative lives in the chapter texts that reference this id.
+id: ag-010
+domain: ag
+date: 2025-06
+country: US
+toll: 召回5,826箱（Class II）
+subject: Carley's Inc.（Soft Baked Iced Lemon Cookies）
+headline: 柠檬曲奇色素标注错误召回
+mechanisms:
+- 程序漂移
+evidence_grade: E
+source_type: 召回公告
+source:
+  org: FDA
+  title: FDA Enforcement Report H-0088-2025
+  year: '2025'
+  url: https://api.fda.gov/food/enforcement.json?search=recall_number:%22H-0088-2025%22
+opened_and_verified: true
+referenced_in_en:
+- 07-appendices/appendix-a-matrix.md
+- 07-appendices/appendix-b-case-table.md
+- facts/INDEX.md
+- facts/ag-010.yaml

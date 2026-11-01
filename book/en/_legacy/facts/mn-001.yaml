@@ -1,0 +1,28 @@
+# Fact layer — language-neutral per bilingual spec (numbers, dates, institution names,
+# document titles kept in original language). Canonical headline kept in Chinese;
+# English narrative lives in the chapter texts that reference this id.
+id: mn-001
+domain: mn
+date: 2026-10
+country: US
+toll: 召回约1.1万个；600起起火等热事故、3起烧伤、9起财产损失
+subject: HAIARA充电宝（Mitrytech，亚马逊渠道）
+headline: 充电宝锂电池热失控，600起事故报告后召回
+mechanisms:
+- 隐蔽耦合
+- 安全边际被吃掉
+evidence_grade: E
+source_type: 召回公告
+source:
+  org: CPSC
+  title: HAIARA Power Banks Recalled Due to Risk of Serious Injury or Death from Fire and Burn Hazards
+  year: '2026'
+  url: https://www.cpsc.gov/Recalls/2027/HAIARA-Power-Banks-Recalled-Due-to-Risk-of-Serious-Injury-or-Death-from-Fire-and-Burn-Hazards-Sold-on-Amazon-com-by-Mitrytech
+opened_and_verified: true
+referenced_in_en:
+- 07-appendices/appendix-a-matrix.md
+- 07-appendices/appendix-b-case-table.md
+- 03-mechanisms/ch16-information-attenuation.md
+- facts/mn-001.yaml
+- facts/INDEX.md
+- 04-domains/manufacturing-supply-chain.md

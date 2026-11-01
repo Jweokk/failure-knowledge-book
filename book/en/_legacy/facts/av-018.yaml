@@ -1,0 +1,25 @@
+# Fact layer — language-neutral per bilingual spec (numbers, dates, institution names,
+# document titles kept in original language). Canonical headline kept in Chinese;
+# English narrative lives in the chapter texts that reference this id.
+id: av-018
+domain: av
+date: 2023-07
+country: IT
+toll: 机上2人受伤，其中1人重伤；飞机毁损
+subject: Tecnam P2002-JF（EC-NXO，航空俱乐部观光飞行）
+headline: 观光小飞机复飞后坠于机场围场外
+mechanisms:
+- 自动化与技能退化
+evidence_grade: A
+source_type: 独立调查报告
+source:
+  org: ANSV
+  title: RELAZIONI D'INCHIESTA – INCIDENTE Tecnam P2002-JF marche EC-NXO, Asiago (VI), 29.7.2023
+  year: '2026'
+  url: https://ansv.it/wp-content/uploads/2026/09/Relazioni-EC-NXO-e-D-ECOO.pdf
+opened_and_verified: true
+referenced_in_en:
+- 07-appendices/appendix-a-matrix.md
+- 07-appendices/appendix-b-case-table.md
+- facts/av-018.yaml
+- facts/INDEX.md

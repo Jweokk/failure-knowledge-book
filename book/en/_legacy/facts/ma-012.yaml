@@ -1,0 +1,28 @@
+# Fact layer — language-neutral per bilingual spec (numbers, dates, institution names,
+# document titles kept in original language). Canonical headline kept in Chinese;
+# English narrative lives in the chapter texts that reference this id.
+id: ma-012
+domain: ma
+date: 2023-12
+country: GB
+toll: 1人死亡
+subject: 捕蟹笼渔船 Amadeus (TH7)
+headline: 捕蟹船起笼时船员倾身舷外落水身亡
+mechanisms:
+- 程序漂移
+- 监管滞后与俘获
+evidence_grade: A
+source_type: 独立调查报告
+source:
+  org: MAIB
+  title: Fall overboard from the crab potting vessel Amadeus (TH7) with the loss of 1 life (Report 13/2026)
+  year: '2026'
+  url: https://www.gov.uk/maib-reports/fall-overboard-from-the-crab-potting-vessel-amadeus-th7-with-the-loss-of-1-life
+opened_and_verified: true
+referenced_in_en:
+- 07-appendices/appendix-a-matrix.md
+- 07-appendices/appendix-b-case-table.md
+- 03-mechanisms/ch31-regulatory-capture.md
+- facts/ma-012.yaml
+- facts/INDEX.md
+- 04-domains/maritime-transport.md

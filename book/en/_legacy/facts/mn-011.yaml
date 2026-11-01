@@ -1,0 +1,26 @@
+# Fact layer — language-neutral per bilingual spec (numbers, dates, institution names,
+# document titles kept in original language). Canonical headline kept in Chinese;
+# English narrative lives in the chapter texts that reference this id.
+id: mn-011
+domain: mn
+date: 2013-01
+country: US
+toll: 召回约25,000台；18起火灾报告、1起手部轻烧伤
+subject: Can-Am Side-by-Side（BRP）
+headline: 全地形车排气积屑起火，18起报告
+mechanisms:
+- 隐蔽耦合
+- 边界条件外推
+evidence_grade: E
+source_type: 召回公告
+source:
+  org: CPSC
+  title: BRP Recalls Can-Am Side-By-Side Vehicles Due to Fire Hazard
+  year: '2013'
+  url: https://www.cpsc.gov/Recalls/2013/brp-recalls-can-am-side-by-side-vehicles
+opened_and_verified: true
+referenced_in_en:
+- 07-appendices/appendix-a-matrix.md
+- 07-appendices/appendix-b-case-table.md
+- facts/mn-011.yaml
+- facts/INDEX.md

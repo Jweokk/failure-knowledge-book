@@ -1,0 +1,27 @@
+# Fact layer — language-neutral per bilingual spec (numbers, dates, institution names,
+# document titles kept in original language). Canonical headline kept in Chinese;
+# English narrative lives in the chapter texts that reference this id.
+id: sw-006
+domain: sw
+date: 2026-09
+country: US
+toll: 事件约1.5小时；期间约96%网页建单请求受影响
+subject: GitHub 平台（issues/注册）
+headline: 后台清理任务拖垮主库，建单请求大面积受阻
+mechanisms:
+- 冗余的假象
+- 隐蔽耦合
+evidence_grade: E
+source_type: 当事方公开复盘
+source:
+  org: GitHub
+  title: 'GitHub availability report: September 2026'
+  year: '2026'
+  url: https://github.blog/news-insights/company-news/github-availability-report-september-2026/
+opened_and_verified: true
+referenced_in_en:
+- 07-appendices/appendix-a-matrix.md
+- 07-appendices/appendix-b-case-table.md
+- 03-mechanisms/ch12-goal-displacement.md
+- facts/sw-006.yaml
+- facts/INDEX.md

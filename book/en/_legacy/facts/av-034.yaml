@@ -1,0 +1,31 @@
+# Fact layer — language-neutral per bilingual spec (numbers, dates, institution names,
+# document titles kept in original language). Canonical headline kept in Chinese;
+# English narrative lives in the chapter texts that reference this id.
+id: av-034
+domain: av
+date: 2000-01
+country: US
+toll: 飞行员2人、乘务3人与乘客83人全部死亡
+subject: 阿拉斯加航空261 MD-83（N963AS）
+headline: 水平安定面丝杠螺母磨损失效失俯仰坠海
+mechanisms:
+- 维护的不可见
+- 监管滞后与俘获
+evidence_grade: A
+source_type: 独立调查报告
+source:
+  org: NTSB
+  title: Loss of Control and Impact with Pacific Ocean, Alaska Airlines Flight 261, McDonnell Douglas
+    MD-83, N963AS (AAR-02/01)
+  year: '2002'
+  url: https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR0201.pdf
+opened_and_verified: true
+referenced_in_en:
+- 05-usage/ch37-review-questions.md
+- 02-anatomy/ch07-decision-irreversible.md
+- 07-appendices/appendix-a-matrix.md
+- 07-appendices/appendix-b-case-table.md
+- 03-mechanisms/ch11-normalization-of-deviance.md
+- facts/av-034.yaml
+- facts/INDEX.md
+- 04-domains/aviation.md

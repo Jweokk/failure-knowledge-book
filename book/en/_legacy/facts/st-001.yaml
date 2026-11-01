@@ -1,0 +1,27 @@
+# Fact layer — language-neutral per bilingual spec (numbers, dates, institution names,
+# document titles kept in original language). Canonical headline kept in Chinese;
+# English narrative lives in the chapter texts that reference this id.
+id: st-001
+domain: st
+date: 2020-03
+country: US
+toll: 融资7550万美元；约200名员工；约450客户
+subject: Atrium（法律科技）
+headline: 法律科技初创融资7550万美元后关闭
+mechanisms:
+- 规模跨越阈值
+- 沉没成本与加码
+evidence_grade: E
+source_type: 当事方公开复盘
+source:
+  org: Failory Cemetery（引创始人 Justin Kan 公开发言）
+  title: Atrium — Failory Startup Cemetery
+  year: '2020'
+  url: https://failory.com/cemetery/atrium
+opened_and_verified: true
+referenced_in_en:
+- 07-appendices/appendix-a-matrix.md
+- 07-appendices/appendix-b-case-table.md
+- facts/INDEX.md
+- facts/st-001.yaml
+- 04-domains/startups-products.md

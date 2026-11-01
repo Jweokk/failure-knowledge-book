@@ -1,0 +1,29 @@
+# Fact layer — language-neutral per bilingual spec (numbers, dates, institution names,
+# document titles kept in original language). Canonical headline kept in Chinese;
+# English narrative lives in the chapter texts that reference this id.
+id: fi-013
+domain: fi
+date: 2026-08
+country: US
+toll: 罚没12.5万美元并申诫
+subject: Moors & Cabot, Inc.
+headline: 反洗钱警报无结构化处置且大量秒级关闭
+mechanisms:
+- 偏差的正常化
+- 自动化与技能退化
+evidence_grade: E
+source_type: 监管处罚
+source:
+  org: FINRA
+  title: Disciplinary and Other FINRA Actions – October 2026
+  year: '2026'
+  url: https://www.finra.org/sites/default/files/2026-10/disciplinary-actions-october-2026.pdf
+opened_and_verified: true
+referenced_in_en:
+- TRANSLATION_STATUS.md
+- 07-appendices/appendix-a-matrix.md
+- 07-appendices/appendix-b-case-table.md
+- 03-mechanisms/ch11-normalization-of-deviance.md
+- facts/INDEX.md
+- facts/fi-013.yaml
+- 04-domains/finance.md

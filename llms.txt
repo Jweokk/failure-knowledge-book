@@ -1,0 +1,28 @@
+# 失败的知识：跨领域失效结构手册 / The Knowledge of Failure
+
+> 把失败当作一类知识来处理的手册：24 个跨领域反复出现的失效机制、14 个领域的特征页、159 个案例。案例只写当事人当时可见的信息，停在决策点，读者先判断再看结局。中英双语，两部分别成文。
+
+A cross-domain manual of structural failure: 24 mechanisms that recur across fields, 14 domain profiles, 159 cases written only from what the people inside could see at the time. Each case stops at the decision.
+
+- 在线读 / Read online：https://tkf.fly2ai.top/ · English: https://tkf.fly2ai.top/en/
+- 仓库 / Repo：https://github.com/Jweokk/failure-knowledge-book
+- 许可 / License：正文 CC BY-NC-SA 4.0，脚本 MIT
+- 规模 / Scale：中文 553,805 字（PDF 1,019 页）· 英文 404,683 词（PDF 1,456 页）· 24 机制章 · 14 领域页 · 53 张完整案例卡 · 附录 A–D
+
+## 结构与用法
+
+- 元问题（1–4 章）：失败的知识为什么最贵、记录会怎样失真、五个认真记录失败的领域、方法为什么没有扩散。
+- 解剖学（5–10 章）：一次失效的解剖、当时可见、案例卡的十二字段、证据等级、怎么读一张卡。
+- 机制（11–34 章）：二十四个机制，每个都有「它怎么长出来／最早能看出什么／什么条件下不成立」，每章跨四到六个领域取证，章末是自检五问。
+- 领域（1–14 页）：航空、化工、建筑、软件、医疗、核电、铁路、海运、采矿、金融、公共工程、产品、食品与农业、能源。
+- 用法（35–39 章）：查（矩阵与总表）、用（决策前的检查单）、练（停点卡）、共（复盘怎么写才留得住）。
+- 边界（40–42 章）：做不到什么、仍在争议中的案例、清单的边界。
+- 附录：A 机制 × 领域矩阵（24 × 14，138 格）、B 案例总表（159 条）、C 证据等级与重建方法、D 机制家系。
+
+## 机制清单（24）
+
+偏差的正常化（Normalization of Deviance） · 指标替代目标（Goal Displacement; Goodhart's Law） · 叙事先于证据（Narrative before Evidence; Motivated Reasoning） · 专家直觉的失效区（Breakdown Conditions of Intuitive Expertise） · 程序漂移（Practical Drift） · 信息在层级中衰减（Information Attenuation; MUM Effect） · 激励错位（Misaligned Incentives; Principal–Agent） · 责任稀释（Diffusion of Responsibility） · 说真话的人先被淘汰（Whistleblower Suppression and Retaliation） · 成功的松弛（Failure of Success） · 隐蔽耦合（Hidden Interactions; Interactive Complexity and Tight Coupling） · 冗余的假象（Illusion of Redundancy; Common-Cause Failure） · 边界条件外推（Extrapolation beyond the Validated Domain） · 规模跨越阈值（Nonlinear Scaling across Thresholds） · 安全边际被吃掉（Margin Erosion; Drift into Failure） · 自动化与技能退化（Automation-Induced Skill Degradation; Out-of-the-Loop） · 沉没成本与加码（Escalation of Commitment） · 期限错配（Horizon Mismatch; Short-Termism） · 维护的不可见（Invisibility of Maintenance; Deferred Maintenance） · 交接断层（Handover Rupture; Organizational Forgetting） · 监管滞后与俘获（Regulatory Lag and Capture） · 合规但不安全（Compliance without Safety; Safety-I and Safety-II） · 连带失效（Cascading Failure; Contagion） · 路径锁定（Path Dependence and Lock-in）
+
+## 引用规则
+
+书中每个数字都追到可打开的原始文书（事故调查委员会报告、监管机构通告、审计报告、判决与和解文件），案例卡的来源字段写明报告编号、页码与链接。引文按原语言保留。发现编号对不上，先查附录 B 再怀疑正文。

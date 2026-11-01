@@ -1,0 +1,29 @@
+# Fact layer — language-neutral per bilingual spec (numbers, dates, institution names,
+# document titles kept in original language). Canonical headline kept in Chinese;
+# English narrative lives in the chapter texts that reference this id.
+id: po-003
+domain: po
+date: 2026-10
+country: US
+toll: 53项重大投资中GAO评估风险更高者24项；21项评级未及时更新
+subject: OMB 联邦IT仪表板 CIO 风险评级
+headline: 联邦IT仪表板风险评级长期不更新，与实际风险背离
+mechanisms:
+- 指标替代目标
+- 责任稀释
+evidence_grade: E
+source_type: 审计报告
+source:
+  org: GAO
+  title: 'IT Dashboard: Selected Agencies'' Investment Ratings Fail to Fully Consider Risks (GAO-27-108416)'
+  year: '2026'
+  url: https://www.gao.gov/products/gao-27-108416
+opened_and_verified: true
+referenced_in_en:
+- 07-appendices/appendix-e-mechanism-genealogy.md
+- 07-appendices/appendix-a-matrix.md
+- 07-appendices/appendix-b-case-table.md
+- 03-mechanisms/ch12-goal-displacement.md
+- facts/po-003.yaml
+- facts/INDEX.md
+- 04-domains/public-policy.md

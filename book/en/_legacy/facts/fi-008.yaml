@@ -1,0 +1,28 @@
+# Fact layer — language-neutral per bilingual spec (numbers, dates, institution names,
+# document titles kept in original language). Canonical headline kept in Chinese;
+# English narrative lives in the chapter texts that reference this id.
+id: fi-008
+domain: fi
+date: 2026-10
+country: CN
+toll: 没收并罚款各3,679,245.18元；签字会计师罚20–40万元
+subject: 中审众环会计师事务所
+headline: 会计师事务所对年报审计未勤勉尽责出具虚假记载报告
+mechanisms:
+- 激励错位
+- 专家直觉的失效区
+evidence_grade: E
+source_type: 监管处罚
+source:
+  org: 中国证监会
+  title: 中国证券监督管理委员会行政处罚决定书（〔2026〕56号）
+  year: '2026'
+  url: http://www.csrc.gov.cn/csrc/c101928/c7667582/content.shtml
+opened_and_verified: true
+referenced_in_en:
+- 07-appendices/appendix-a-matrix.md
+- 07-appendices/appendix-b-case-table.md
+- 03-mechanisms/ch17-misaligned-incentives.md
+- facts/fi-008.yaml
+- facts/INDEX.md
+- 04-domains/finance.md

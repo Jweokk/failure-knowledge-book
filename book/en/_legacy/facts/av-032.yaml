@@ -1,0 +1,28 @@
+# Fact layer — language-neutral per bilingual spec (numbers, dates, institution names,
+# document titles kept in original language). Canonical headline kept in Chinese;
+# English narrative lives in the chapter texts that reference this id.
+id: av-032
+domain: av
+date: 2009-02
+country: US
+toll: 机上49人与地面1人死亡
+subject: 科尔根航空3407（大陆连线）DHC-8-400（N200WQ）
+headline: 夜间进近失速告警后操纵错误失速坠入民宅
+mechanisms:
+- 程序漂移
+- 自动化与技能退化
+evidence_grade: A
+source_type: 独立调查报告
+source:
+  org: NTSB
+  title: Loss of Control on Approach, Colgan Air, Inc., Operating as Continental Connection Flight 3407
+    (AAR-10/01)
+  year: '2010'
+  url: https://www.ntsb.gov/investigations/accidentreports/reports/aar1001.pdf
+opened_and_verified: true
+referenced_in_en:
+- 07-appendices/appendix-a-matrix.md
+- 07-appendices/appendix-b-case-table.md
+- 03-mechanisms/ch17-misaligned-incentives.md
+- facts/INDEX.md
+- facts/av-032.yaml

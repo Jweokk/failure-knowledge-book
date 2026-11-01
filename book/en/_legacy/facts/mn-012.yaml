@@ -1,0 +1,26 @@
+# Fact layer — language-neutral per bilingual spec (numbers, dates, institution names,
+# document titles kept in original language). Canonical headline kept in Chinese;
+# English narrative lives in the chapter texts that reference this id.
+id: mn-012
+domain: mn
+date: 2014-01
+country: US
+toll: 召回约42,500台；7起冒烟或起火报告、2起受伤
+subject: Kenmore 摆头风扇加热器
+headline: 风扇加热器电机座断裂起火，7起报告2伤
+mechanisms:
+- 连带失效
+- 安全边际被吃掉
+evidence_grade: E
+source_type: 召回公告
+source:
+  org: CPSC
+  title: Sears and Kmart Recall Kenmore Oscillating Fan Heaters
+  year: '2014'
+  url: https://www.cpsc.gov/Recalls/2014/sears-and-kmart-recall-kenmore-oscillating-fan-heaters
+opened_and_verified: true
+referenced_in_en:
+- 07-appendices/appendix-a-matrix.md
+- 07-appendices/appendix-b-case-table.md
+- facts/INDEX.md
+- facts/mn-012.yaml

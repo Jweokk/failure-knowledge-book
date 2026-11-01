@@ -1,0 +1,26 @@
+# Fact layer — language-neutral per bilingual spec (numbers, dates, institution names,
+# document titles kept in original language). Canonical headline kept in Chinese;
+# English narrative lives in the chapter texts that reference this id.
+id: nu-003
+domain: nu
+date: 2026-09
+country: FR
+toll: INES 1级；丢失铀样品2个共40毫克约1000贝克；发现Am-241源约660千贝克
+subject: 圣艾蒂安矿业学院（EMSE）实验室
+headline: 实验室丢失天然铀样品并发现未登记镅-241密封源
+mechanisms:
+- 偏差的正常化
+- 维护的不可见
+evidence_grade: B
+source_type: 官方通报
+source:
+  org: ASNR（法国核安全与辐射防护局）
+  title: Perte et découverte de sources radioactives lors de la réalisation d'un inventaire
+  year: '2026'
+  url: https://reglementation-controle.asnr.fr/controle/actualites-du-controle/activites-industrielles/avis-d-incident-hors-installations-nucleaires/perte-et-decouverte-de-sources-radioactives-lors-de-la-realisation-d-un-inventaire
+opened_and_verified: true
+referenced_in_en:
+- 07-appendices/appendix-a-matrix.md
+- 07-appendices/appendix-b-case-table.md
+- facts/nu-003.yaml
+- facts/INDEX.md

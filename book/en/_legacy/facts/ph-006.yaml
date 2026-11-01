@@ -1,0 +1,26 @@
+# Fact layer — language-neutral per bilingual spec (numbers, dates, institution names,
+# document titles kept in original language). Canonical headline kept in Chinese;
+# English narrative lives in the chapter texts that reference this id.
+id: ph-006
+domain: ph
+date: 2026-06
+country: US
+toll: 召回1,573件
+subject: GC Agar Base／Remel, Inc
+headline: 淋球菌培养基对部分菌株检出不足
+mechanisms:
+- 指标替代目标
+- 偏差的正常化
+evidence_grade: E
+source_type: 召回公告
+source:
+  org: FDA
+  title: openFDA device enforcement record Z-2623-2026
+  year: '2026'
+  url: https://api.fda.gov/device/enforcement.json?search=recall_number:%22Z-2623-2026%22
+opened_and_verified: true
+referenced_in_en:
+- 07-appendices/appendix-a-matrix.md
+- 07-appendices/appendix-b-case-table.md
+- facts/ph-006.yaml
+- facts/INDEX.md

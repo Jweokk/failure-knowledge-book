@@ -1,0 +1,29 @@
+# Fact layer — language-neutral per bilingual spec (numbers, dates, institution names,
+# document titles kept in original language). Canonical headline kept in Chinese;
+# English narrative lives in the chapter texts that reference this id.
+id: ma-010
+domain: ma
+date: 2007-09
+country: GB
+toll: 3人死亡
+subject: 应急响应救援船 Viking Islay
+headline: 救援船锚链舱缺氧连续进入，3人相继遇难
+mechanisms:
+- 隐蔽耦合
+- 合规但不安全
+- 专家直觉的失效区
+evidence_grade: A
+source_type: 独立调查报告
+source:
+  org: MAIB
+  title: Entry to an enclosed space on emergency response rescue vessel Viking Islay with loss of 3 lives
+    (Report 12/2008)
+  year: '2008'
+  url: https://www.gov.uk/maib-reports/entry-to-an-enclosed-space-on-emergency-response-rescue-vessel-viking-islay-off-the-east-yorkshire-coast-england-with-loss-of-3-lives
+opened_and_verified: true
+referenced_in_en:
+- 07-appendices/appendix-a-matrix.md
+- 07-appendices/appendix-b-case-table.md
+- 03-mechanisms/ch14-expert-intuition-failure.md
+- facts/INDEX.md
+- facts/ma-010.yaml

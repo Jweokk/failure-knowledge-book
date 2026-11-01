@@ -1,0 +1,27 @@
+# Fact layer — language-neutral per bilingual spec (numbers, dates, institution names,
+# document titles kept in original language). Canonical headline kept in Chinese;
+# English narrative lives in the chapter texts that reference this id.
+id: ph-001
+domain: ph
+date: 2025-10
+country: US
+toll: 召回8,400支
+subject: Semaglutide Injection／ProRx LLC
+headline: 司美格鲁肽注射液无菌保证不足被召回
+mechanisms:
+- 偏差的正常化
+- 维护的不可见
+evidence_grade: E
+source_type: 召回公告
+source:
+  org: FDA
+  title: openFDA drug enforcement record D-0115-2026 (Semaglutide Injection)
+  year: '2025'
+  url: https://api.fda.gov/drug/enforcement.json?search=recall_number:%22D-0115-2026%22
+opened_and_verified: true
+referenced_in_en:
+- 07-appendices/appendix-a-matrix.md
+- 07-appendices/appendix-b-case-table.md
+- facts/INDEX.md
+- facts/ph-001.yaml
+- 04-domains/pharma-devices.md

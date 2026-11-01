@@ -1,0 +1,28 @@
+# Fact layer — language-neutral per bilingual spec (numbers, dates, institution names,
+# document titles kept in original language). Canonical headline kept in Chinese;
+# English narrative lives in the chapter texts that reference this id.
+id: ch-005
+domain: ch
+date: 2023-07
+country: US
+toll: 释放超31,000磅环氧乙烷；周边数百居民就地避险
+subject: Dow Louisiana Operations Glycol II环氧乙烷装置（路易斯安那普拉克明）
+headline: 检修遗留工作灯刺穿爆破片引发爆炸与环氧乙烷泄放
+mechanisms:
+- 维护的不可见
+- 隐蔽耦合
+evidence_grade: A
+source_type: 独立调查报告
+source:
+  org: U.S. Chemical Safety and Hazard Investigation Board (CSB)
+  title: Explosions, Fires, and Toxic Ethylene Oxide Release at Dow Louisiana Operations (No. 2023-03-I-LA)
+  year: '2026'
+  url: https://www.csb.gov/file.aspx?DocumentId=6316
+opened_and_verified: true
+referenced_in_en:
+- 07-appendices/appendix-a-matrix.md
+- 07-appendices/appendix-b-case-table.md
+- 03-mechanisms/ch21-hidden-coupling.md
+- facts/ch-005.yaml
+- facts/INDEX.md
+- 04-domains/chemical.md

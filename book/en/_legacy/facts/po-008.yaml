@@ -1,0 +1,28 @@
+# Fact layer — language-neutral per bilingual spec (numbers, dates, institution names,
+# document titles kept in original language). Canonical headline kept in Chinese;
+# English narrative lives in the chapter texts that reference this id.
+id: po-008
+domain: po
+date: 2026-06
+country: CN
+toll: 多征/提前征收企业所得税增值税等404.27亿元；虚增财政收入596.51亿元；偷逃税款109.35亿元
+subject: 2025年度中央预算执行审计（中国审计署）
+headline: 中央预算执行审计查出多征提前征税
+mechanisms:
+- 激励错位
+- 信息在层级中衰减
+evidence_grade: E
+source_type: 审计报告
+source:
+  org: 审计署
+  title: 国务院关于2025年度中央预算执行和其他财政收支的审计工作报告
+  year: '2026'
+  url: https://www.audit.gov.cn/n5/n26/c10792910/part/10793816.pdf
+opened_and_verified: true
+referenced_in_en:
+- 07-appendices/appendix-a-matrix.md
+- 07-appendices/appendix-b-case-table.md
+- 03-mechanisms/ch17-misaligned-incentives.md
+- facts/po-008.yaml
+- facts/INDEX.md
+- 04-domains/public-policy.md

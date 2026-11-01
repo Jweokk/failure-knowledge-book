@@ -1,0 +1,29 @@
+# Fact layer — language-neutral per bilingual spec (numbers, dates, institution names,
+# document titles kept in original language). Canonical headline kept in Chinese;
+# English narrative lives in the chapter texts that reference this id.
+id: ag-001
+domain: ag
+date: 2023-09
+country: US
+toll: 致病171例、住院22例、死亡0
+subject: 加州商业生乳农场（CDC称 dairy farm A）
+headline: 商业生乳致沙门氏菌爆发171例
+mechanisms:
+- 合规但不安全
+- 边界条件外推
+evidence_grade: B
+source_type: 官方通报
+source:
+  org: CDC（MMWR）
+  title: Outbreak of Salmonella Typhimurium Infections Linked to Commercially Distributed Raw Milk
+  year: '2025'
+  url: https://www.cdc.gov/mmwr/volumes/74/wr/mm7427a1.htm?s_cid=mm7427a1_w
+opened_and_verified: true
+referenced_in_en:
+- 07-appendices/appendix-a-matrix.md
+- 07-appendices/appendix-b-case-table.md
+- 03-mechanisms/ch23-boundary-extrapolation.md
+- 01-meta/ch02-three-biases.md
+- facts/ag-001.yaml
+- facts/INDEX.md
+- 04-domains/agriculture-food.md

@@ -1,0 +1,29 @@
+# Fact layer — language-neutral per bilingual spec (numbers, dates, institution names,
+# document titles kept in original language). Canonical headline kept in Chinese;
+# English narrative lives in the chapter texts that reference this id.
+id: ch-001
+domain: ch
+date: 2014-11
+country: US
+toll: 死亡4人（3名操作员与1名值班主管）
+subject: DuPont La Porte工厂Lannate杀虫剂装置（得州拉波特）
+headline: 甲硫醇泄漏入厂房，4名作业人员死亡
+mechanisms:
+- 偏差的正常化
+- 程序漂移
+- 维护的不可见
+evidence_grade: A
+source_type: 独立调查报告
+source:
+  org: U.S. Chemical Safety and Hazard Investigation Board (CSB)
+  title: Toxic Chemical Release at the DuPont La Porte Chemical Facility (No. 2015-01-I-TX)
+  year: '2019'
+  url: https://www.csb.gov/file.aspx?DocumentId=6124
+opened_and_verified: true
+referenced_in_en:
+- 07-appendices/appendix-a-matrix.md
+- 07-appendices/appendix-b-case-table.md
+- 03-mechanisms/ch11-normalization-of-deviance.md
+- facts/INDEX.md
+- facts/ch-001.yaml
+- 04-domains/chemical.md

@@ -1,0 +1,69 @@
+# Chapter 4 Why This Method Never Spread
+
+> What this chapter covers: given that five fields proved failure can be systematized institutionally, why the system has stayed confined to them for sixty years; and, for the software industry — the sole exception — what its special conditions were.
+> When to turn back: when you are about to propose "building a postmortem system" to management, or judging whether an industry's failure knowledge can be expected to grow on its own.
+> Estimated reading time: 25 minutes.
+
+None of the four devices listed in Chapter 3 requires high technology, and none costs much to legislate. Aviation had the full set installed by the mid-twentieth century; in the seventy years since, no industry outside safety regulation has copied it wholesale. The omission is a product of the incentive structure. This chapter first counts the five gates blocking the way, then dissects the software exception, and closes with a judgment framework: could your industry grow this system, and should you wait for it.
+
+## 4.1 The Five Gates
+
+Gate one: liability. Writing down the details of a failure amounts to organizing evidence for potential litigation. The status of internal postmortems under discovery rules is a question every legal department knows cold: the clearer the document, the harder the defense in court later. The rational choice is to write postmortems vaguely, or never to write them down at all. Compliance documents (inspection records, training sign-in sheets) have legally mandated formats and must be written; causal postmortems carry no such obligation, and are better left unwritten — that is the real legal position of postmortem culture in many organizations. 〔Verification pending: cross-jurisdiction comparison would require legal databases; this sentence is a qualitative statement〕
+
+Gate two: competition. Failure detail is concentrated competitive intelligence. An investigation report for a fatal air crash names the part, the fuel line, the checklist that failed; a postmortem of a business failure names the supplier, the parameter, the channel that failed. The former is read by the whole industry; the latter is read by your competitors among others. The patent system protects technical solutions, never lessons; lessons lie in the loser's rubble, and only competitors go digging there.
+
+Gate three: face. Organizational narrative is an asset. A listed company's prospectus contains a "Risk Factors" section, and readers can run an experiment: take ten prospectuses at random and compare the risk-factor language — it comes out heavily templated. Disclosures specific enough to say "this accident happened in our history, and it cost us this much" are rare, because they amount to using a statutory document to characterize one's own history. 〔Verification pending: systematic testing would require sampling full prospectus texts on SEC EDGAR; what follows is an operational suggestion readers can check themselves〕 The face gate works on far more than listed companies: founders' public narratives, anniversary celebrations, government achievement reports — all flow one way. Failure gets no column inches in that direction.
+
+Gate four: institutions. The most expensive of the four devices is the independent investigation body, and it requires legislation. A subject without investigative powers cannot produce the full process: reporters cannot get the docket, scholars cannot enter the site, insiders cannot publish the whole text. Investigative power is a public power, and public powers are usually paid for by a disaster big enough (section 4.3 expands on this).
+
+Gate five: cost. Writing postmortems takes labor hours; reading them takes competence; indexing and maintenance take headcount. The circulation of success has a media industry paying for it; the circulation of failure has no business model: nobody subscribes to accident reports, nobody pays for postmortems, retelling them generates no traffic. Of the five gates, the first four are incentive problems; the fifth is pure market failure.
+
+## 4.2 The Software Exception: How the Public Postmortem Survived
+
+Over the past decade and a half, the software and internet services industry produced the world's only large-scale body of public failure knowledge with no statutory basis: the public postmortem, together with the methodology built around it. Landmark steps include the methods literature published openly in 2016 by Google's Site Reliability Engineering (SRE) team, whose operating discipline of the "blameless postmortem" has been widely paraphrased; earlier practice took shape inside several leading internet companies, and the name "blameless" is usually traced to the engineering blogs of a few leading firms in the early 2010s. (the representative public literature is the SRE handbook at sre.google, verified as accessible; earlier texts carrying the name as it spread have been lost or migrated, and are not cited here)
+
+The exception deserves a device-by-device dissection, because it shows how all four devices can be assembled with no legislation at all.
+
+The substitute for device one (mandatory reporting): changes and outages are high-frequency events; monitoring systems generate event records automatically, and the on-call system mandates a postmortem — the ticket does not close until the postmortem is written. No law, but a workflow.
+
+The substitute for device two (independent investigation): the postmortem is moderated by an engineer from a team uninvolved in the incident, on the pattern "the involved narrate, the moderator probes, conclusions are anonymized". Independence comes from rotation of process, with no institutional headcount behind it.
+
+The substitute for device three (public full texts): the status-page culture and customer incident notifications. Public-facing postmortems cover only the largest-blast-radius outages, yet the public postmortem libraries of leading companies have accumulated into the hundreds, all full texts queryable. (the list is maintained, from tested access paths, in Appendix C.4)
+
+The substitute for device four (liability separation): the blameless principle. The output of a postmortem is defined as system improvement items, never as a list of human errors. Whether performance systems actually quarantine incident records varies from company to company, and this is the device most often honored in name only across software's postmortem institutions: the institution is called blameless, yet the incident history still counts in promotion reviews.
+
+The substitutes hold together because of four industry conditions. Condition one: the object of failure is infrastructure. A service outage carries no criminal exposure, losses are capped by service level agreement (SLA) payouts, and the legal exposure of writing a postmortem is far smaller than elsewhere. Condition two: the industry has a written culture. Design docs, code review, change tickets — engineers' daily work already lands on paper, and a postmortem is just one more document type. Condition three: failures are frequent and causally traceable. Staged rollouts and change management systems let "which change caused which outage" be correlated automatically; sample size and attributability are things no other industry has. Condition four: talent moves fast. Engineers circulate among companies carrying postmortem practice as a job skill, and industry norms standardize without any legislation.
+
+The same conditions mark the exception's boundaries. Software postmortems cover availability failures only. Security incidents (data breaches, intrusions) are almost never given public postmortems, because the postmortem text is itself an attack manual and legal liability is far from capped; product failures (building the wrong feature) and business failures (choosing the wrong market) sit outside the tradition entirely, back under the five gates of section 4.1. A further boundary is a trend: in recent years, leading companies' complete public postmortems have grown fewer, status-page disclosures ever briefer, and the public libraries' pace of updates has slowed. 〔Verification pending: a quantitative trend would require year-by-year statistics on the public libraries; this is a qualitative judgment〕 The exception has no legislative moat; it is a function of industry conditions, and when the conditions change, the exception will shrink back.
+
+## 4.3 Institutions Are Paid for by Disaster
+
+Looking back over the legislative history of the four devices, one pattern repeats: they are almost always written in the aftermath of major disasters.
+
+In chemicals, the U.S. Chemical Safety and Hazard Investigation Board (CSB) was established under the Clean Air Act Amendments of 1990, and its legislative backdrop included the pressure created by events like the December 1984 toxic gas release at the Bhopal pesticide plant in India (thousands dead; the count of immediate fatalities depends on later investigations and government statistics 〔Verification pending: the official figure requires Indian government archives; estimates vary widely across sources, and the text keeps the qualitative "thousands"〕). In finance, the Sarbanes–Oxley Act of 2002 followed hard on the 2001 bankruptcies of Enron and WorldCom. In aviation, the international investigation framework tightened step by step through the string of accidents of the postwar jet age; after the March 27, 1977 two-aircraft collision at Tenerife (583 dead; investigations conducted by the Dutch, Spanish, and American sides; the final report issued by the Spanish authorities 〔Verification pending: the official archive page of the Spanish investigation report remains to be located; this sentence has been rewritten as a qualitative statement〕), the International Civil Aviation Organization (ICAO) pushed through revisions to radio phraseology and cockpit communication procedures. 〔Verification pending: the original ICAO Doc series texts need checking〕
+
+Disaster pays first and institutions are written later. This ordering shows that institutions come into being because losses price them into existence, never because someone "recognized their importance". Two uses follow for the reader. Use one: evaluate your industry. If your industry still has no failure-recording system, the meaning is that losses have not yet grown large enough to force legislation, or that losses are absorbed by many small scattered parties whose aggregation never becomes legislative pressure. Use two: find cheaper substitute paths. Waiting for disaster to buy an institution is the most expensive route; industry self-regulatory alliances, shared postmortem repositories with liability-waiver clauses, and insurer-led data pools have all served as historical substitutes; their conditions for standing are in section 4.4.
+
+## 4.4 Will Your Industry Grow This System?
+
+Three criteria; score each.
+
+Criterion one: the externality of failure. Does failure harm only yourself, or the public? Failures that harm the public will eventually draw regulation, and regulators will sooner or later be forced to build recording systems (all five precedent fields are high-externality industries). Failures that harm only yourself never grow institutions; self-discipline is all you get.
+
+Criterion two: the pace of technical iteration. When rules update more slowly than the technology, the regulator's recording system cannot keep up with its object; fast-iterating industries are more likely to spread norms through practitioner mobility (a necessary condition of the software model), slow-iterating ones through legislation (the nuclear model).
+
+Criterion three: practitioner mobility. Talent flow turns case lessons into industry common knowledge. In low-mobility industries (utilities, certain monopolies), lessons stay trapped in the original organization until the organization disappears.
+
+An industry scoring three out of three can expect a software-style postmortem tradition to emerge on its own; score one out of three, and your organization is better off building an internal system without waiting for the industry (Chapters 38 and 39 provide templates). The judgment itself is a form of prevention: knowing what kind of disaster your industry is waiting for to pay the bill means at least knowing the shape of the invoice.
+
+A ready-made contrast is the Indian cryptocurrency exchange Koinex (Appendix B st-002): the founders' shutdown postmortem attributed the death to banks freezing payment channels. Regulatory uncertainty transmitted through financial infrastructure, and the industry made no wrong product decision at all. This is the startup-flavored sample of criterion one (the externality of failure lands outside the practitioner): the disaster your industry is waiting for is sometimes one you did not create.
+
+## Self-Check: Five Questions
+
+1. In your organization's most recent internal postmortem, did legal review the draft? What did the review change?
+2. In your industry, how valuable is failure detail as competitive intelligence? Name one specific field whose disclosure would amount to arming rivals.
+3. In your industry's prospectuses, annual reports, or public materials, how templated is risk disclosure? Compare two documents and count the disclosures specific enough to include numbers.
+4. Of software's four conditions (infrastructure, written culture, frequent attributable failures, talent mobility), which does your industry lack? The missing conditions decide whether you should copy the software model or the nuclear model.
+5. The last time your industry's "disaster bought an institution", what did it buy? If that invoice were issued again, where would your organization stand in the order of claimants?
+
+(First draft of this chapter: 3427 characters; to be expanded as case examples are added)

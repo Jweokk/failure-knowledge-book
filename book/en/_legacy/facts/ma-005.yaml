@@ -1,0 +1,27 @@
+# Fact layer — language-neutral per bilingual spec (numbers, dates, institution names,
+# document titles kept in original language). Canonical headline kept in Chinese;
+# English narrative lives in the chapter texts that reference this id.
+id: ma-005
+domain: ma
+date: 2024-04
+country: GB
+toll: 无人伤亡（3人落水获救）；Serinah 沉没
+subject: 原油轮 Apache 与尾拖渔船 Serinah (GH 116)
+headline: 双方均未按避碰规则行动，油轮撞沉渔船
+mechanisms:
+- 偏差的正常化
+- 安全边际被吃掉
+evidence_grade: A
+source_type: 独立调查报告
+source:
+  org: MAIB
+  title: Collision between the crude oil tanker Apache and the stern trawler Serinah (Report No 4/2026)
+  year: '2026'
+  url: https://assets.publishing.service.gov.uk/media/6985fa6785bc7d6ba0fbc752/2026-4-Apache-Serinah-ReportAndAnnex.pdf
+opened_and_verified: true
+referenced_in_en:
+- 07-appendices/appendix-a-matrix.md
+- 07-appendices/appendix-b-case-table.md
+- facts/ma-005.yaml
+- facts/INDEX.md
+- 04-domains/maritime-transport.md

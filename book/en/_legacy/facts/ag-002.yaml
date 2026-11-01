@@ -1,0 +1,26 @@
+# Fact layer — language-neutral per bilingual spec (numbers, dates, institution names,
+# document titles kept in original language). Canonical headline kept in Chinese;
+# English narrative lives in the chapter texts that reference this id.
+id: ag-002
+domain: ag
+date: 2024-02
+country: US
+toll: 致病13例、住院7例（其中2例HUS）、死亡0
+subject: 单一核桃种植者与脱壳加工商（CDC未具名）
+headline: 有机核桃污染E. coli O157致13例
+mechanisms:
+- 隐蔽耦合
+evidence_grade: B
+source_type: 官方通报
+source:
+  org: CDC（MMWR）
+  title: 'Notes from the Field: Outbreak of E. coli O157:H7 Infections Linked to Organic Walnuts'
+  year: '2025'
+  url: https://www.cdc.gov/mmwr/volumes/74/wr/mm7438a2.htm?s_cid=OS_mm7438a2_w
+opened_and_verified: true
+referenced_in_en:
+- 07-appendices/appendix-a-matrix.md
+- 07-appendices/appendix-b-case-table.md
+- facts/ag-002.yaml
+- facts/INDEX.md
+- 04-domains/agriculture-food.md

@@ -1,0 +1,27 @@
+# Fact layer — language-neutral per bilingual spec (numbers, dates, institution names,
+# document titles kept in original language). Canonical headline kept in Chinese;
+# English narrative lives in the chapter texts that reference this id.
+id: av-001
+domain: av
+date: 2013-07
+country: GB
+toll: 无伤亡记载；后机身上部大范围热损伤
+subject: 埃塞俄比亚航空 波音787-8（ET-AOP）
+headline: 停场787应急定位发射机锂电池起火烧损后机身
+mechanisms:
+- 隐蔽耦合
+- 维护的不可见
+evidence_grade: A
+source_type: 独立调查报告
+source:
+  org: AAIB
+  title: Aircraft Accident Report 2/2015 – Boeing B787-8, ET-AOP
+  year: '2015'
+  url: https://www.gov.uk/aaib-reports/aircraft-accident-report-2-2015-boeing-b787-8-et-aop-12-july-2013
+opened_and_verified: true
+referenced_in_en:
+- TRANSLATION_STATUS.md
+- 07-appendices/appendix-a-matrix.md
+- 07-appendices/appendix-b-case-table.md
+- facts/av-001.yaml
+- facts/INDEX.md
