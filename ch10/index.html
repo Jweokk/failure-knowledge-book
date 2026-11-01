@@ -1,0 +1,2938 @@
+
+<!doctype html>
+<html lang="zh" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="跨领域失效结构手册：二十四个机制、十四个领域、一百五十九个案例">
+      
+      
+      
+        <link rel="canonical" href="https://tkf.fly2ai.top/ch10/">
+      
+      
+        <link rel="prev" href="../ch09/">
+      
+      
+        <link rel="next" href="../ch11/">
+      
+      
+        
+          <link rel="alternate" href="/" hreflang="zh">
+        
+          <link rel="alternate" href="/en/" hreflang="en">
+        
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.8.0">
+    
+    
+      
+        <title>第 10 章 最小反事实与证据等级 - 失败的知识</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.57a0d79d.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.fb2fffe2.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Serif+SC:300,300i,400,400i,700,700i%7CNoto+Sans+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Noto Serif SC";--md-code-font:"Noto Sans Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/extra.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="custom" data-md-color-accent="custom">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#10" class="md-skip">
+          跳转至
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="页眉">
+    <a href=".." title="失败的知识" class="md-header__button md-logo" aria-label="失败的知识" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            失败的知识
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              第 10 章 最小反事实与证据等级
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="custom" data-md-color-accent="custom"  aria-label="深色"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="深色" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="custom" data-md-color-accent="custom"  aria-label="浅色"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="浅色" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+      <div class="md-header__option">
+  <div class="md-select">
+    
+    <button class="md-header__button md-icon" aria-label="选择当前语言">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m12.87 15.07-2.54-2.51.03-.03A17.5 17.5 0 0 0 14.07 6H17V4h-7V2H8v2H1v2h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2zm-2.62 7 1.62-4.33L19.12 17z"/></svg>
+    </button>
+    <div class="md-select__inner">
+      <ul class="md-select__list">
+        
+          <li class="md-select__item">
+            <a href="/" hreflang="zh" class="md-select__link">
+              中文
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="/en/" hreflang="en" class="md-select__link">
+              English
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</div>
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="搜索" placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="查找">
+        
+        <button type="reset" class="md-search__icon md-icon" title="清空当前内容" aria-label="清空当前内容" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            正在初始化搜索引擎
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/Jweokk/failure-knowledge-book" title="前往仓库" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="导航栏" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="失败的知识" class="md-nav__button md-logo" aria-label="失败的知识" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    失败的知识
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/Jweokk/failure-knowledge-book" title="前往仓库" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    首页
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../preface/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    前言：读者契约
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第一部　元问题
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    第一部　元问题
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ch01/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第 1 章 失败的知识为什么最贵，又最没人整理
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ch02/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第 2 章 三种偏斜：记录、幸存、归因
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ch03/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第 3 章 五个认真记录失败的领域
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ch04/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第 4 章 这套方法为什么没有扩散出去
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第二部　解剖学
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    第二部　解剖学
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ch05/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第 5 章 案例卡的十二个字段
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ch06/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第 6 章 当时可见
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ch07/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第 7 章 决策点与不可逆点
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ch08/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第 8 章 加码
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ch09/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第 9 章 失效链：三层结构与交界断点
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第 10 章 最小反事实与证据等级
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第 10 章 最小反事实与证据等级
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#101" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10.1 最小反事实的纪律
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#102" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10.2 五步倒推法
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#103" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10.3 三种不合格反事实（对照表）
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#104-ae" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10.4 证据等级 A–E
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#105" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10.5 "重建"的标注方法
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#106" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10.6 数字回源与引用体例
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        自检五问
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第三部　二十四个机制
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    第三部　二十四个机制
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ch11/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第 11 章 偏差的正常化
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ch12/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第 12 章 指标替代目标
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ch13/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第 13 章 叙事先于证据
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ch14/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第 14 章 专家直觉的失效区
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ch15/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第 15 章 程序漂移
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ch16/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第 16 章 信息在层级中衰减
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ch17/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第 17 章 激励错位
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ch18/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第 18 章 责任稀释
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ch19/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第 19 章 说真话的人先被淘汰
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ch20/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第 20 章 成功的松弛
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ch21/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第 21 章 隐蔽耦合
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ch22/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第 22 章 冗余的假象
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ch23/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第 23 章 边界条件外推
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ch24/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第 24 章 规模跨越阈值
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ch25/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第 25 章 安全边际被吃掉
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ch26/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第 26 章 自动化与技能退化
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ch27/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第 27 章 沉没成本与加码
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ch28/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第 28 章 期限错配
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ch29/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第 29 章 维护的不可见
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ch30/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第 30 章 交接断层
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ch31/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第 31 章 监管滞后与俘获
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ch32/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第 32 章 合规但不安全
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ch33/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第 33 章 连带失效
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ch34/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第 34 章 路径锁定
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第四部　十四个领域
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    第四部　十四个领域
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../domain-01/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    航空
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../domain-02/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    化工与流程工业
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../domain-03/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    核电与能源
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../domain-04/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    医疗
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../domain-05/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    药品与器械
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../domain-06/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    建筑与基础设施
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../domain-07/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    海事与运输
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../domain-08/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    软件与互联网服务
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../domain-09/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    金融
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../domain-10/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    创业与产品
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../domain-11/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    公共政策与行政
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../domain-12/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    军事
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../domain-13/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    制造业与供应链
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../domain-14/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    农业与食品
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第五部　怎么用
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    第五部　怎么用
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ch35/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第 35 章 处境定位表
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ch36/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第 36 章 决策前的三十分钟
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ch37/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第 37 章 设计评审问句清单
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ch38/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第 38 章 复盘怎么写才能在三年后还有用
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ch39/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第 39 章 九十分钟的死亡预演会
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第六部　边界
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    第六部　边界
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ch40/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第 40 章 该鼓励的失败
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ch41/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第 41 章 正常事故理论与黑天鹅
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ch42/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第 42 章 这套东西不管用的时候
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9" >
+        
+          
+          <label class="md-nav__link" for="__nav_9" id="__nav_9_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    附录
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_9">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    附录
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../appendix-a/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    附录 A 机制 × 领域矩阵
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../appendix-b/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    附录 B 案例总表
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../appendix-c/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    附录 C 证据等级与重建方法
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../appendix-d/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    附录 D 机制家系
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../glossary/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    术语表
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#101" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10.1 最小反事实的纪律
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#102" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10.2 五步倒推法
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#103" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10.3 三种不合格反事实（对照表）
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#104-ae" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10.4 证据等级 A–E
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#105" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10.5 "重建"的标注方法
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#106" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10.6 数字回源与引用体例
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        自检五问
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="10">第 10 章 最小反事实与证据等级</h1>
+<blockquote>
+<p>本章讲什么：给案例卡最值钱的两个字段配齐方法论
+本章与第 5、6、7、9 章的关系收拢一次：第 5 章定义字段（是什么）、第 6 章给字段 6 的纪律（怎么填）、第 7 章给字段 9 的判定（怎么认）、第 9 章给走查的框架（怎么组合）、本章给字段 11 与 12 的方法（怎么推、怎么分级）：五章合起来是案例卡这门手艺的完整课程。课程的学法建议是做中学，每读完一章做一次练习，第五章的毕业卡可以分章渐进完成：第 5 章读完填一遍字段、第 6 章读完补当时可见、第 7 章读完补不可逆点、第 9 章读完做九格、本章读完做倒推与分级：五次渐进之后，同一张卡已经是全格的合格卡：渐进完成的那张卡，就是你的毕业作品。
+毕业作品之外，本章给一份与全书各部的路线衔接：第二部毕业的读者，读第三部时把每章案例当练习材料，每章读完，挑一个案例用五步法做反事实、用等级表定证据、做九格走查：三件套练习贯穿第三部二十四章，练完之后第四部的领域页对读者就是复习（工具不变、参数换行业）。全书的学习曲线因此在第二部末尾到达第一个平台：平台期的读者已经有了全部工具，后面的每一部都是在工具上叠加参数与场景。
+叠加的过程有一个建议的节拍：第三部每读四章做一次全流程练习，第 11 至 14 章、15 至 18 章……每四章一组，每组挑一个案例做全套（卡、反事实、九格、等级）：六组练完，工具的肌肉记忆就固化了，固化的检验是速度，第一次做全套要半天，第六次只要一小时：速度就是掌握的度量。
+度量之外最后一个提醒给教师与培训者：本章的五步法与等级表可以直接当教材用，培训的设计就是练习的序列：第一次课讲五步法加一个示范、第二次课学员互评反事实、第三次课练等级判定加互证、第四次课全流程做一张卡：四次课的课程包成本极低（材料全是本书章节加公开案例），它的产出是组织内第一批会写卡的人：人的产能是卡片库的种子，种子在第 4 章讲过是行业流通的瓶颈，而瓶颈的解法之一就是这门四课的培训。
+培训的学员构成也有讲究：一线工程师、安全职能、中层管理各占三分之一，单一构成的班培养的是同质技能，混成班的产出是跨层对话，工程师与管理者在课上互相挑反事实的毛病：挑毛病的过程就是跨层理解的过程，第 9 章的干预货币理论在培训班里第一次被实践：学员第一次体会到对方手里的货币长什么样。
+体会的延伸是组织级的认证，完成四课加毕业卡的学员授予内部认证，认证的名单与卡片作品进知识库：认证不是头衔是产能标记，需要写卡的项目从名单里找人：产能标记让卡片技能第一次可见，可见之后才有调配与激励，第 39 章的预算科目里有认证培训与写卡工时两栏：制度的闭环在此完成。
+闭环之外还剩最后一段：本章是第二部的末章，解剖学部到此交卷。五章的内容（字段、当时可见、决策点与不可逆点、加码台阶、失效链、反事实与证据等级，共六章）构成一个完整的证据工作流：找材料（第 2 章的门槛）、读材料（第 6 章的纪律）、拆结构（第 9 章的九格）、定位关键位置（第 7 章）、给结论（第 5 章的字段与本章的方法）：工作流的每一站都有工具、都有纪律、都有练习。工作流的终点是一个能力：把任何一起失败，变成一张可核查的卡。这个能力就是本书全部分析的地基：第三部的二十四章机制，每一章的案例都是用这套工作流做出来的。读者练熟了它，就有了亲手检验本书的每一块基石的能力：这是本书对读者能力的最高邀请，也是本部的合卷语。
+合卷之后第二部的六个章回课表重新点一遍名：第 5 章 12 字段、第 6 章 3 纪律、第 7 章 2 工具 1 判定表、第 8 章 7 台阶 4 装置、第 9 章 3 层 3 断点 9 格表、第 10 章 5 步法 5 级表。六课合计的数字装备：12+3+3+11+15+10，共 54 个可操作件。这个数字是第二部的全部产出，也是第三部每个案例背后的工艺成本。数字大而件件能用：这就是工具书与观点书的分野，也是本书敢把 158 张卡交给读者核查的底气来源。
+底气之外给一句收束全部的白话：第二部教的全部东西，用一句家常话说就是，把失败这件事，当回事地、有章法地、留痕迹地做一遍。当回事是态度（第二部的存在证明态度可以转化为方法），有章法是本章到第 5 章的工具（方法可以学），留痕迹是第 38 章的制度（痕迹可以查）。三件事都不玄：每一件都能从明天的一个下午开始做。第二部在此合卷，第三部的机制之门在你面前。
+门后的二十四章，每章都会用到你在这六课里练的每一件工具：案例卡在每章的形态不同（有的展开、有的压缩），但骨架永远是十二字段、证据永远带等级、反事实永远过五步。学完本章的读者在第三部里不会遇到任何新工具：会遇到的是同一套工具在二十四种失效上的二十四种用法。用法的丰富，正是工具设计的成功：这也是为什么本书把工具全部前置，前置的成本是前两部的抽象，收益是后四部的流畅：抽象换流畅，这笔交换在阅读体验上是有争议的，在能力建构上是没有争议的。
+没有争议的最后一个原因是时间：工具前置的学习成本是一次性的，六章学完终身可用：机制后置的学习成本是持续的，每章都要重新解释方法：一次性的成本在任何长期项目中都优于持续性的成本，第 28 章的期限逻辑在这里罕见地站在了投入这一边：为工具花的钱，是全书回报率最高的钱。本章作为这笔投资的最后一张收据，到此合卷。下一部，我们用这些工具去访问五个行业：它们的记录制度、它们的名案、它们的口音。
+口音的预告与第 3 章的地图呼应：航空的口音是程序（每句话都有编号），化工的口音是层次（物理化学与管理的双螺旋），海事的口音是国际（每个案例都是多法域），医药的口音是统计（个案与信号的换算），核电的口音是保守（哪怕一毫希也要登记）。五种口音在第四部各占一页，读完口音的读者，拿到任何一个行业的报告都能立刻听出它是哪里的：听出产地，是评价一份材料的前置技能，前置技能加第二部的工具，就是读者进入第三部现场的全部装备。
+装备齐了，最后清点一遍这一部的六个章回与它们的数字装备：第 5 章 12 字段、第 6 章 3 纪律 1 判据 3 信号词、第 7 章 3 条件 3 货币 1 判定表、第 8 章 7 台阶 4 装置 1 自测、第 9 章 3 层 3 断点 9 格表、第 10 章 3 纪律 5 步法 5 等级 1 标注体例。六课合计 50 余个可操作件，件件可以在今天下班前开始使用：这就是第二部作为全书工具箱的最终形态，也是它作为本书中场合卷的资格：上半场给了读者失败的世界观（第一部）与解剖的手术刀（第二部），下半场（第三部）将用这两样东西去巡诊二十四种组织失效。合卷，进场。
+进场前的最后一句叮嘱写给想跳过第二部直接读第三部的读者：你可以这样做，第三部的每章案例卡是自足的（不学解剖学也能读懂故事），但你会错过后半段，每个案例的失效链分析、每个防法与干预货币的对应：错过的这些恰好是本书区别于故事合集的部分。如果你读完第三部发现需要回补工具，欢迎回来：第 5 至第 10 章随时在这里，等你的问题带着需求而来。工具书最好的打开方式本来就是带着问题查，顺序阅读只是它最体面的那种。
+体面与实用之外，最后给一条重读的建议：第二部值得在你第一次亲手做完一张卡之后再读一遍，做过之后再读，第 5 章的每个反例你都会认出自己犯过的、第 6 章的每条纪律你都会想起自己差点违反的：做过之后的重读是彩蛋阅读，所有第一遍看不见的细节都亮了。这个建议适用于全书任何一章，但尤其适用于第二部：因为第二部的每一件工具都要经过你的手才会真正属于你。
+属于你的标志不是记住定义，是肌肉记忆，写复盘时手自动去分双栏、做决策时手自动去填判定表、读报告时眼自动去找证据等级：肌肉记忆的养成没有速成，每件工具都要亲手用十次以上，十次的使用清单恰恰是本部各章的自检五问：五问加练习，就是全部的养成方案。本章作为解剖学部的终章，把养成的起点再一次交到你手里：从今天的第一张卡开始。
+第一张卡不必完美，它的使命是暴露你与标准之间的距离，距离清单比完美卡更有用，它就是你下一阶段的学习大纲。写完第一张卡，拿它对照第 5 章的字段表逐格检查：哪格空着、哪格的故事在冒充事实、哪格的反事实是全能型：检查结果写一页备忘，备忘就是你的学习计划，计划执行完，第二张卡自然合格一半。本部的全部内容，说到底就是为了让你在第二张卡时合格、第五张卡时熟练、第十张卡时能教别人。教别人的那一刻，本书的使命就完成了。：最小反事实的五步倒推法（含三种不合格反事实），证据等级 A–E 的定义、升降级与"重建"标注。
+何时翻回来：写案例卡字段 11 与字段 12、评审别人的复盘结论、或者决定一个案例能不能进正文的时候。
+读完约需：35 分钟。</p>
+</blockquote>
+<h2 id="101">10.1 最小反事实的纪律</h2>
+<p>定义（第 5 章字段 11 的展开）：只改变一个动作，事件即可避免或后果大幅缩小的那个动作。
+定义里还有一词要精读：大幅缩小，反事实不要求消除全部后果，把 110 人死亡缩成 110 人受伤，也是合格的反事实，相称性：反事实的规模要与后果的规模相称，把一起 97 人死亡事故的反事实定为一次班前会的提醒，提醒拦不住 97 人级别的后果：相称性的检验是干预的量级覆盖，干预的杠杆够不够撬动这个后果：不够撬动的反事实是玩具，玩具反事实的鉴别：把它当真执行一遍，后果真的能缩小到声明量级吗。
+当真执行的演练有个变体叫最小成本试演，反事实的动作假设只执行一次，成本几何、谁会反对、流程是否允许：三问的答案给反事实的现实性打分，现实性低的反事实即使合格，也只是合格的理论，理论反事实的价值在于标出位置，现实反事实的价值在于可执行：两者的价值不同，底稿里都留（落款里只放现实性过关的那个。），后果的缩小以可验证为标准，预期缩小的量级要写明，把后果写小一半还是小九成：量级声明让反事实的评估有了刻度，不可验证的缩小声明（后果会好很多）不算数。三条纪律：只写一个；写完检验它是否依赖运气；写完检验它是否越权。三条全过，才算合格。</p>
+<p>为什么只写一个，第 5 章已经从读者端讲过
+作者端的纪律还有一个心理障碍要拆：写多个反事实的冲动来自怕遗漏，只写一个会不会漏掉更好的：怕遗漏的解法是底稿，把全部候选写进工作底稿，底稿附在卡后不发表：发表的只有一个，底稿的存在让怕遗漏成为多余，候选都留了痕，只是公开的结论只有一个。底稿与结论的分离是学术评审的常规，复盘写作借用即可。（读者会挑简单好走的记住）。从作者端补一句：多个反事实并存说明作者没有完成倒推，两个候选反事实摆在桌上，正确做法是比较它们的干预位置与证据强度，选出一个，把落选的写进工作底稿。结论只交付一个，这是工具书的义务。
+只写一个的纪律还有一个博弈论理由：多个反事实并存时，读者会自动选择成本最低的那个作为教训，而成本最低的往往不是效果最好的，教训的选择权从作者滑向读者的惰性：滑动的结果是同一个案例在不同读者那里产出不同的教训，教训的随机化等于没有教训。单反事实纪律把选择权收归作者，作者的比较过程写在底稿，结论只留一个，交付与底稿的两层结构兼顾了严谨与可读。</p>
+<h2 id="102">10.2 五步倒推法</h2>
+<p>第一步：倒排失效链。从后果出发向回列节点
+倒排的技术还有一个辅助工具要提：时间线软件或纸笔皆可，工具不重要，纪律才重要：倒排的纪律是节点写卡片，一个节点一张卡，卡片可以重排，倒排的过程是试错，顺序错了重来，卡片化让重排的成本趋零。卡片化的物理动作，写卡片、排顺序、连线，看似原始，效果胜过多数思维软件，本书只取一个实操结论：复盘与倒排，回到纸面上去做。
+纸面上的倒排有一个团队版本要补：倒排墙，把节点卡片贴在一面墙上全员排序，排序的分歧处就是认知分歧的所在，分歧的卡片用不同颜色标注，颜色墙是复盘会的高级形态，会议从听报告变成排序子：排序墙的产出是全组校准过的失效链，校准的意义在第 30 章交接断层里讲过：组织对失效的共同认知，比任何个人认知都更抗失传。
+抗失传的认知还有一个文档化出口：排序墙拍成照片归档，照片加最终顺序的数字版，两者进知识库与知识包，第 30 章：归档的排序墙是失效链的永久底稿，三年后新人的重建对照，底稿就是标准答案：标准答案的存在让每次重建的偏差可测，偏差的轨迹是组织认知的进化记录。
+倒排的起点还有一个技术提醒：后果要选对层级，从哪个后果开始倒排，死亡的后果还是受伤的后果还是未遂的后果：起点不同，倒出的链条不同，重大后果的链条更长，未遂后果的链条止于防御闸，起点按复盘的目的选，学防御选未遂、学穿透选事故：目的先于倒排，这是第 35 章定位表在方法论里的第一次现身。：后果、不可逆点（第 7 章）、最后一个决策点、更早的结构性条件。列到组织层与激励层为止（第 9 章的九格表直接可用）。节点要带日期与动作主体，"管理松懈"不是节点，"3 月 14 日评审会将该项风险列为第 7 议题、用时 4 分钟"是节点。
+节点判据还可以再补一条：节点必须是动作而不是状态，会议召开是动作、议题排位是动作；管理松懈是状态、文化不良是状态：动作可以换（换一个动作试试），状态换不动，你无法直接换一种文化：状态要通过生成它的动作来改，找到生成状态的决策：状态节点是九格表激励层的常客，写清楚它由哪个动作生成，就完成了从状态到动作的还原。</p>
+<p>第二步：逐节点做反事实检验。对每个节点问：该节点的动作若不同，后果是否改变？改变的标"有效"，不改变的标"无效"。检验时只用当时可见的信息（第 6 章纪律）：一个动作要算合格的干预点，其必要性必须在当事人的信息环境里成立。
+当时可见的检验还有一个边界情形：信息环境本身是可改变的，当事人看不见某信息，是因为信息系统没显示：在这种情形下，合格的干预点上移到信息系统层，让信息可见是反事实，让当事人多聪明不是。上移的逻辑与第 9 章九格表一致，信息环境的改造是组织层干预：检验时区分当事人在既有环境下的判断与信息环境本身的改造，两个层次的合格反事实可以并存，各自标层，第 9 章的标层纪律。</p>
+<p>第三步：剔除运气型。凡依赖偶然性的候选，剔除。"若检查员那天多看一眼""若恰好在场的是位资深工程师"都属此列。运气型反事实的鉴别特征：它要求的动作在制度里没有位置，发生与否取决于人手与巧合。</p>
+<p>第四步：剔除越权型。候选动作若要求当事人违反流程、对抗上级或拥有他实际没有的权限，剔除或上移。车间操作员"应当拒绝放行"是越权型反事实，除非该流程确实赋予他独立否决权；拒绝权不存在的，合格干预点在授权设计上，不在操作员身上，节点因此上移到写流程的会议。越权型反事实是复盘里最常见的不合格品，它把结构问题化装成勇气问题。
+越权型的检查还有一个配套动作要写：上移之后的节点要重新过一遍运气检验，上移到授权设计层的新节点，若修复方式依赖领导开明，某位高管恰好重视，则又是运气型：运气检验在每一层都要做，运气不挑层，它在任何层都能混进候选。检验的口诀是写一个动作问一句：这个动作在制度里有位置吗，有位置才继续，没位置就再上移或剔除。</p>
+<p>第五步：取最靠后者并落款。在剩余合格候选中取时间最靠后的一个，写明它的三要素：日期、位置（谁的地盘）、动作。落款格式："最小反事实：在（日期）的（载体）上，（主体）执行（动作）。"
+落款的最后一个用途是量化统计：组织把一年的合格反事实收齐，每条的层、位置、动作类型分类统计，统计的读数是组织改进机会的分布，哪一层的反事实最多：分布给下一年改进资源的分配提供依据，反事实最多的一层就是改进预算该去的一层：这个从统计到预算的通路，是本章方法论与第 39 章预算模板的接口。三要素写不齐，说明倒推还没完成，回到第一步。
+落款格式还有一个组织级应用：反事实的工单转化，合格的反事实直接生成一份工单草稿，工单的字段与反事实三要素一一对应，日期对期限、位置对责任方、动作对任务：转化的意义是让教训落地为零一个待办，不转化的反事实在复盘会结束时就死了：转化的触发条件是评审通过，评审问的就是五步法的问题，过了五步，工单自动合法。</p>
+<h2 id="103">10.3 三种不合格反事实（对照表）</h2>
+<table>
+<thead>
+<tr>
+<th>类型</th>
+<th>样例</th>
+<th>病灶</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>全能型</td>
+<td>"加强管理、完善制度、提高意识"</td>
+<td>无动作、无主体、无日期，不可执行不可反驳</td>
+</tr>
+<tr>
+<td>运气型</td>
+<td>"若检查员恰好多看一眼"</td>
+<td>要求的动作在制度里没有位置</td>
+</tr>
+<tr>
+<td>越权型</td>
+<td>"操作员应当顶住压力拒绝放行"</td>
+<td>要求当事人行使他没有的权限；合格干预点在授权设计</td>
+</tr>
+</tbody>
+</table>
+<p>全能型最常见，鉴别动作是把句子压成一个动词加一个宾语：压不出来，就不合格。
+三种不合格反事实还有一个混合形态要收录：伪装成具体的全能型，看起来有动作有主体，管理层应该更早意识到供应链的脆弱性：拆开看：管理层是集体名词（无具名主体），更早意识到是状态（无动作）：伪装的具体比明显的空洞更危险，它通过了两秒钟的直觉检查，只有用五步法逐项过，才现出原形。伪装版的鉴别口诀：具名到人、动词落地、日期给到：三样缺一即打回。</p>
+<h2 id="104-ae">10.4 证据等级 A–E</h2>
+<p>全书案例的证据分五级，等级决定该案例有资格支撑什么内容。</p>
+<p>A 级：独立调查机构的报告全文。独立于被调查方与处罚职能，全文公开，含事实编与分析编。可支撑：决策序列、被排除的选项、最小反事实。本书正文案例的主体等级。</p>
+<p>B 级：官方通报、公报、监管公告。有权威性，无完整证据链。可支撑：后果量级、结论性认定。不可支撑：决策点细节。B 级案例进附录矩阵，进正文须标"重建"。过程报告（如 JTSB 的"経過報告"）按 A− 计，与附录 C 一致。</p>
+<p>C 级：判决书、行政处罚决定书、仲裁文书。事实经过质证，但事实的选取服务于法律争点。可支撑：金额、责任主体、行为时间线。不可支撑：未进入争点的技术过程。
+C 级的使用还有一条方向性提示：优先引用对己方不利的事实认定，法院确认的、对方挑战失败的事实，经过的质证最充分：不利认定反而更硬。复盘引用 C 级文书时，自认事实优先是一条提高可信度的技巧。</p>
+<p>D 级：当事方公开复盘（软件行业 postmortem、公司声明、当事人回忆录）。有第一手细节，但自证性天然可疑。可支撑：组织内部过程的形态。与 A、B、C 级材料交叉验证后才可支撑事实认定。
+D 级的交叉验证还有一个效率技巧：验证的优先顺序，先验 D 级材料里独有的细节，别家没有的细节才需要验：与公开报告重合的部分，报告已经背书，不必重复验：验独有的、跳过重合的：一套优先顺序能把交叉验证的工作量压掉七成。</p>
+<p>E 级：媒体报道。只作发现线索：用它找到案例，再去找 A–D 级材料。正文禁止以 E 级为唯一来源。
+E 级的搜索技巧还要补一条：媒体的时效分层，事发报道（快、错得多）、深度调查（慢、纠错多）、周年回顾（最慢、加入长期视角）：三层报道串读是 E 级线索挖掘的完整动作，只读第一层得到的案例方向常常是错的。串读的材料清单进本书的检索手册，各领域的深度媒体名单与周年回顾的检索式。</p>
+<p>升降级规则两条。
+升降级之外还有第三种变动：状态冻结，证据等级待定的案例，调查进行中、诉讼未决：标为冻结状态，冻结卡不进正文、不进矩阵、只在知识库里待命：冻结的理由写明，预计解冻条件：调查终报发布即解冻，解冻后按新证据定级。冻结状态的引入防止了两类错误，用过时的过程报告下结论，或在终报发布后忘记回头更新。冻结是证据生命周期管理的最后一块拼图。
+拼图之外还有一种变动：证据的部分降级，一张卡里多条事实的等级不同，核心事实 A 级、旁证 C 级：部分降级时卡片不整体降，降的是单条事实的支撑范围，等级标注改为分条标注，每条事实带自己的等级：分条标注让卡片的使用者精确知道哪条硬哪条软，粗颗粒的整体等级在复杂案例里是误导，分条是成熟的标志。组合升级：B＋C 互证的核心事实，可支撑标注"重建"的正文案例；单一 B 级不行。
+组合升级的互证规则还有一个细节：互证的是事实不是结论，两份 B 级文件对同一事实的记载一致，互证成立：两份文件的结论一致但事实陈述各异，互证不成立，结论的一致可能只是转述的循环，第 2 章的流通偏斜在证据互证里的形态：循环转述是证据分析的经典陷阱，A 抄 B、B 抄 C，三份来源其实是同一份。破循环的检验是找最早的源头，三份材料的第一份是独立采访还是互相转述：源头检验写成口诀：溯源、找最早、问一句它亲眼看见了吗。降级：链接失效且无存档的，降级待核；引用文本与原文不符的，直接剔除（链接核查与数字回源两道检查负责执行）。
+升降级的执行还有一条仲裁规则：升降级的争议由谁裁决，证据等级的判断有主观成分，同一份材料，两人可能判不同级：仲裁的原则是就低不就高，争议等级取较低者：就低的安全边际是给读者的，读者按低级使用材料，不会吃亏。仲裁记录写进案例的勘误行，争议本身也是材料。</p>
+<h2 id="105">10.5 "重建"的标注方法</h2>
+<p>中等证据的案例仍然值得写，条件是把推断标出来。
+值得写的理由还有一个组织学注脚：多数组织的内部材料天然是 B、C、D 级，一线复盘是 D、内部调查是 B、法务文书是 C：等级制度的存在让这些材料第一次有了互认的语法，知道哪级能干什么，内部复盘才能被正确使用，不夸大、不浪费：等级语法的组织级教学是一天的课，学会之后，组织的全部存量复盘都从一堆纸变成分级知识库。标注体例：正文叙述只写可验证的事实句；推断句以"重建"起头，写明依据。
+重建句的写作还有一个语气纪律：推断的语气词克制，推断句里不使用显然、无疑、当然，推断就是推断，把推断写成断言的作者，是在用语气弥补证据：语气与证据成反比是复盘写作的一条铁律，语气越强的句子，读者越应该追问它的证据编号。示例格式：</p>
+<p>"3 月 14 日评审会的纪要显示该项风险列为第 7 议题（事实句，C 级：会议纪要）。重建：按议题顺序与时长推断，该风险得到的讨论不足 5 分钟，未形成决议条目（推断句）。"</p>
+<p>重建句的纪律：一条推断必须能被读者沿着标注的依据复查；复查路径不存在的推断不写。
+重建标注的密度也要有自律，满纸重建的案例读起来全是脚注：重建密度超过正文的四成时，说明证据还不够写这篇，退回矩阵等材料：密度自律的量化标准是事实句与推断句的比例，至少三比一，低于三比一的案例，标题就要注明这是重建分析而非事实报道。重建标注让中证据案例保持可用，同时不让它们冒充 A 级。附录 B 的案例总表为每条案例保留等级列，读者的信任应该跟着等级走。
+等级的标注还有一个动态维护的要求：等级不是终身制，新证据出现，等级上调或下调，调查报告发布，B 级案例升 A 级；引用原文被推翻，案例降级或剔除：动态维护的制度载体是案例库的年检，年检的动作是逐卡看证据状态，有没有新报告、链接还活着吗：年检的产出是等级变动清单，清单公示给读者：读者拿到的永远是最新等级。</p>
+<h2 id="106">10.6 数字回源与引用体例</h2>
+<p>正文里每个数字的四元组（谁统计、何时、样本、口径）在第 5 章已立规，这里补两条执行规则。规则一：数字的集合检查。写完一章，提取正文全部数字，与该章引用的案例卡数字集合做差集，差集为空才算过关。
+差集检查还有一个反向用法：卡里有而正文没用的数字，用不上不是问题；用上了而卡里没有，才是问题。反向差集说明卡比正文更丰富，这是好现象，说明作者做了取舍而不是照抄。取舍的理由写进卡的备注，为什么这个数字没进正文，备注让取舍可追溯。这条规则的实际含义只有一句：正文里不许出现"顺手写个大概数"，所有数字要么来自引用的材料，要么删掉。
+数字纪律的成本收益也值得写明：成本是写得慢，每个数字都要回查原始材料；收益是核查的免除。读者相信每一个数字，因为流程保证了它们；信任的复利在引用时兑现，别人引用你的数字不必自己再核一遍。规则二：引文保留原文语言，括注译文；机构名、文书名、法规名按《术语表》中英对照执行，不漂移。</p>
+<p>题录体例固定为：（机构，文件编号或题名，年份，链接见附录 B 编号）。页码在核对阶段补齐；拿不到页码的引文，把引述范围写宽一点（"该报告执行摘要"而非"该报告第 41 页"），这是诚实处理不确定性的体例。
+体例的诚实原则还有一条延伸：复盘的读者告知分级，A 级证据支撑的结论可以写成确定句，B 级支撑的写大概率句，重建句永远带推断标记：告知分级让读者按等级阅读，不确定的句子永远不以确定的口吻出现。分级告知写进第 38 章的复盘模板，模板管格式，纪律管灵魂，两者合起来，才是可核查复盘的完整形态。
+体例的诚实原则还有一个应用：引语的取舍，引原文时，只引你逐字核对过的句子，转述的引语加转字，据转述：转述与直引的区分是引用伦理的地基
+地基之上还有一条检验：引用的页码核对，直引的每一句都能翻到页码，翻不到页码的直引降级为转述，页码核对的执行成本每句一分钟，它买的是全书引用体系的零容忍承诺：零容忍的意思是：宁可少引一句，不引一句无法核对的。，地基裂了，整本书的引文都可疑。</p>
+<h2 id="_1">自检五问</h2>
+<ol>
+<li>写出你组织最近一次损失的最小反事实，用五步法检验它是否运气型或越权型。</li>
+<li>你手头项目的决策记录，够写 A 级还是只有 D 级材料？差在哪里？</li>
+<li>你引用过的行业案例里，有几条经得起 10.4 节的等级检验？降级之后还成立的结论有几条？</li>
+<li>你的复盘里最近一次出现全能型反事实是什么时候？当时它是怎么通过评审的？</li>
+<li>给你的团队立一条引用规则：哪个等级以下的材料，可以在你的会议室里作为事实引用？
+五问之外给本章的毕业实践：为你组织最近的一次损失写一张完整的案例卡（十二字段、五步倒推、等级标注、重建句子全套走一遍）。实践的全部工时约半天，它的验收标准是：一个不了解该事件的同事，能只凭你的卡与链接，把事件从头到尾复核一遍。验收通过，你已经掌握了本书方法论的全部零件：卡片的书写能力是本书交给读者的最后一件工具，也是后续每一部（领域、用法、边界）都要反复使用的工具。
+工具的使用场景在后续各部无处不在，领域页的案例按卡组织、用法章的模板按卡展开、边界章的检验按卡核对：卡片这门手艺贯穿全书，读者在第二部末尾就练熟它，后面的四部读起来就全是复习加应用：这也是本部把方法论集中在第 5 至第 10 章的原因，先把工具箱装满，再出门旅行。
+旅行之前还剩最后一站：把五个章节的证据纪律串成一条用户路线，读者面对一份新的失败材料时，依次过五道门：第一道，它是什么等级（第 10 章）；第二道，它过了记录门槛吗（第 2 章）；第三道，它的当时可见与事后重建分了吗（第 6 章）；第四道，它的失效链断了几层（第 9 章）；第五道，它的最小反事实合格吗（本章五步法）。五道门走完，一份材料的使用方式就定了，引用、参考、仅作线索、丢弃：五道的流程可以印成一页纸，一页纸的证据纪律，是第二部交给读者的最终浓缩。
+浓缩之外给最后一段实操提醒：五道门不必每次全走，快速读报走第一、二道即可，要引用才走全部五道，门的分级使用与第 23 章的分级放行同构，用途决定深度：随手一提的材料不用五道门，写进决策依据的材料必须五门全过：用途分级让证据纪律的成本与价值成正比，纪律才守得住。</li>
+</ol>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  回到页面顶部
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="页脚" >
+        
+          
+          <a href="../ch09/" class="md-footer__link md-footer__link--prev" aria-label="上一页: 第 9 章 失效链：三层结构与交界断点">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                上一页
+              </span>
+              <div class="md-ellipsis">
+                第 9 章 失效链：三层结构与交界断点
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../ch11/" class="md-footer__link md-footer__link--next" aria-label="下一页: 第 11 章 偏差的正常化">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                下一页
+              </span>
+              <div class="md-ellipsis">
+                第 11 章 偏差的正常化
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      免费公开 · 持续校订
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.sections", "navigation.top", "navigation.footer", "navigation.tracking", "toc.follow", "search.suggest", "search.highlight", "content.code.copy"], "search": "../assets/javascripts/workers/search.a7633da7.min.js", "tags": null, "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.c21346df.min.js"></script>
+      
+        <script src="../assets/shelf-counter.js"></script>
+      
+    
+  </body>
+</html>

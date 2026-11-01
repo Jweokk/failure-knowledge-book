@@ -1,0 +1,3122 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="A cross-domain manual of structural failure: twenty-four mechanisms, fourteen domains, 159 cases">
+      
+      
+      
+        <link rel="canonical" href="https://tkf.fly2ai.top/en/ch12/">
+      
+      
+        <link rel="prev" href="../ch11/">
+      
+      
+        <link rel="next" href="../ch13/">
+      
+      
+        
+          <link rel="alternate" href="/en/" hreflang="en">
+        
+          <link rel="alternate" href="/" hreflang="zh">
+        
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.8.0">
+    
+    
+      
+        <title>Chapter 12 Goal Displacement; Goodhart's Law - The Knowledge of Failure</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.57a0d79d.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.fb2fffe2.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Serif:300,300i,400,400i,700,700i%7CNoto+Sans+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Noto Serif";--md-code-font:"Noto Sans Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/extra.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="custom" data-md-color-accent="custom">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#chapter-12-goal-displacement-goodharts-law" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="The Knowledge of Failure" class="md-header__button md-logo" aria-label="The Knowledge of Failure" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            The Knowledge of Failure
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Chapter 12 Goal Displacement; Goodhart's Law
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="custom" data-md-color-accent="custom"  aria-label="Dark"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Dark" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="custom" data-md-color-accent="custom"  aria-label="Light"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Light" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+      <div class="md-header__option">
+  <div class="md-select">
+    
+    <button class="md-header__button md-icon" aria-label="Select language">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m12.87 15.07-2.54-2.51.03-.03A17.5 17.5 0 0 0 14.07 6H17V4h-7V2H8v2H1v2h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2zm-2.62 7 1.62-4.33L19.12 17z"/></svg>
+    </button>
+    <div class="md-select__inner">
+      <ul class="md-select__list">
+        
+          <li class="md-select__item">
+            <a href="/en/" hreflang="en" class="md-select__link">
+              English
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="/" hreflang="zh" class="md-select__link">
+              中文
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</div>
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/Jweokk/failure-knowledge-book" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="The Knowledge of Failure" class="md-nav__button md-logo" aria-label="The Knowledge of Failure" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    The Knowledge of Failure
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/Jweokk/failure-knowledge-book" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../preface/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Preface
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Part I　Meta-questions
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Part I　Meta-questions
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ch01/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 1: Why Failure Knowledge Is the Most Expensive, and the Least Organized
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ch02/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 2 Three Biases: Recording, Survivorship, Attribution
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ch03/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 3 The Five Fields That Record Failure in Earnest
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ch04/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 4 Why This Method Did Not Spread
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Part II　Anatomy
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Part II　Anatomy
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ch05/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 5 The Twelve Fields of the Case Card
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ch06/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 6 Visible at the Time
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ch07/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 7 Decision Points and Points of No Return
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ch08/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 8: Escalation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ch09/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 9 The Failure Chain: Three Layers and the Breaks at Their Boundaries
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ch10/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 10 The Minimum Counterfactual and Evidence Grades
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Part III　Twenty-four mechanisms
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Part III　Twenty-four mechanisms
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ch11/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 11 Normalization of Deviance (Vaughan, 1996)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 12 Goal Displacement; Goodhart's Law
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 12 Goal Displacement; Goodhart's Law
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#121-what-it-is" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        12.1 What It Is
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#122-how-it-grows" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        12.2 How It Grows
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#123-the-shape-in-four-domains" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        12.3 The Shape in Four Domains
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="12.3 The Shape in Four Domains">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#case-1-finance-the-delinquent-loans-that-were-moved-off-the-books" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Case 1 (Finance): The Delinquent Loans That Were Moved Off the Books
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#case-2-public-policy-ratings-that-drifted-from-actual-risk" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Case 2 (Public policy): Ratings That Drifted from Actual Risk
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#case-3-software-the-gatekeeper-that-watched-the-replica-condensed" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Case 3 (Software): The Gatekeeper That Watched the Replica (condensed)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#case-4-construction-the-broken-bolts-that-never-entered-the-ledger-condensed" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Case 4 (Construction): The Broken Bolts That Never Entered the Ledger (condensed)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#case-5-finance-the-codes-nobody-reconciled-condensed" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Case 5 (Finance): The Codes Nobody Reconciled (condensed)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#124-what-can-be-seen-earliest" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        12.4 What Can Be Seen Earliest
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#125-how-to-prevent-it" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        12.5 How to Prevent It
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#126-boundaries-with-adjacent-mechanisms" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        12.6 Boundaries with Adjacent Mechanisms
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#127-five-self-checks" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        12.7 Five Self-Checks
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ch13/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 13 Narrative before Evidence; Motivated Reasoning
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ch14/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 14 Where Intuitive Expertise Breaks Down (Kahneman & Klein)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ch15/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 15 Practical Drift (Snook)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ch16/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 16 Information Attenuation up the Hierarchy
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ch17/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 17 Misaligned Incentives
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ch18/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 18 Diffusion of Responsibility
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ch19/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 19 Why the Truth-Teller Goes First
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ch20/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 20 The Slack of Success (Failure of Success, Sitkin)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ch21/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 21: Hidden Coupling
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ch22/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 22 The Illusion of Redundancy
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ch23/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 23 Extrapolating Past the Validated Domain
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ch24/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 24: Crossing a Scale Threshold
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ch25/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 25: Margin Erosion (Dekker)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ch26/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 26 Automation and Skill Decay
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ch27/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 27: Sunk Cost and Escalation (Staw)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ch28/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 28 Horizon Mismatch; Short-Termism
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ch29/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 29 The Invisibility of Maintenance
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ch30/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 30 Handover Rupture; Organizational Forgetting
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ch31/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 31 Regulatory Lag and Capture
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ch32/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 32 Compliant and Unsafe (Hollnagel: Safety-I and Safety-II)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ch33/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 33: Cascading Failure
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ch34/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 34: Path Lock-in (David; Arthur)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Part IV　Fourteen domains
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Part IV　Fourteen domains
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../domain-01/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Aviation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../domain-02/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chemical & Process
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../domain-03/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Nuclear & Energy
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../domain-04/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Healthcare
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../domain-05/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Drugs and Devices
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../domain-06/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Construction and Infrastructure
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../domain-07/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Maritime and Transport
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../domain-08/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Software and Internet Services
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../domain-09/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Finance
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../domain-10/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Startups and Products
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../domain-11/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Public Policy and Administration
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../domain-12/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Military
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../domain-13/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Manufacturing and Supply Chain
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../domain-14/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Agriculture and Food
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Part V　How to use it
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Part V　How to use it
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ch35/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 35 The Situating Table
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ch36/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 36 Thirty Minutes Before the Decision
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ch37/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 37 Design Review Question List
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ch38/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 38 Writing a Postmortem That Lasts
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ch39/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 39 The Ninety-Minute Dry Run
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Part VI　Boundaries
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Part VI　Boundaries
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ch40/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 40 The Failures Worth Encouraging
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ch41/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 41 Normal Accidents and Black Swans
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ch42/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 42 When This Does Not Work
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9" >
+        
+          
+          <label class="md-nav__link" for="__nav_9" id="__nav_9_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Appendices
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_9">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Appendices
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../appendix-a/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Appendix A: Mechanism × Domain Matrix
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../appendix-b/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Appendix B: Case Index
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../appendix-c/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Appendix C: Evidence Grades and the Reconstruction Method
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../appendix-d/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Appendix D: A Genealogy of Mechanisms
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#121-what-it-is" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        12.1 What It Is
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#122-how-it-grows" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        12.2 How It Grows
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#123-the-shape-in-four-domains" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        12.3 The Shape in Four Domains
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="12.3 The Shape in Four Domains">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#case-1-finance-the-delinquent-loans-that-were-moved-off-the-books" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Case 1 (Finance): The Delinquent Loans That Were Moved Off the Books
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#case-2-public-policy-ratings-that-drifted-from-actual-risk" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Case 2 (Public policy): Ratings That Drifted from Actual Risk
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#case-3-software-the-gatekeeper-that-watched-the-replica-condensed" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Case 3 (Software): The Gatekeeper That Watched the Replica (condensed)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#case-4-construction-the-broken-bolts-that-never-entered-the-ledger-condensed" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Case 4 (Construction): The Broken Bolts That Never Entered the Ledger (condensed)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#case-5-finance-the-codes-nobody-reconciled-condensed" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Case 5 (Finance): The Codes Nobody Reconciled (condensed)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#124-what-can-be-seen-earliest" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        12.4 What Can Be Seen Earliest
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#125-how-to-prevent-it" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        12.5 How to Prevent It
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#126-boundaries-with-adjacent-mechanisms" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        12.6 Boundaries with Adjacent Mechanisms
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#127-five-self-checks" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        12.7 Five Self-Checks
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="chapter-12-goal-displacement-goodharts-law">Chapter 12 Goal Displacement; Goodhart's Law</h1>
+<blockquote>
+<p>What this chapter covers: how a metric quietly takes the place of the goal it stands for; three criteria for telling that the mechanism has started; the shape it takes on the ground in four domains; eight weak signals; and four lines of defence for whoever sets a metric.
+When to turn back: when you are about to set a new KPI, when a polished metrics report lands on your desk, or when something "looks good in the numbers but feels wrong".
+Estimated reading time: 50 minutes.</p>
+</blockquote>
+<h2 id="121-what-it-is">12.1 What It Is</h2>
+<p>A metric is always a stand-in. The goals that matter, safety, health, whether anyone actually learned the material, whether trust is real, whether the assets are worth what the books say, are for the most part not measurable in themselves. So the organization measures something countable and installs it where the goal should be. Goal displacement names the moment the substitute takes over: management attention settles on the countable quantity, the organization starts optimizing the quantity itself, and the optimizing stops improving the thing the quantity stood for. Goodhart's law in its common form: when a measure becomes a target, it ceases to be a good measure. Charles Goodhart said something narrower in a 1975 lecture at the Bank of England; the familiar sentence was written by Marilyn Strathern ('Improving ratings', European Review 5(3): 305–321, 1997, bibliographic record verified via Crossref). The causal direction is the part people get wrong. The measure did not degrade. The behaviour around it changed.</p>
+<p>Three criteria tell you the mechanism is running. Any one of them is enough:</p>
+<ol>
+<li>Optimizing actions appear that are specific to the assessed quantity, and their cost is spent on the number rather than on the work.</li>
+<li>Those actions do not improve the goal behind the number, and may consume it.</li>
+<li>Someone who says so pays for it, in the appraisal or in the meeting.</li>
+</ol>
+<p>The three are not parallel. Criterion 1 is the starting point. Any assessed metric attracts optimizing actions; that is rational behaviour, not a disease. Criterion 2 is the watershed, the point where the optimizing action comes off the goal it was supposed to serve. Criterion 3 is the freeze: the separation has been noticed, the noticer has been punished, and the organization's priorities are now on the record. How fast the three arrive depends on how quickly the distance between metric and goal becomes visible. The greater the distance and the later the consequence, the longer the window in which nothing appears to be wrong.</p>
+<p>The occasion of Goodhart's observation is worth recording. In 1975, discussing monetary aggregate targets at the Bank of England, he put the point as a piece of regulatory shop talk: any observed statistical regularity will tend to collapse once pressure is placed on it for control purposes. Strathern later rewrote it into the sentence everyone cites. The difference between the two versions usually gets skipped. The original describes a game between the controller and the controlled: the controlled party knows what is being watched and moves real behaviour outside the observation point. The familiar version describes a divergence between measure and goal. This book uses both, because both are happening inside organizations. The first is gameplay, what the assessed do to the metric. The second is drift, what the metric's meaning does to itself over time. Of the four defences in section 12.5, the first two watch gameplay and the last two watch drift.</p>
+<p>Donald Campbell, a sociologist, said the same thing a few years before Goodhart, from the angle of educational testing: the more any quantitative indicator is used for social decision-making, the more it will be subject to corruption pressures and the more it will distort and corrupt the social processes it is meant to monitor. Read together, the two sentences show the mechanism ignoring systems and industries alike. Wherever measurement is used to decide people or resources, pressure appears. You do not need to remember who said it first. What you need is the conditional both sentences share: used for decisions. A metric on a wall that nobody looks at provokes no behaviour at all. The entire force of goal displacement comes from the metric's wiring to appraisal, budget and personnel.</p>
+<p>Take a metric apart and it has four parts: the definition (what counts as one overdue loan), the sample (which projects enter the rating), the frequency (how often it is measured), and the presentation (what type size, which page). Each part has room for play, and the professionalism of the play rises through that list. Changing the presentation is the crudest move: bad numbers set in small type. Changing the frequency sits in the middle, measuring before the review and stopping after it. Changing the sample is subtler, moving the projects that are about to fail out of the sample. Changing the definition is the professional's move, redefining the start date of "overdue". Goodhart effects do not arrive in step across the four. Play with the presentation and the goal may be unharmed. Play with the definition and the link between metric and goal is usually already severed. Defences can be laid out to match: presentation and frequency get caught by paired indicators (Device 2), sample and definition get stopped by the register of definitions (Device 4). Case 1 in this chapter works on the definition layer, on whether a rescinded loan counts as a loss, and that is why it is misleading rather than merely aggressive accounting. A cut at the definition layer carries a disclosure obligation with it.</p>
+<p>Readers of a metrics report come in three kinds, and each has a different failure to guard against. The first reads the trend: the curve is up, so things are fine. Trend is the reading most easily polluted, because gameplay manufactures trends by nature. The second reads rank, its position against peers. Rank moves an organization's attention from the goal to the competition, and goal displacement evolves fastest in a ranking context, because once gameplay spreads among peers, not playing becomes the way to fall behind. The third reads anomalies, caring only about moments of significant deviation. The anomaly reader is the least sensitive to mature gameplay, since mature gameplay keeps numbers inside the normal band and misses every anomaly detector by design. No one reading is sufficient. The workable combination is to have the three readers exchange question lists on a schedule: the trend reader asking the anomaly reader "what has felt wrong lately" usually gets further than any audit report.</p>
+<p>One step down the same four parts yields three conditions a metric needs at the moment it is set. It must be reconcilable: the metric's data has to reconcile against an independent source, system logs against reports, an external list against an internal ledger. A metric that will not reconcile has no standing to enter an appraisal. It needs an outside comparison: a comparison series, not collected by the assessed party, designated in advance as the reference for when the metric distorts. And its definition history must be on file: changes to definition, sample, frequency and presentation kept in one place, so the metric can be replayed through time. A metric failing all three can still be used, though only for self-reference, never for appraisal or resource allocation. These three are the four defences projected onto the moment of setting: reconcilability is Device 2, the outside comparison is Device 3, the definition history is Device 4.</p>
+<h2 id="122-how-it-grows">12.2 How It Grows</h2>
+<p>Three conditions generate it.</p>
+<p><strong>Condition one: the goal cannot be measured directly.</strong> A goal that can be counted needs no proxy. "How many conforming parts did we build this month" can be counted. "How good were this month's decisions" needs a stand-in, say the share of decisions revisited six months later. The further the proxy sits from the real goal, the more room the optimization has to skew.</p>
+<p><strong>Condition two: the levels above read only numbers.</strong> Management's bandwidth is finite, and reporting across levels compresses into numbers by default (Chapter 16 gives that attenuation its quantitative form). Once the basis of a decision converges on a single number, optimizing that number is the rational choice at every desk in the organization. Nobody breaks a rule. Every level completes what it is assessed on. That is Chapter 17's misaligned incentives arriving as a technical implementation.</p>
+<p><strong>Condition three: the assessment cycle is shorter than the real cycle.</strong> Loan quality runs in years and the report in quarters. Student growth runs in years and the exam in semesters. Where the two cycles differ, the metric and the goal come apart, because inside the gap the return on optimizing the proxy is certain while the cost of exposure is deferred.</p>
+<p>A fourth condition is implicit and usually skipped: the neutral appearance of a number. Numbers do not look like interests. They look like facts. When two departments fight over a metric's definition, the scene presents as a technical discussion, how the sample is drawn, what sits in the denominator, and nobody has to say out loud that this decides their year-end rating. The neutral surface keeps optimizing actions out of moral view. Nobody believes they are cheating; everyone is "getting the data right". This is why goal displacement is more common than open fraud. Fraud needs someone willing to lie. Metric optimization needs ordinary people doing their jobs carefully.</p>
+<p>The spread of gameplay is the fastest step in the whole mechanism. Once an optimizing move has been invented, it needs no training to travel. The month-end push, the selective filing, the trick of moving an ugly quantity out of the denominator: these move with rotation, with meetings where one department watches another, with the annual reinterpretation of the assessment. Gameplay is the fastest-travelling knowledge in organizational memory, because it is the only knowledge that pays immediately on acquisition. Design the defence on the assumption that gameplay exists. A metrics system designed in the hope that nobody finds the game fails on the day it goes live.</p>
+<p>Condition three has a seasonal form that deserves its own paragraph. Gameplay rises and falls with the assessment calendar. The month-end push, the quarter-end surge, the fiscal-year-end adjustment of a definition are direct projections of the cycle gap. That shape hands an auditor a time window. Check at the trough of the calendar and you see normal operations; check at the peak and you see the game. Sampling points for a metric audit should therefore be secret and random, with the days around the assessment date always included. The practice is cheap. What it encodes is the insight that gameplay is periodic, and only a periodic method will see it.</p>
+<p>Composite metrics need a warning of their own. Weighting several sub-metrics into one score is the standard answer to thin management bandwidth, and it widens both entrances to this mechanism at once. Weights are the top layer of the definition: whoever sets them sets the cheapest path for gameplay, and weight changes usually go unlogged, with a lower bar than changing a definition. Composition also hides compensation. A deteriorating sub-metric can be fully cancelled by a flattering one, so an improving safety score may come precisely from a falling count of reported incidents. Three minimum requirements apply to any composite. Weight changes go through the definition register. Every sub-metric is displayed separately. Any jump in the composite can be traced to a named sub-metric. A composite that fails all three is worse to read than its parts.</p>
+<h2 id="123-the-shape-in-four-domains">12.3 The Shape in Four Domains</h2>
+<h4 id="case-1-finance-the-delinquent-loans-that-were-moved-off-the-books">Case 1 (Finance): The Delinquent Loans That Were Moved Off the Books</h4>
+<p>fi-001.</p>
+<p><strong>When and where</strong>: May 2019 (the special handling programme launched), August 2019 (the delinquency programme launched), through February 2021 (the end of the period the SEC treats as relevant), with rescissions in practice continuing to the end of August 2020. Orlando, Florida, at the headquarters of Travel + Leisure Co. The complaint was filed on 30 September 2026 in the United States District Court for the Southern District of Florida, case No. 26-cv-62760, with Litigation Release No. 26657 issued the same day.</p>
+<p><strong>What and who</strong>: Travel + Leisure Co., formerly Wyndham Destinations, Inc., renamed after its spin-off from Wyndham Worldwide on 31 May 2018 and renamed again to its present name on 17 February 2021, the largest timeshare company in the world, with 797,000 owners and more than 280 resort clubs; since 2014 the company has financed more than half of its timeshare sales itself every year (complaint p.6). The posts involved: senior management responsible for finance and investor relations, who confirmed the rescission target count every quarter (p.10); the sales rescission committee, which reviewed rescission requests beyond the statutory rescission period; the operations departments that executed the rescission coding; and the financial planning staff who built the monthly forecast.</p>
+<p><strong>What they were doing</strong>: Through late 2018, third-party exit companies grew active, charging owners to terminate contracts after the statutory deadline and often advising them to stop paying outright (complaint p.7). The company tightened rescission approvals and rejected any customer suspected of working with such a firm (p.7). The outcome ran against the tightening. In the first quarter of 2019 delinquency and the loan loss provision rate jumped together, the provision rate rising from 20.4% in the same quarter a year earlier to 22.5% (p.8). On the 1 May 2019 first-quarter earnings call, five analysts pressed on that metric in succession, and management promised on the spot to stop the year-over-year increase and hold the 2019 provision rate at its 2018 level (p.8). That same month the company started a special handling programme that pulled delinquent or defaulted timeshare loans out of the portfolio and rescinded them in bulk, known internally by three names: "late-stage delinquency" rescission, the "late-stage rescission programme", and the "owner care programme" (pp. 9–10). In August it added a further delinquency programme, covering loans tied to customer complaints (p.2). The special handling programme screened the longest delinquency first, ahead of foreclosure (p.10). New rescissions stopped at the end of August 2020 because timeshare sales were falling under the pandemic (p.11). Every loan rescinded in the relevant period fell outside the statutory rescission period, five to seven days in the states concerned, which the company called "late-stage rescission" internally (p.3, p.9).</p>
+<p><strong>The decision point</strong>:</p>
+<ol>
+<li>
+<p>1 May 2019, the first-quarter earnings call. Management turned the loan loss provision rate into a public commitment: stop the year-over-year increase, hold the 2019 guidance (complaint p.8). One quarter earlier the metric had appeared in the results at 22.5% against 20.4% (p.8). That sentence converted an internal metric into a public target, and every quarterly number after it had to answer to the sentence.</p>
+</li>
+<li>
+<p>From May 2019, the monthly forecast. The company wrote a target count into the monthly forecast for how many delinquent or defaulted loans had to be rescinded, calculated backwards: to reach the provision guidance, a given number of defaults had to leave the portfolio (p.10). Senior management confirmed the target count at least once a quarter and then directed the relevant departments to execute it (p.10). The calculation had two inputs, the 2019 guidance holding level with 2018 and the internal 2020 target the company had set for itself (p.10). The carrier was a forecast spreadsheet rather than a set of minutes, and the spreadsheet ran from May 2019 to the end of 2020 (p.10). It carried counts and balances. It carried no loan identities, and no comparison column for what the rate would have been without the rescissions.</p>
+</li>
+<li>
+<p>August 2019, the weekly meeting of the sales rescission committee. The delinquency programme compiled delinquent and defaulted loans into a "delinquency agenda" spreadsheet circulated before the meeting; every line on it was approved, with no review loan by loan (p.11). The committee's original function was to judge, one loan at a time, whether a request to rescind past the deadline should stand. After this step the judgement was a signature on a whole table. The committee still met and the agenda still went out.</p>
+</li>
+<li>
+<p>30 October 2019 to February 2021, seven periodic reports and five calls. The carriers the complaint lists: the MD&amp;A of the 10-Q for the five quarters from 30 September 2019 to 30 September 2020; the quarterly results releases issued with 8-Ks; the MD&amp;A of the 10-K for fiscal 2019 and fiscal 2020; and the calls for the third and fourth quarters of 2019, the third and fourth quarters of 2020, and the full year 2019 (p.12). The improvement was attributed to the customer care phone line, to getting owners back on vacation, to tighter underwriting, and to improvements in the booking system (p.13).</p>
+</li>
+</ol>
+<p><strong>What was visible then</strong>: the loan-by-loan list of rescinded loans, with days delinquent and default status; the thresholds were the company's own, 30 days delinquent and 120 days in default (complaint p.7). The list held one particular class of entry: loans coded for rescission within a few days of the 120-day mark (p.10). The delinquency programme's table was grouped by customer complaint, with rescission decoupled from whether a complaint had merit and tied only to delinquency status (p.2, p.11). The "delinquency agenda" spreadsheet and the committee's weekly agenda (p.11). The rescission target count inside the monthly forecast (p.10). The record of the five analysts' questions on 1 May 2019 (p.8). Analyst reports forwarded by investor relations, one stating that the provision rate had a material impact on the stock price (p.8). 10-Q and 8-K drafts, the provisioning worksheets, the call scripts (pp. 12–13). The company's self-set 2020 internal target sat in the same forecast set (p.10). One piece of background was also of record: investors and analysts treated the metric as a barometer of whether the company could hold off the third-party exit firms (pp. 11–12), and the company knew it (p.8). At the end of every quarter these materials sat on the same desk at the same time, a sheet saying how many loans had to go and a draft saying how much the metric had improved. One thing was already blank. The company forecast the effect of rescissions on the metric and never tracked the programme's actual effect on the financial statements (p.2, p.10), so nothing on that desk could answer how much of the improvement came from the rescissions. What became knowable only afterwards: the totals of more than 2,900 loans, roughly $77 million in balance, of which about $34 million was in default (p.3); the age profile, 44% over one year and 11% over two years (p.9); and the fact that in several quarters the programme moved both metrics by more than 5% (p.12).</p>
+<blockquote>
+<p><strong>Stop here. Decide before you turn the page.</strong></p>
+<p>You are in that seat now, with the materials above in front of you.</p>
+<ol>
+<li>What would you do? Write the action, not "pay more attention".</li>
+<li>Which item here are you most likely to miss, and why does it look unimportant?</li>
+<li>If you may set one checkpoint, when is it and what does it check?</li>
+</ol>
+</blockquote>
+<p><strong>What happened</strong>: on 30 September 2026 the SEC sued and settled on the same day. The company neither admitted nor denied the allegations, accepted a permanent injunction (Securities Act of 1933, 17(a)(2) and (a)(3); Exchange Act of 1934, 13(a) and 12b-20, 13a-1, 13a-11, 13a-13), and paid a civil penalty of $975,000 (Litigation Release 26657). The relevant period, October 2019 to February 2021, is not the same stretch as the rescission operations, May 2019 to December 2020, and the complaint writes the two apart (p.1, p.3). During the relevant period the company raised about $1.65 billion through three private note issuances, and issued $13.5 million of common stock for a 2019 acquisition and $96.8 million of common stock for an employee stock purchase plan (complaint p.14). Against the three questions: the most common answer to the first is "have legal confirm whether the right to rescind is available". The right was available. The complaint alleges non-disclosure, and the rescissions themselves are not among the charges (pp. 1–3), so that answer is a layer off the mark: an available right and a disclosable fact are two different things in the complaint (p.3). The item most easily missed under the second question is the monthly forecast, the only sheet in the case that carries the target and the action in one place. The checkpoint for the third belongs at the first monthly forecast review in May 2019: check whether that line of numbers has a disclosure treatment attached to it, and who signs the sheet.</p>
+<p><strong>Options ruled out</strong>: disclose both programmes and their quantitative effect on the provision metric (not done; every allegation in the complaint rests on this omission, complaint pp. 1–3). Leave the rescinded loans in the portfolio and provision for them on the normal basis (not chosen; rescission and charge-off happened in the same place, leaving no trace in the accounts, p.3). Have the sales rescission committee review the delinquency agenda loan by loan (the process existed; the delinquency programme routed around it, p.11). Track the programme's actual effect on the financial statements (not done, p.2, p.10). Use the absolute balance of delinquent loans as the external pair for the provision rate (not done; no disclosure in the complaint sets balance beside rate). Confine rescissions to the statutory five-to-seven-day window in each state (not done; every loan rescinded in the relevant period was past it, p.3). Obtain a written opinion from an outside auditor on the accounting for the rescissions (the complaint does not mention any review opinion from an outside auditor). The complaint records behaviour, not the reasons these options were turned down. What can be checked is that none of them happened, and that each carried a cost legible on paper.</p>
+<p><strong>Early signals</strong>:</p>
+<ol>
+<li>
+<p>1 May 2019: five analysts pressed on the provision rate in the same call (complaint p.8). The promise to stop the rise and hold guidance absorbed the pressure, and nobody asked how the company meant to stop it.</p>
+</li>
+<li>
+<p>First quarter 2019: the provision rate at 22.5%, up two percentage points year over year, a move the company itself acknowledged as meaningful to investors (p.8). It was treated as an operating problem and handled by operating means: take loans out of the portfolio, rather than say in the disclosure that the definition had changed.</p>
+</li>
+<li>
+<p>An analyst report forwarded by investor relations, stating that the provision rate had a material impact on the stock price (p.8). The sentence entered the internal channel and never entered a filed document.</p>
+</li>
+<li>
+<p>August 2019: the "delinquency agenda" went live and rescission moved from loan-by-loan approval to approval of a whole table (p.11). The simplification looked like an efficiency gain. It is the only written procedural change in the case, and after it no document records why any individual loan was approved.</p>
+</li>
+<li>
+<p>The age of the rescinded loans, 44% over one year and 11% over two (p.9). These were old accounts. Rescinding them did not improve the quality of new sales; it changed the numerator and the denominator of the current period.</p>
+</li>
+</ol>
+<p>Of the five, the earliest predates the programme's launch and the latest appears in the results release of 30 October 2019 (p.8, p.13).</p>
+<p><strong>The point of escalation</strong>: the "delinquency agenda" mechanism of August 2019. Judgement loan by loan was replaced by a signature on the whole table, and after that no rescission carried a record of whether it should have been approved (complaint p.11). In the same quarter the first rescissions entered the 10-Q and 8-K treatment. By 26 February 2020 the company described the full-year provision rate as "flat" and claimed it had met guidance (p.13), and the fiscal 2019 10-K carried the same treatment into the annual report (p.12). On 6 May 2020 it said the metric "would have been" the fourth consecutive quarter of year-over-year improvement (p.13). By then the rescission had moved from an operating action to a component of the compliance story. From May 2019 to at least December 2020 the cumulative count passed 2,900 (p.3), with the target reset on the forecast every quarter (p.10): each quarter stacked new rescissions on the last, and backing out would have meant unwinding a stack of spreadsheets. After new rescissions stopped in August 2020, the disclosure did not change its story; the fiscal 2020 10-K and the full-year call still described improvement (p.12). Reversing course would have required restating three years of external statements at once. That is what "cannot turn back" looks like in practice.</p>
+<p><strong>Failure chain</strong>:</p>
+<p>Technical layer: the definition. Whether a loan counted as on the books, and whether it stayed in the portfolio after rescission, was decided by the company's own accounting treatment. Once coded as rescinded, revenue, provision already taken and default balance reversed together, and the accounts read as though the loan had never existed (complaint p.3). The delinquency and default thresholds were the company's own as well, 30 days and 120 days (p.7), and rescissions clustered just short of 120 days (p.10).</p>
+<p>Organizational layer: the target count went from the monthly forecast to the executing departments; the delinquency programme bypassed the sales rescission committee's review loan by loan; and the company did not track the programme's actual effect, so no internal document could answer how much of the improvement came from rescissions (p.2, p.10). Of the three layers, only the accounting entries kept a complete record, and what they record is "never happened". What can reconstruct the history is the rescission coding table and the monthly forecast, and neither enters the disclosure process.</p>
+<p>Incentive layer: the provision rate sat in external guidance, analysts called it material to the share price, and the May 2019 call turned it into a commitment (p.8). In the same period the third-party exit firms were pushing defaults up, and the company itself used the metric as a barometer of whether it was holding them off (p.7).</p>
+<p>At the boundary: the definition layer supplied the action, move it out; the incentive layer supplied the number, how many. The two met in one row of the monthly forecast. The break is that row. It was an operating target and a disclosure treatment at once, and only the first was written into a process.</p>
+<p><strong>Minimum counterfactual</strong>: on the first monthly forecast of May 2019, add a line reading "provision rate if this month's rescinded loans had stayed in the portfolio", and carry that line unchanged into the MD&amp;A of that quarter's 10-Q. One action, in the month the programme started, needing no luck: the company was already forecasting the effect (complaint p.2), and the data sat on the same sheet. The 10-Q is prepared every quarter and the MD&amp;A written every quarter, so the line has a landing place already built (p.12). The cost is one line of text and one more signature. The line does not stop the rescissions. It makes "what is the metric after the rescissions" into a question somebody has to answer. Answer it and a disclosure obligation exists; leave it blank and the sheet carries a gap. The gatekeeper is the existing quarterly reporting sequence, and no new committee is needed. Fixed afterwards instead, the job becomes a comparison series across five quarters (p.12): one line turns into a restatement, and the restatement then has to explain why the first five quarters said nothing.</p>
+<p><strong>Outcome and sources</strong>: civil penalty of $975,000, permanent injunction, neither admit nor deny (Litigation Release No. 26657 / AAER-4603, 30 September 2026). Two primary documents, issued the same day, checking each other: SEC v. Travel + Leisure Co., No. 26-cv-62760 (S.D. Fla.), Complaint, 17 pages, paragraphs 1–50, giving fact and page number paragraph by paragraph; and Litigation Release No. 26657, giving the penalties and the list of statutes, a web page without pagination, cited by release number. The two agree on the penalty amount, the list of statutes and the period of conduct (LR text; complaint ¶1, ¶9). The enforcement release page carries a download link to the complaint PDF, which closes the citation chain. Link at Appendix B, fi-001.</p>
+<p>Case 1 also repays a separate look at the width of five reporting quarters. At the end of the first quarter the rescission could still be explained as an accounting judgement. Repeated at the end of the second, the judgement was anchored by precedent. By the third quarter it was beginning to look like a process. By the fifth it was a routine component of the financial statements, and apart from the few people who knew all the facts, nobody in the organization still treated it as a decision. That is the temporal shape of this mechanism: the sense of doing something decays with repetition while the undisclosed amount accumulates. The point where the two curves open away from each other is where outside intervention is worth most and an internal brake costs most. A hard rule follows from it. Any accounting choice that affects external disclosure, executed for two consecutive reporting periods, triggers a mandatory outside review, with reviewers including a party from outside the auditors and the disclosure committee. Five quarters of width could have been compressed into half a quarter of argument.</p>
+<h4 id="case-2-public-policy-ratings-that-drifted-from-actual-risk">Case 2 (Public policy): Ratings That Drifted from Actual Risk</h4>
+<p>po-003.</p>
+<p><strong>When and where</strong>: March 2025 (the baseline month for the risk documents) and April 2025 (the month of the rating snapshot), with the report published on 7 October 2026. Washington, D.C. Policy and definitions were set by the Office of Management and Budget (OMB) Federal CIO office, the dashboard at itdashboard.gov was operated by the General Services Administration (GSA), and the ratings were submitted by the CIOs of 12 agencies.</p>
+<p><strong>What and who</strong>: OMB's Federal CIO office, which set the rating definitions and the update frequency; GSA's Office of Government-Wide Policy (OGP), which took over dashboard operations in March 2022 (GAO-27-108416 p.5) and handled user feedback, prioritization and releases on three-week iterations (p.25); the CIOs of 12 agencies, together with the CPIC teams, investment managers, project health assessment groups and chief technology officer offices that drafted ratings for them (pp. 43–48); and GAO, which ran the comparison at the request of the House Committee on Oversight and Government Reform (p.1).</p>
+<p><strong>What they were doing</strong>: OMB launched the federal IT dashboard in June 2009. In December 2014 FITARA wrote into law that agency CIOs classify major IT investments by risk, and required that an investment rated high risk for four consecutive quarters trigger a review (GAO-27-108416 p.1, p.9). The dashboard covered nearly 600 investments across 26 agencies (p.5). The page carried three classes of rating. Cost and schedule were computed by formula, with a variance of 30% or more red, 10% or more but under 30% yellow, and under 10% green (p.6). The CIO rating was filled in by a person on a 1 to 5 scale, 1 the highest risk and 5 the lowest, then mapped onto five colours (p.6). OMB supplied six factors: risk management, requirements management, contractor oversight, historical performance, human capital, and other (p.7, table 1). Update frequency was not specified in A-11 Section 55 of 25 July 2024; only the version of 29 August 2025 says "at least quarterly" (p.7, footnotes 16 and 17). GAO began the audit in April 2025, took the April snapshot, and used the March risk registers for comparison, on the reasoning that ratings in the month an audit opens are least disturbed by the audit (pp. 3–4). The report summary offers an example: a system already behind schedule that still displays a stale "low risk" on the page may never receive the review it needs (report summary page). In 2015 GAO had already placed IT acquisition and operations management on the federal high-risk list, partly on the reliability of dashboard data (p.2).</p>
+<p><strong>The decision point</strong>:</p>
+<ol>
+<li>
+<p>April 2025, 53 ratings posted to the dashboard. How each was calculated differed by agency. Treasury added three scores (the operational risk rating, the bureau CIO's integer from 1 to 5, and the CPIC chair's judgement), passed the sum through an overall rating formula and rounded to an integer (p.46, table 17). Education scored the six factors, combined them into a raw score from 1 to 5, and had the CIO review it; where the CIO believed other factors applied, the "CIO discretionary rating" became the final rating outright (p.44). HHS used a self-assessment followed by a "discretionary risk rating and rationale" from the CIO (p.45). GSA ignored risk scores and set a level when any three of eight criteria were met (p.47). VA used a quantified score, 1 point per category out of 5 (p.47). In that same month GSA rated Login.gov "medium" and GAO rated it "high": three risks in the investment's risk register averaged "elevated", and technical issues plus an incomplete data protection implementation remained open as of March 2025 (p.20).</p>
+</li>
+<li>
+<p>April 2025, all six Department of Veterans Affairs investments rated optimistically: none of the six agreed with GAO, and GAO judged all six riskier (p.16, table 4). The health management platform was rated "low" by the agency and "high" by GAO; benefits appeals and benefits payment were rated "low", with GAO at "medium" and "elevated" respectively; customer relationship management and enterprise data services were rated "low", with GAO at "medium" for both (pp. 18–19). Education had a single investment in the sample and was off by one level: the loan servicing system was rated "medium" by the agency and "elevated" by GAO, on the ground that 16 of the project's 20 applicable risks were "elevated" or "high" (p.20).</p>
+</li>
+<li>
+<p>April 2025, 21 ratings older than the agency's own update cycle (p.22, table 9). By agency: Commerce 5 of 5 overdue, HHS 9 of 9, DHS 4 of 4, Transportation 1 of 8, GSA and Education 1 each (p.22). The three classes are not the same case. Commerce, Transportation and GSA had set monthly updates and had not updated in April. HHS and DHS had set quarterly and had not updated in the three months before April. Education had set semi-annual and had not updated in the preceding six months (p.22).</p>
+</li>
+<li>
+<p>April 2026, OMB announced on the dashboard that the system would be retired and replaced, with agencies moving to "a streamlined state focused on statutorily required data". It gave no timetable and did not answer GAO's inquiries (p.2, p.4). GSA said the page was still open to the public and to authorized users as of May 2026 (p.2).</p>
+</li>
+</ol>
+<p><strong>What was visible then</strong>: each investment's risk register in its March 2025 version, listing likelihood and impact item by item; executive review board briefings; GAO and inspector general reports from March 2024 to March 2025 (p.40); the investment's prior ratings and their generation dates on the dashboard; OMB's A-11 Section 55 and the six-factor list; the agency's own CPIC guidance and rating criteria documents (pp. 43–48); and the FITARA clause on four consecutive quarters of high risk (p.9). The dates were public: when a rating was generated and whether the agency's cycle was monthly, quarterly or semi-annual sat on the same page (p.13, table 3; p.22). The FITARA text was in hand too, including the requirement to review four consecutive quarters of high risk (p.9). GSA had run a user survey in October 2024, and 26 of 37 responses were satisfied with the overall experience (p.26), a result equally within the public record. One exception is worth noting: State said it could not obtain its own agency's historical ratings and so could not do trend analysis (p.24). For that agency, prior ratings were not on the desk. An older archive was also open: between 2010 and 2016 GAO issued six reports on the dashboard with 47 recommendations, 45 implemented and 2 closed unimplemented (p.10), with both the reports and the implementation status public. What became knowable only afterwards: GAO's weighting scheme, bands of 0, 1, 3, 9 and 27 (p.39, table 14); GAO's downgrading of nine assessments by one level on reports since March 2024 and one by two levels on review briefings (pp. 40–41); and the full-sample result of 27 consistent, 24 higher and 2 lower (p.16).</p>
+<blockquote>
+<p><strong>Stop here. Decide before you turn the page.</strong></p>
+<p>You are in that seat now, with the materials above in front of you.</p>
+<ol>
+<li>What would you do? Write the action, not "pay more attention".</li>
+<li>Which item here are you most likely to miss, and why does it look unimportant?</li>
+<li>If you may set one checkpoint, when is it and what does it check?</li>
+</ol>
+</blockquote>
+<p><strong>What happened</strong>: on 7 October 2026 GAO published the report. Of 53 investments, 27 matched the CIO rating, 24 were judged riskier by GAO and 2 less risky; 21 ratings had not been updated within the agency's own cycle; and 17 recommendations went to 9 agencies (p.16, p.22, p.30). The responses: 5 agencies agreed, DHS agreed with one recommendation and disagreed with one, Commerce and Defense disagreed, Treasury took no position, and OMB submitted no comments (p.31); VA committed to reassess its six investments by 31 December 2026 (p.32). Defense objected that GAO had given no written description of its rating method, and GAO's answer was that the risk register for the Army's personnel and pay system Increment 2 held three "elevated" risks, which is what the "elevated" rating rested on (pp. 34–35); in the same exchange GAO accepted Defense's supplementary material on update timeliness and withdrew that recommendation (p.35). Against the three questions: the most common answer to the first is "rate honestly". All 24 deviations recorded in the report lean toward lower risk, and all six VA ratings lean the same way (p.16). That distribution will not yield to an explanation in terms of individual honesty. The item most easily missed under the second question is the rating date. The colour is on the page every day and nobody reads the date, so 21 overdue ratings look exactly like ratings generated that morning. The checkpoint for the third belongs at the step where a rating is finalized: check whether any discretionary adjustment left a written rationale, and whether the rating's date still falls inside the agency's own cycle.</p>
+<p><strong>Options ruled out</strong>: move rating submission from agency CIOs to an independent assessor (not implemented; the 2014 statute assigns the function to the CIO directly, p.9). Set the level purely from the risk register score (not adopted; Commerce, GSA and DOD all said the rating combined multiple factors, p.19, pp. 33–34). Raise every agency to monthly updates (seven had already chosen monthly and five quarterly or semi-annual, and OMB's August 2025 revision asked only for quarterly, p.13). Have the federal CIO carry out the FITARA advisory role for investments rated high risk four consecutive quarters (the law already requires it; in November 2024 GAO found 27 review records and the federal CIO at none of them, p.9). Display the rating beside the risk register score it corresponds to (not implemented; p.6 records converting a 1 to 5 score into a colour, with the conversion invisible on the page). Lower the four-quarter trigger to two (not discussed; FITARA writes four into the statute, p.9). Have GAO fill in the ratings directly (not implemented; GAO states that its assessment offers a standardized cross-agency view and is not a prescription to agencies, p.41). All seven options are recorded in the report, and none was executed.</p>
+<p><strong>Early signals</strong>:</p>
+<ol>
+<li>
+<p>GAO-16-494 in June 2016 ran the same comparison: of 95 investments, GAO judged 60 riskier, 22 consistent and 13 less risky (p.10). Ten years on the direction had not changed, and the share had fallen from 63% to 45% (p.10, p.16). What overrode it was written into every response: the methods differ, so the results are not comparable.</p>
+</li>
+<li>
+<p>GAO-25-107041 in November 2024: 17 investments across 8 agencies had been rated high risk for four consecutive quarters, and no agency fully met FITARA's review requirement; the federal CIO attended none of the 27 review records (p.9). What overrode it was procedural. OMB neither accepted nor rejected it, and by October 2026 nothing had moved (p.10, p.28).</p>
+</li>
+<li>
+<p>The April 2025 rating dates: 21 past the agency's own cycle (p.22). What overrode it was the interface. An overdue rating is still a normal block of colour on the page.</p>
+</li>
+<li>
+<p>OMB's A-11 Section 55 of July 2024 did not specify update frequency (p.7). What overrode it is that it reads as blank space rather than as a gap. No frequency means the rhythm belongs to the agency, and once the rhythm belongs to the agency there is no such thing as overdue, until August 2025 closed the hole.</p>
+</li>
+<li>
+<p>The agencies' own explanation, attributing deviation to having considered more factors (p.19). That sentence is itself a signal: it concedes that the rating is not the risk score, and the page shows only the rating.</p>
+</li>
+</ol>
+<p><strong>The point of escalation</strong>: April 2026, when OMB announced retirement and replacement on the dashboard page (p.2). The announcement turned the addressee of 17 recommendations into a system awaiting decommissioning. It gave no specification for the new system, no timetable and no route for agency participation; GSA said all of that sat with OMB (p.6), and GAO records OMB's non-response in three places in the report (p.2, p.4, p.6). At that point the only route to better ratings runs through rebuilding them inside the new system, whose definitions are set by the same office. The 21 overdue ratings will not be fixed before retirement. They will disappear with the system. GAO drew the boundary at the same time: retirement is not immunity, and public reporting of investment risk is a FITARA requirement rather than a preference of that particular website (p.29). The recipients of the 17 recommendations are still in place. The carrier is about to go. Two classes of requirement in those recommendations, timely updates and ratings that reflect the ability to meet goals, will then have to be executed against a system that does not yet exist.</p>
+<p><strong>Failure chain</strong>:</p>
+<p>Technical layer: of the three rating classes, two have a formula (cost, schedule) and one does not (risk). The CIO rating is a human judgement from 1 to 5, and the page shows a colour and a score with no components, no confidence and no mapping to the risk register (p.6). Given the same register, an agency combines it by its own weights and GAO combines it as 0, 1, 3, 9, 27; the two results can differ by two levels while both claim compliance (p.39, p.46).</p>
+<p>Organizational layer: the rating is drafted by the agency being rated. Between draft and final sits a discretionary step, with Education's CIO able to override the raw score and HHS's CIO supplying a "discretionary rating and rationale" (pp. 44–45). The update cycle is set by the agency, and 21 are overdue (p.22). Two agencies' processes take longer than a quarter (p.23).</p>
+<p>Incentive layer: the rating enters congressional view, and FITARA ties four consecutive quarters of high risk to a mandatory review (p.9). The cost of a low rating is an explanation this quarter. The cost of a high one arrives when the project fails, and project cycles run in years. A rating sitting at "medium" never triggers the FITARA review (p.9).</p>
+<p>At the boundary: the discretionary opening left by the technical layer is filled by the self-assessment process of the organizational layer, with its direction set by the incentive layer. The break sits at that opening. One field is at once the agency's report upward and the public and congressional route to oversight, and the two uses demand opposite kinds of close reading.</p>
+<p><strong>Minimum counterfactual</strong>: beside the rating on every investment page, display the date the rating was generated and the agency's declared update cycle, and grey out the whole cell once the cycle is exceeded. One action, before the April 2025 snapshot, and available at the time: both fields already existed in the system (p.13, table 3; p.22). It changes no rating method and adds no new metric. It lets the 21 overdue ratings show themselves on the page. Feasibility rests on changing the front end rather than agency process: GSA makes front-end changes on OMB's instruction, and user-feedback improvements already shipped on three-week iterations (pp. 25–26), so no agency has to agree to change its rating method first. The cost is one front-end change and one note on definitions.</p>
+<p><strong>Outcome and sources</strong>: GAO's conclusion is that the selected agencies' ratings do not consistently provide an accurate assessment of investment risk (p.28), and it made 17 recommendations, all falling under two requirements: that ratings reflect the investment's ability to meet its goals, and that they be updated in line with agency process (pp. 30–31). Eight of the nine agencies receiving recommendations submitted written comments, carried in appendices 4 through 11 (p.32). Primary source: GAO, IT Dashboard: Selected Agencies' Investment Ratings Fail to Fully Consider Risks, GAO-27-108416, 7 October 2026, 30 pages of body text, appendices 1 through 12 running to printed page 66, with front matter at i–iv; page numbers in this card are printed page numbers, matching the footers. Link at Appendix B, po-003.</p>
+<p>Case 2 carries a number that is easy to read backwards: more than half of the 53 ratings agreed. Does a majority agreement mean the system is broadly sound? The GAO report will not support that comfort. Which projects the agreeing ratings cluster in, and which the deviating ones cluster in, is the test of whether the system has failed. If the deviations concentrate on the highest-risk projects, precisely where a rating most needs to tell the truth, then "more than half agree" says only that low-risk projects are easy to agree on, while the high-risk projects carry the credibility of the whole system. That is a general rule for metric audits: the overall agreement rate is a placebo indicator, and the agreement rate by stratum carries the information. Apply it inside your own organization, and the first question to ask of any "compliance rate" report is where the non-compliant cases sit.</p>
+<p>Two more numbers deserve a second look through time. The fact that 21 ratings went unrevised means that even a rating once honest rots as time passes. The fact that the previous report's recommendation to OMB sat for more than a year with no action means the comparison mechanism had already sent a signal and the system did not digest it. These two numbers join this chapter to the archival view of Chapter 11. An unrevised rating is the "already explained" form of time. An unimplemented recommendation is the public-sector version of a remediation deadline that exists only on paper. The health check for a metrics system therefore needs two time items: when was this last updated, and how many of the previous round's recommendations were implemented. Those two answers belong in the first line of any report. They matter more than any current number.</p>
+<h4 id="case-3-software-the-gatekeeper-that-watched-the-replica-condensed">Case 3 (Software): The Gatekeeper That Watched the Replica (condensed)</h4>
+<p>sw-006. The GitHub platform, September 2026. The official monthly availability report, a page read and verified for this book: a background data cleanup job overwhelmed the primary database, and within about ninety minutes 96% of web requests to create issues failed. The protection mechanism monitored replica lag only, with the primary's own load outside its scope: the cleanup ran on the judgement that every replica metric was normal and pushed the primary past its limit. The decision point is the design review of the protection mechanism. Minimum counterfactual: add a primary load threshold to the protection, pausing the cleanup job when the threshold is crossed. Primary source: GitHub, 2026, link at Appendix B, sw-006.</p>
+<h4 id="case-4-construction-the-broken-bolts-that-never-entered-the-ledger-condensed">Case 4 (Construction): The Broken Bolts That Never Entered the Ledger (condensed)</h4>
+<p>ce-002. Audenshaw, Manchester, the longitudinal sleeper system on a railway bridge. RAIB report, Report 10/2025, a page read and verified for this book: fatigue fracture of a base fixing bolt derailed a freight train, 9 wagons left the track, the line was closed for about 8 weeks, and nobody was injured. The investigation found the fatigue fracture of the base bolt to be the cause of the derailment, and found that earlier bolt failures had been neither recorded by the maintenance team nor reported: Network Rail's safety assurance system had not noticed for years. The metric read zero while the goal deteriorated. Minimum counterfactual: the maintenance team registers the failure under procedure and reports it the first time a bolt is found broken. Primary source: RAIB, Report 10/2025, 2025, link at Appendix B, ce-002.</p>
+<p><strong>Expansion note (sw-006)</strong>: GitHub's post-incident review, published by the party and verified for this book, gives more detail than the condensed version, and the place worth stopping at is the design definition of the protection. The cleanup job carried an automatic safeguard that paused it under high load, and the safeguard's monitored object was replica lag alone, with the primary's own load outside the scope. The review confirms that the cleanup kept running on the judgement that the replica metrics were normal, and pushed the primary past its limit. Restated in this chapter's language: the goal of database health was broken into a set of metrics, and the one written into the protection logic, replica lag, took the place of the goal. The pressure the cleanup put on the primary was never put to the question of whether the goal was being damaged, because it was always put to the question of whether the metric was normal, and the metric was normal. The event ran about ninety minutes and about 96% of web requests to create issues failed. The minimum counterfactual is written on the source card: add a primary load threshold to the protection, pausing the cleanup job when it is crossed. That counterfactual costs almost nothing, and it works as a mirror for anyone designing metrics. Check whether your automatic protection watches the goal, or one shadow of the goal.</p>
+<p>The two expansion notes together carry one more warning. In both cases the party added the missing metric afterwards, one adding a primary load threshold, the other being required to add failure registration. Adding a metric is the standard output of a post-incident review, and it is also the moment this chapter's mechanism watches most closely: a new metric goes live and the next round of gameplay begins to evolve. A reader of such reports should attach one sentence automatically to "monitoring has been added": was its gameplay rehearsed first.</p>
+<p><strong>Expansion note (ce-002)</strong>: the broken bolts at Audenshaw can be read again under Chapter 11's three-state register. The coldest finding in the RAIB investigation is that earlier bolt failures were neither recorded by the maintenance team nor reported. The metric, the count of registered failures, read zero. The goal, real visibility of the joint's condition, deteriorated. The path here runs negative: the goal's information channel was never connected to a metric, so failures never entered the count. This chapter's eight weak signals cannot catch that kind of negative substitution, because they watch for visible optimizing actions, and here there was no action at all. Only Chapter 11's Device 1 catches it. The status of every defect on a physical system is allowed three states, and "never registered" reads at audit as "the three-state register is not running", which is itself a finding of the highest order.</p>
+<p>Four cases side by side show the two directions of goal displacement. Positive substitution (fi-001, po-003): metric pressure drives visible optimizing actions, and rescissions and ratings are both actions; actions leave traces, and afterwards there is something to investigate. Negative substitution (ce-002, sw-006): nobody optimizes a metric, because the goal's information channel was never wired into one, with failures never entering a register and primary load never entering monitoring. Positive substitution needs a defence against gameplay. Negative substitution needs a defence against blind spots. The defences differ: gameplay against rehearsal and pairing (Devices 1 and 2), blind spots against an unassessed channel and a definition register (Devices 3 and 4). When you assess your own organization, start with the negative question: which of your key goals has an information channel that was never connected to any metric. That question reaches the weak point earlier than "is this metric being gamed".</p>
+<h4 id="case-5-finance-the-codes-nobody-reconciled-condensed">Case 5 (Finance): The Codes Nobody Reconciled (condensed)</h4>
+<p>fi-010. Webull Financial, a broker-dealer. FINRA decision of August 2026, in the monthly summary PDF downloaded and verified for this book: the books and records for option order origin codes were inaccurate over a long period, drawing a $115,000 fine and a censure. The origin code is the basis of measurement for a broker's internal routing statistics and its regulatory reporting: a miscoded field distorts every downstream metric about which channel contributes how many orders. From this chapter's angle, what the case displaces is record accuracy itself. When a record has no reconciliation arrangement, its distortion has no exposure mechanism, and an error can persist for a long time without triggering any signal. The decision point is the reconciliation design of the data pipeline. Minimum counterfactual: reconcile origin codes against routing logs on a schedule, logging discrepancies separately. Primary source: FINRA, Disciplinary and Other FINRA Actions, 2026, link at Appendix B, fi-010.</p>
+<p>Case 5 pushes this chapter's boundary out one more step. fi-001 is a metric actively optimized. fi-010 is a metric's raw material going wrong with nobody reconciling it. po-003 is a rating decoupled from real risk. ce-002 and sw-006 are goals whose information never reached a metric at all. Five forms sit under one mechanism name, and each needs its own defence, which is why the signal list in section 12.4 has to be used together with the four devices in section 12.5. The list locates the form. The devices do the fitting.</p>
+<h2 id="124-what-can-be-seen-earliest">12.4 What Can Be Seen Earliest</h2>
+<p>Eight weak signals, each with the reason normally used to override it.</p>
+<ol>
+<li>The footnotes on a metric's definition keep growing, until someone has to be assigned to explain them. The reason given: "Refining the definition is a mark of management maturity."</li>
+<li>The same metric means different things in different departments. The reason given: "The businesses are different."</li>
+<li>A full-time "data governance" post appears, and the problem list does not get any shorter. The reason given: "Data quality needs an owner."</li>
+<li>The metric improves while the front line reports otherwise, and the gap lasts more than two assessment cycles. The reason given: "The front line only sees its own corner."</li>
+<li>Optimizing actions on the assessed quantity are visible, month-end pushes, batch back-filling, selective filing, and nobody asks how those actions relate to the goal. The reason given: "Meeting a target takes some flexibility."</li>
+<li>Someone who says the metric is distorted loses points in the appraisal or gets moved to another post. The reason given: "Think of the whole."</li>
+<li>External comparison data, customer complaints, regulatory sampling, third-party assessment, diverges from the internal metric over a long period. The reason given: "Different definitions, so not comparable."</li>
+<li>The metric's historical base gets restated. The reason given: "For comparability."</li>
+</ol>
+<p>Put the eight back against the cases in this chapter. Signal 3, a data governance post and an unchanged problem list, matches po-003: the rating system had complete guidance and process, and what it lacked was a third-party comparison between rating and real risk. Signal 4, improvement against what the front line reports, matches fi-001: the provision rate improved while the absolute balance of delinquent loans was piling up. Signal 5, visible optimizing actions nobody queries, matches fi-001 as well: the rescissions were batch operations, repeated, across five quarters. Signal 8, a restated base, is the latent form all four share: once a definition change goes unlogged, restatement meets no barrier.</p>
+<p>The eight also have a practical reading by cost of discovery. Signals 1 through 3 can be found from a desk, by reading the metric documentation and looking at the organization chart. Signals 4 and 7 need external comparison data. Signals 5 and 6 need observation on site. Signal 8 needs an archive. An auditor with only a desk view catches about a third of them, and that is the real coverage of most metric audits. It is also why the right to obtain external comparison data, complaints, sampling results, third-party assessments, belongs in the rules rather than in the auditor's ingenuity.</p>
+<p>A list of external comparison data by industry, restricted to items that are usually public: on the customer side, complaints and returns, with billing disputes and regulatory complaints in finance; on the quality side, rework and recalls; on the people side, voluntary turnover and the list of posts that are hard to fill; on the public side, regulatory penalties and third-party assessments. There is one principle for choosing a comparison. It should be mechanistically related to the metric under suspicion, and it should carry no shared optimization incentive. A shared incentive is the main cause of comparison failure: if the complaints unit and the sales unit sit inside the same assessment unit, complaint data stops being a comparison and becomes an accomplice.</p>
+<p>There is a class of earlier signal buried in why the metric was created, and it is worth writing out. When a new metric appears, ask where it was first proposed. A metric born from a problem, an incident rate added after an incident, is usually healthy. A metric born from a reporting need, a dashboard built to show something upward, carries an optimization mandate from birth. The only cure for the second kind is to give it an outside comparison, and to put the comparison into the same report.</p>
+<h2 id="125-how-to-prevent-it">12.5 How to Prevent It</h2>
+<p>Device 1: rehearse the gameplay. When a metric is created, write down how it will be gamed: at least three optimizing moves, and a probe for each move that would reveal it. The Goodhart effect cannot be removed, only observed. A metric that goes live without a gameplay rehearsal goes live unmonitored. Who signs: the proposal is drafted by whoever puts the metric forward, supplemented by whoever will be assessed on it, and reviewed by an independent party.</p>
+<p>Device 2: pairing. An output metric needs a quality metric, volume needs a rework rate, speed needs an incident rate. The pair is collected by a different department, and the assessed party does not control the paired metric's definition or sample. The lesson from Travel + Leisure: had the provision rate's counter-metric, the change in the absolute balance of delinquent loans, been submitted by a risk function independent of finance and made public, the effect of the rescission programme could not have been hidden.</p>
+<p>Device 3: keep one unassessed channel. Set up an information channel that produces no metric: frontline interviews, sampling of raw complaints, managers walking the floor. It does not enter appraisal, only decisions, and it must have a named reader. When its output diverges from the metric, the divergence is the most expensive signal available.</p>
+<p>Device 4: register definition changes. Every adjustment to a metric's definition, sample or baseline is logged separately and countersigned by an independent party. Travel + Leisure's rescission programme was an accounting definition change, GitHub's monitoring scope a technical definition change, and Audenshaw's failure registration categories a records definition change. All three failed in unregistered definition territory.</p>
+<p>Set the four devices against the cases in this chapter and each has one direct use. Device 1 on po-003: at the design of the rating system, rehearse three moves, a rating that lags, a description updated while the rating does not move, and an answer of "the methods differ" to any query, each with a probe, an automatic reminder against the update deadline, an audit flag when description and rating change out of step, and outlier detection on the cross-agency rating distribution. Device 2 on fi-001: the paired metrics for the provision rate are the absolute balance of delinquent loans and the count of rescissions, collected by a risk function independent of finance and carried in the notes to the financial statements. Device 3 on ce-002: track walkers' verbal findings and informal reports from site staff, sampled periodically into the decision layer, unassessed. Device 4 on sw-006: the coverage of a monitoring system is a definition, and every change to it, what was added and what was removed, goes through the register.</p>
+<p>The failure mode of each device needs writing down, because it determines where the maintenance cost lands. Rehearsed gameplay dies when rehearsal and reality separate: the rehearsal document is written and filed, and gameplay is already three generations on. Pairing dies when the paired metric's definition gets absorbed: sit the collecting department and the assessed department in the same room often enough and the definitions converge. The unassessed channel dies on a vacant "named reader": its output lands in an inbox with no decision authority. The definition register dies when the register and the use of it separate: the form is being filled in, the metric is being changed, and nothing forces the two to meet. The maintenance method is one thing only. Once a quarter, replay a real event through all four devices, and repair on the spot whichever one the replay cannot pass.</p>
+<p>Here is a five-step minimum for a reader who needs to start work, run in order.</p>
+<ol>
+<li>Draw the proxy chain: the metric's definition, its data source, who enters it, who may change it, and its definition change history, on half a page. A metric you cannot draw goes to step two anyway.</li>
+<li>Find the comparison: a piece of outside data the metric should relate to, complaints, chargebacks, rework, regulatory sampling, plotted with the metric across the last eight assessment cycles. A divergence lasting more than two cycles is a flag.</li>
+<li>Catch the season: re-sort the metric by the assessment calendar and look at the peak-trough gap. An abnormal gap flags gameplay risk.</li>
+<li>Read where closures go: count where all the exception items end up, alarms, tickets, negative reviews. A single destination for all closures, everything "no action needed" or everything "completed", is the fingerprint of negative substitution.</li>
+<li>Ask who paid: who in the past year lost points or was moved for questioning the metric. An organization that cannot produce one example should go back and re-read criterion 3 at the start of the chapter.</li>
+</ol>
+<p>Run those five and a metric health sheet exists. Nothing in them needs special access, and most of the material sits in public reports.</p>
+<p>Turned around, the same five steps become the checklist for setting a new metric. At setup, run the first three, proxy chain, comparison, seasonal forecast, and add the two actions specific to setup: write the gameplay rehearsal (Device 1) and register the baseline definition (Device 4). A metric that goes through all five on the day it is set costs about half a day. Reformed after three cycles of assessment, the same metric costs quarters. Metrics resemble machines in one respect: the running-in cost is lowest before delivery.</p>
+<h2 id="126-boundaries-with-adjacent-mechanisms">12.6 Boundaries with Adjacent Mechanisms</h2>
+<p>Against normalization of deviance (Chapter 11): normalization re-files a deviation, which moves the archive; goal displacement redefines the goal, which moves the ruler. In cases the two often share a bed, with an optimized metric concealing a deviation while the deviation's success reinforces the metric's credibility. Tell them apart by the object of the action. Archival moves belong to Chapter 11, measurement moves to this chapter.</p>
+<p>Against misaligned incentives (Chapter 17): misaligned incentives is the structural disease, with interests at each level pointing different ways, and goal displacement is its most common technical implementation. The division of judgement: if what needs changing is the interest structure, who bears the consequence, go to Chapter 17; if the interest structure is sound and the measurement is skewed, stay here.</p>
+<p>Against the fifth step of the ladder (Chapter 8): the ruler swap at step five is an emergency move in a crisis, with a meeting and one decision on record. The definitional drift in this chapter is gradual and belongs to normal times, with no single moment where the ruler changed. The two share the definition register as a defence, and their triggers are different.</p>
+<h2 id="127-five-self-checks">12.7 Five Self-Checks</h2>
+<ol>
+<li>Write down your team's three most important assessment metrics and, for each, the real goal it stands in for. A metric whose proxy relationship you cannot state is not ready for a conversation about optimizing it.</li>
+<li>In your organization, when did someone last say a metric was distorted? What happened to that person afterwards?</li>
+<li>Pick a metric that has improved for three consecutive cycles and test it against one piece of external comparison data, complaints, sampling, or what the front line feels. How wide is the gap?</li>
+<li>Which metric in your system has a definition change with no register entry? How much of that metric can you still believe?</li>
+<li>If your core KPI were abolished tomorrow, what is the first data you would want to see? Why is that data not in the metric today?</li>
+</ol>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../ch11/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Chapter 11 Normalization of Deviance (Vaughan, 1996)">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                Chapter 11 Normalization of Deviance (Vaughan, 1996)
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../ch13/" class="md-footer__link md-footer__link--next" aria-label="Next: Chapter 13 Narrative before Evidence; Motivated Reasoning">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                Chapter 13 Narrative before Evidence; Motivated Reasoning
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Free and open · continuously revised
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.sections", "navigation.top", "navigation.footer", "navigation.tracking", "toc.follow", "search.suggest", "search.highlight"], "search": "../assets/javascripts/workers/search.a7633da7.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.c21346df.min.js"></script>
+      
+        <script src="../assets/shelf-counter.js"></script>
+      
+    
+  </body>
+</html>

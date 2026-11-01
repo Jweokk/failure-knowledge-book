@@ -1,0 +1,3189 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="A cross-domain manual of structural failure: twenty-four mechanisms, fourteen domains, 159 cases">
+      
+      
+      
+        <link rel="canonical" href="https://tkf.fly2ai.top/en/ch21/">
+      
+      
+        <link rel="prev" href="../ch20/">
+      
+      
+        <link rel="next" href="../ch22/">
+      
+      
+        
+          <link rel="alternate" href="/en/" hreflang="en">
+        
+          <link rel="alternate" href="/" hreflang="zh">
+        
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.8.0">
+    
+    
+      
+        <title>Chapter 21: Hidden Coupling - The Knowledge of Failure</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.57a0d79d.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.fb2fffe2.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Serif:300,300i,400,400i,700,700i%7CNoto+Sans+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Noto Serif";--md-code-font:"Noto Sans Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/extra.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="custom" data-md-color-accent="custom">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#chapter-21-hidden-coupling-interactive-complexity-and-tight-coupling-perrow" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="The Knowledge of Failure" class="md-header__button md-logo" aria-label="The Knowledge of Failure" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            The Knowledge of Failure
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Chapter 21: Hidden Coupling
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="custom" data-md-color-accent="custom"  aria-label="Dark"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Dark" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="custom" data-md-color-accent="custom"  aria-label="Light"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Light" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+      <div class="md-header__option">
+  <div class="md-select">
+    
+    <button class="md-header__button md-icon" aria-label="Select language">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m12.87 15.07-2.54-2.51.03-.03A17.5 17.5 0 0 0 14.07 6H17V4h-7V2H8v2H1v2h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2zm-2.62 7 1.62-4.33L19.12 17z"/></svg>
+    </button>
+    <div class="md-select__inner">
+      <ul class="md-select__list">
+        
+          <li class="md-select__item">
+            <a href="/en/" hreflang="en" class="md-select__link">
+              English
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="/" hreflang="zh" class="md-select__link">
+              中文
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</div>
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/Jweokk/failure-knowledge-book" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="The Knowledge of Failure" class="md-nav__button md-logo" aria-label="The Knowledge of Failure" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    The Knowledge of Failure
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/Jweokk/failure-knowledge-book" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../preface/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Preface
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Part I　Meta-questions
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Part I　Meta-questions
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ch01/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 1: Why Failure Knowledge Is the Most Expensive, and the Least Organized
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ch02/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 2 Three Biases: Recording, Survivorship, Attribution
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ch03/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 3 The Five Fields That Record Failure in Earnest
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ch04/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 4 Why This Method Did Not Spread
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Part II　Anatomy
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Part II　Anatomy
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ch05/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 5 The Twelve Fields of the Case Card
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ch06/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 6 Visible at the Time
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ch07/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 7 Decision Points and Points of No Return
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ch08/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 8: Escalation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ch09/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 9 The Failure Chain: Three Layers and the Breaks at Their Boundaries
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ch10/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 10 The Minimum Counterfactual and Evidence Grades
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Part III　Twenty-four mechanisms
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Part III　Twenty-four mechanisms
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ch11/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 11 Normalization of Deviance (Vaughan, 1996)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ch12/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 12 Goal Displacement; Goodhart's Law
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ch13/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 13 Narrative before Evidence; Motivated Reasoning
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ch14/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 14 Where Intuitive Expertise Breaks Down (Kahneman & Klein)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ch15/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 15 Practical Drift (Snook)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ch16/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 16 Information Attenuation up the Hierarchy
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ch17/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 17 Misaligned Incentives
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ch18/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 18 Diffusion of Responsibility
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ch19/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 19 Why the Truth-Teller Goes First
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ch20/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 20 The Slack of Success (Failure of Success, Sitkin)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 21: Hidden Coupling
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 21: Hidden Coupling
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#211-what-it-is" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        21.1 What It Is
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#212-how-it-grows" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        21.2 How It Grows
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#213-four-domains-four-shapes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        21.3 Four Domains, Four Shapes
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="21.3 Four Domains, Four Shapes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#case-one-aviation-a-hidden-link-between-control-channels" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Case One (Aviation): A Hidden Link Between Control Channels
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#case-two-software-one-permission-doubles-a-file" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Case Two (Software): One Permission Doubles a File
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#case-three-chemical-the-relief-line-became-a-propagation-path" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Case Three (Chemical): The Relief Line Became a Propagation Path
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#case-four-maritime-non-oem-bearings-and-a-ship-that-could-not-anchor" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Case Four (Maritime): Non-OEM Bearings and a Ship That Could Not Anchor
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Case Four (Maritime): Non-OEM Bearings and a Ship That Could Not Anchor">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#case-five-software-an-empty-parameter-means-all-full-card" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Case Five (Software): An Empty Parameter Means All (full card)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#case-six-software-a-regex-outside-the-load-test-condensed" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Case Six (Software): A Regex Outside the Load Test (condensed)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#case-seven-software-customer-retries-became-the-attack-condensed" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Case Seven (Software): Customer Retries Became the Attack (condensed)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#case-eight-aviation-an-unlatched-door-and-a-lying-pitot-condensed" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Case Eight (Aviation): An Unlatched Door and a Lying Pitot (condensed)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#case-nine-agriculture-and-food-the-invisible-end-product-condensed" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Case Nine (Agriculture and Food): The Invisible End Product (condensed)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#214-what-shows-up-earliest" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        21.4 What Shows Up Earliest
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#215-how-to-prevent-it" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        21.5 How to Prevent It
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#216-boundaries-with-neighbouring-mechanisms" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        21.6 Boundaries with Neighbouring Mechanisms
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#217-the-five-self-checks" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        21.7 The Five Self-Checks
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ch22/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 22 The Illusion of Redundancy
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ch23/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 23 Extrapolating Past the Validated Domain
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ch24/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 24: Crossing a Scale Threshold
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ch25/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 25: Margin Erosion (Dekker)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ch26/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 26 Automation and Skill Decay
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ch27/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 27: Sunk Cost and Escalation (Staw)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ch28/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 28 Horizon Mismatch; Short-Termism
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ch29/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 29 The Invisibility of Maintenance
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ch30/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 30 Handover Rupture; Organizational Forgetting
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ch31/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 31 Regulatory Lag and Capture
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ch32/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 32 Compliant and Unsafe (Hollnagel: Safety-I and Safety-II)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ch33/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 33: Cascading Failure
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ch34/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 34: Path Lock-in (David; Arthur)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Part IV　Fourteen domains
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Part IV　Fourteen domains
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../domain-01/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Aviation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../domain-02/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chemical & Process
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../domain-03/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Nuclear & Energy
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../domain-04/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Healthcare
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../domain-05/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Drugs and Devices
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../domain-06/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Construction and Infrastructure
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../domain-07/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Maritime and Transport
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../domain-08/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Software and Internet Services
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../domain-09/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Finance
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../domain-10/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Startups and Products
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../domain-11/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Public Policy and Administration
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../domain-12/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Military
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../domain-13/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Manufacturing and Supply Chain
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../domain-14/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Agriculture and Food
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Part V　How to use it
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Part V　How to use it
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ch35/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 35 The Situating Table
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ch36/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 36 Thirty Minutes Before the Decision
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ch37/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 37 Design Review Question List
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ch38/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 38 Writing a Postmortem That Lasts
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ch39/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 39 The Ninety-Minute Dry Run
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Part VI　Boundaries
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Part VI　Boundaries
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ch40/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 40 The Failures Worth Encouraging
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ch41/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 41 Normal Accidents and Black Swans
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ch42/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 42 When This Does Not Work
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9" >
+        
+          
+          <label class="md-nav__link" for="__nav_9" id="__nav_9_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Appendices
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_9">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Appendices
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../appendix-a/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Appendix A: Mechanism × Domain Matrix
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../appendix-b/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Appendix B: Case Index
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../appendix-c/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Appendix C: Evidence Grades and the Reconstruction Method
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../appendix-d/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Appendix D: A Genealogy of Mechanisms
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#211-what-it-is" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        21.1 What It Is
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#212-how-it-grows" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        21.2 How It Grows
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#213-four-domains-four-shapes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        21.3 Four Domains, Four Shapes
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="21.3 Four Domains, Four Shapes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#case-one-aviation-a-hidden-link-between-control-channels" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Case One (Aviation): A Hidden Link Between Control Channels
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#case-two-software-one-permission-doubles-a-file" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Case Two (Software): One Permission Doubles a File
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#case-three-chemical-the-relief-line-became-a-propagation-path" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Case Three (Chemical): The Relief Line Became a Propagation Path
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#case-four-maritime-non-oem-bearings-and-a-ship-that-could-not-anchor" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Case Four (Maritime): Non-OEM Bearings and a Ship That Could Not Anchor
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Case Four (Maritime): Non-OEM Bearings and a Ship That Could Not Anchor">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#case-five-software-an-empty-parameter-means-all-full-card" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Case Five (Software): An Empty Parameter Means All (full card)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#case-six-software-a-regex-outside-the-load-test-condensed" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Case Six (Software): A Regex Outside the Load Test (condensed)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#case-seven-software-customer-retries-became-the-attack-condensed" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Case Seven (Software): Customer Retries Became the Attack (condensed)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#case-eight-aviation-an-unlatched-door-and-a-lying-pitot-condensed" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Case Eight (Aviation): An Unlatched Door and a Lying Pitot (condensed)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#case-nine-agriculture-and-food-the-invisible-end-product-condensed" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Case Nine (Agriculture and Food): The Invisible End Product (condensed)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#214-what-shows-up-earliest" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        21.4 What Shows Up Earliest
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#215-how-to-prevent-it" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        21.5 How to Prevent It
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#216-boundaries-with-neighbouring-mechanisms" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        21.6 Boundaries with Neighbouring Mechanisms
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#217-the-five-self-checks" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        21.7 The Five Self-Checks
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="chapter-21-hidden-coupling-interactive-complexity-and-tight-coupling-perrow">Chapter 21: Hidden Coupling | Interactive Complexity and Tight Coupling (Perrow)</h1>
+<blockquote>
+<p>What this chapter covers: how two systems that "should have nothing to do with each other" come to share one inconspicuous thing; Perrow's interactive complexity, the three criteria, four field sites, and an annual dependency-mapping regime.
+When to turn back: after a merger, an architecture rebuild or a supplier change; when a fault report starts saying "unknown cause".
+Reading time: 50 minutes.</p>
+</blockquote>
+<p>Hidden coupling has one property that separates it from every other mechanism in this book. It cannot be managed before it is seen, and once it is managed it stops being hidden. That sounds like a tautology. It is the hardest problem statement in the field, because you cannot open a project, allocate a budget or set a date for something you do not know exists. Perrow, in <em>Normal Accidents</em> (1984), put interactive complexity among the structural sources of accidents: the connections between the parts of a modern system exceed anyone's full understanding, and failures travel along paths their designers never drew. Forty years on, the systems are only more complex. What this chapter can supply is a mapping discipline that turns the unseen into the seen, one pass at a time.</p>
+<h2 id="211-what-it-is">21.1 What It Is</h2>
+<p>Definition: hidden coupling is the engineering face of interactive complexity. Two systems share a connection that neither their designers nor their users are aware of, and a small fault crosses between them along a path nobody has drawn. Nothing is hidden at the physical layer, where the path is real and has always been there. The hiding is at the cognitive layer. Nobody put it on paper, so nobody managed it.</p>
+<p>Three criteria start the mechanism. Any one of them is enough.</p>
+<ol>
+<li>Two systems believed to be independent turn out to share something trivial: one account, one pipeline, one permission, one battery, one bearing supply chain.</li>
+<li>Nobody can answer the question "who is affected if this goes down".</li>
+<li>Fault reports start containing "unknown cause" or "unexpected propagation path".</li>
+</ol>
+<h2 id="212-how-it-grows">21.2 How It Grows</h2>
+<p>Four generative conditions.</p>
+<p>Condition one is merger and system integration. The link between two systems is struck from the merged drawings while remaining connected in the physical world. The merger document records "functional migration complete" and omits "old connection physically retained".</p>
+<p>Condition two is legacy. A workaround installed twenty years ago outlives everyone who remembers it, and the half-life of an expedient is the tenure of the person who installed it.</p>
+<p>Condition three is outsourcing and supply chain depth. What you buy is a component made of other people's components (a near relative of Chapter 33, cascading failure: that chapter covers the concentration of dependency, this one covers the invisibility of the connection).</p>
+<p>Condition four is configuration drift. Permissions, parameters and switches quietly link into new paths across a series of changes. Every change passes its own review. The review looks at the change, never at the change combined with the rest of the network.</p>
+<p>One asymmetry has to be learned by heart. Coupling that is seen gets managed, and managed coupling stops being hidden. The stock of this mechanism therefore always equals the part nobody has drawn yet. The defence is an unending mapping exercise, never a one-off cleanup.</p>
+<p>Perrow's framework has two axes. This chapter uses the first and owes the reader the second, because mixing them up is the standard misreading. Axis one is interactive complexity, the way parts are connected: in a linear system failures propagate along known paths, in an interactively complex system they can combine along unexpected ones. Axis two is tight coupling, the time available to work the problem after a fault: a tightly coupled system has almost no slack, and the chain completes before anyone intervenes. The axes take their values independently. An interactively complex but loosely coupled system (a university) can produce strange failures and digest them slowly. A linear but tightly coupled one (a conveyor factory) fails fast and predictably. Disasters cluster where both axes are at maximum: nuclear power, chemicals, aviation, global networks. The mapping discipline in this chapter works on axis one, making interaction visible, while the priority order for mapping comes from axis two. Dark lines in tightly coupled areas get drawn first, because once energised they leave no time for a human response. All four main cases sit in the double-high region. The helicopter's control interaction happens at the scale of seconds, Cloudflare's file propagation at the scale of minutes, the Dow relief path had no waiting time at all, and on Kommandor Susan the interval from loss of power to loss of the anchor was a few minutes.</p>
+<p>The cognitive layer of "hidden" has one more source: the language wall between specialisms. Every subsystem has its own vocabulary (process, network, mechanical, permissions), and coupling points tend to fall exactly on the border between two of them. No specialist on either side can describe the line completely in their own words. A network engineer says "authorisation", a process engineer says "pipeline", and on their own drawings neither word points at the other's system. The language wall explains why dependency mapping has to be run by a questioner and an answerer from opposite sides (the organisational note under Device 1). It also explains why the artefact has to be written in a cross-system common language (resource name, blast radius, owner) and not in either side's dialect.</p>
+<h2 id="213-four-domains-four-shapes">21.3 Four Domains, Four Shapes</h2>
+<h3 id="case-one-aviation-a-hidden-link-between-control-channels">Case One (Aviation): A Hidden Link Between Control Channels</h3>
+<p>av-040.</p>
+<p><strong>When and where</strong>: 27 October 2018, 1937 (UTC, night local time), King Power Stadium, Leicester, England. The helicopter lifted from the centre circle of the pitch, intending to reposition to London Stansted. After loss of right yaw control it came down on the concrete of the staff car park on the south-east side of the stadium. That surface has a 0.5 metre step, and the airframe was still rotating fast when it touched (AAIB p. 71).</p>
+<p><strong>What and who</strong>: type certificate holder Leonardo S.p.A. (AgustaWestland at the time the certificate was issued), accident aircraft serial number 69018; the tail rotor double-row ball bearing was manufactured in France (the BEA took part in the investigation), the tail rotor actuator in the United States (the NTSB took part); operator Starspeed Ltd, owner Foxborough Ltd (Isle of Man), single-pilot operations under Part-NCC; airworthiness authority EASA, type certificate data sheet EASA.R.5098, certified to CS-29 Amendment 2 (17 November 2008) (p. 26). One pilot (53, ATPL(H), 12,947 hours total, 177 on type), four passengers (p. 21, p. 22, p. 38).</p>
+<p><strong>What they were doing</strong>: the airframe was built on 11 July 2016 and had 330.9 hours and 1,034 landings at the accident; the last biweekly check was on 22 October (p. 24). The bearing is a hybrid, steel races with silicon nitride ceramic balls (p. 22). It carried over the AW139's on-condition status: no scheduled removal time, a rotational smoothness check by hand every 600 flight hours or once a year, removal for visual inspection at 2,400 hours (p. 35). The load spectrum and discard life for the AW169 and AW189 were completed at design acceptance with the AW139 as the reference, producing the same recommended life and the same inspection interval (p. 37). Certification flight tests measured tail rotor axial and bending loads, and the data were never passed to the bearing manufacturer for review (p. 214). The same test data later showed that a few classes of manoeuvre inside the normal envelope generate contact pressure high enough to cause damage (p. 213). The accident bearing was the most damaged of the same-type bearings submitted for examination, and had the shortest time in service (p. 213). Takeoff was at 1937, rearward climb at 600 to 700 feet per minute, at 250 feet a 15 degree nose-down input held for 6 seconds with gear retraction, and a right turn entered at about 300 feet (p. 14, p. 60). The departure was flown as a Cat A procedure under a congested-area approval: reach the decision point after lift-off, hold a climb margin of 130 feet, accelerate to VY, then transition. The aircraft's average rate of climb exceeded the procedure's parameters and the turn began before the acceleration segment was complete. The investigation found that neither deviation materially affected controllability after the failure (p. 165, p. 197).</p>
+<p><strong>The decision point</strong>:</p>
+<p>One. 2012. An AW139 in Qatar seized the same bearing and lost yaw control. There were rotation marks on the control shaft. The AW139 thread is left-hand, so the nut seat tightened instead of backing out, torque went back into the bearing until it failed completely, the blades stopped at about +10 degrees, and the helicopter ran on and landed with nobody injured (p. 36). The event did not start an independent Annex 13 investigation; the manufacturer and the local airworthiness authority judged the bearing too badly damaged for a meaningful failure analysis (p. 36). The response was two maintenance requirements: no refitting after removal, and a discard life of 3,000 hours. Both went out as a service bulletin with no airworthiness directive behind them, so the life never became an airworthiness requirement (p. 36). The 3,000 hours from the bulletin sat alongside the 2,400-hour inspection point, and the evidence shows operators commonly refitted bearings after the 2,400-hour check in order to run them to 3,000 (p. 36 footnote). In the same period the load spectrum and life for the AW169 and AW189 were going through design acceptance (p. 37).</p>
+<p>Two. July 2015, EASA issued the AW169 type certificate. The system safety assessment placed the bearing in the tail rotor assembly (CS 29.547, 29.602) and the control shaft with its actuator-end lock nut in the tail rotor actuator (CS 29.1309, 29.602). Two reports, two failure analyses (p. 38). The actuator manufacturer's analysis covered its own parts only, with a written statement that it had not been told the effects of failure in connected parts, "for example shaft rotation driven by gearbox torque". The thread handedness of the nut was not in the design specification either (p. 38). Both failures were classified catastrophic. The actuator-end lock nut was listed as a catastrophic single-point failure, but only two failure modes were considered, nut fracture and loosening under vibration. On the accident aircraft that nut was right-hand thread (p. 28, p. 214). The authority confirmed that once a failure is classified catastrophic the manufacturer need not consider its knock-on effects at all (p. 39).</p>
+<p>Three. After 1937 that night, the start of the right turn came with a right pedal input. The control shaft moved right under hydraulic pressure and reduced tail rotor pitch through the pitch link. AAIB's analysis of the recorded data says plainly that the failure sequence was triggered by this pedal input, and that inputs of this kind are common at this stage and could be connected to anything, a crosswind correction among them (p. 165).</p>
+<p><strong>What was visible then</strong>: at the certification table in July 2015, the bearing was never certified separately; it was assessed as part of the system by compliance method (p. 37); the two AW139 part numbers had accumulated 3,699,826 hours (p. 35); the 2012 wreckage had been judged "too damaged for a meaningful failure analysis" (p. 36); CS-29 held no design or test requirement for rolling contact fatigue in bearings (p. 37); bearings were not stripped and inspected after the certification tests (p. 214); operator records in the UK and Italy showed several bearings rejected for roughness and axial play (p. 35). In the cockpit, after 1937: the flight manual held one combined tail rotor failure procedure (LTE), split into hover and forward flight, both opening with lowering the collective, both stating that this will produce rapid right yaw and loss of yaw control, and both noting that a high yaw rate brings pitch and roll with it (pp. 56 to 57); there was no procedure for tail rotor pitch runaway, catastrophic by certification and therefore not required (p. 57); the aircraft was moving from rearward to forward flight and was already turning, so neither case fitted, and no simulator exercise matched either (p. 165); yaw rate reached 128 degrees per second, the ADAHRS reached the limit of its output to the autopilot, data went invalid, the autopilot disengaged and annunciated "ap ahrs 1 fail" and "ap ahrs 2 fail" (p. 170); a low rotor RPM warning and three oil system pressure warnings followed, later analysed as effects of the yaw rate while the systems themselves were sound (p. 170); radio altitude peaked at about 430 feet (p. 62); yaw rate reached close to 10 per cent of main rotor RPM (p. 170). Information that arrived only afterwards: subsurface-origin rolling contact fatigue on the raceway, fracture of the cage, and debris ground to powder and re-plated into a new raceway surface (p. 199); the rotating control shaft screwed the lock nut out, friction heat locally melted nut and seat into a weld, and both were pushed off the end of the shaft (p. 171); with mechanical feedback gone the control shaft travelled to the end of its range, and the yaw primary stop sat on the pilot's side of the disconnect, so the stop failed (p. 172).</p>
+<blockquote>
+<p><strong>Stop here. Decide before you turn the page.</strong></p>
+<p>You are in this seat, with the material above on the desk.</p>
+<ol>
+<li>What would you do? Write the action, not "pay more attention".</li>
+<li>Which item here are you most likely to miss, and why does it look unimportant?</li>
+<li>If you may set one checkpoint, when is it and what does it check?</li>
+</ol>
+</blockquote>
+<p><strong>What happened</strong>: within 1 second of the yaw starting, left pedal was fully down. After about 5 seconds of full left pedal with no effect the pilot began lowering the collective, reaching the bottom in 2 seconds (p. 166). Yaw rate peaked at 209 degrees per second, altitude peaked near 430 feet, and the aircraft then descended at about 4,000 feet per minute, with full collective applied at about 75 feet (pp. 62 to 63). The airframe rolled over on impact and the fuel caught fire. All five on board died, one crew and four passengers, and the vertical deceleration exceeded the 30g energy-absorption limit of the seats; four firefighters who arrived first suffered heat injuries (p. 21, p. 198). Back to the three questions. The most common answer to the first is to step on the opposite pedal earlier and harder. The cost of that action in this case was zero to one second: the pilot had full left pedal inside 1 second, and the pedals lost their mechanical connection to the tail rotor the moment the control shaft disconnected. Simulator trials showed that no rate of collective movement restored heading control (p. 167). The item most likely missed under the second question is the word catastrophic. It reads as a classification, and in the document chain it also works as an order to stop analysing. The third question lands at the type certification review board: for any failure classed catastrophic, ask what happens if that failure occurs in a part belonging to the neighbouring system.</p>
+<p><strong>Options ruled out</strong>: a rolling contact fatigue requirement for critical bearings in CS-29 (no clause existed before 2023, and the existing acceptable means were enough to pass; AAIB raised it afterwards as Recommendation 2023-019, p. 37, p. 218); giving the certification load data to the bearing manufacturer for review (not required, p. 214); a system-level mitigation analysis after a catastrophic classification, meaning warning and fault-tolerant design (explicitly not required, p. 39, raised afterwards as Recommendation 2023-025); a flight manual procedure for tail rotor pitch runaway (catastrophic by certification, not required, p. 57); turning the bearing into a life-limited part with mandatory removal (the AW139 already had the 2,400-hour inspection, but the life came from a service bulletin rather than an airworthiness requirement, p. 36); adding a third locking feature (the two required by CS 29.607, split pin and lockwire, were already fitted, p. 39); using the existing vibration monitoring to catch degradation (manufacturer tests judged the existing sensor set would not help with this bearing, and an accelerometer was added at the lever position only afterwards, p. 155).</p>
+<p><strong>Early signals</strong>: (1) The 2012 AW139 event: control shaft already rotating, blades stopped at +10 degrees, forced landing. No independent investigation was opened, the wreckage was judged too damaged for a meaningful failure analysis, and the handling consisted of two maintenance requirements in a service bulletin. The case was closed as an individual occurrence with the mechanism unresolved (p. 36). (2) Ceramic balls produce contact pressure about 12 per cent above steel, and CS-29 had no rolling contact fatigue clause; the bearing was not certified separately, and passing the compliance method was compliance (p. 22, p. 37). (3) Bearings were not stripped after the certification flight tests. The rules did not require it, the tests produced no abnormal readings, and a strip was therefore treated as unnecessary (p. 214). (4) Operator records in the UK and Italy showed bearings rejected for roughness and axial play, while a 3,000-hour life coexisted with a 2,400-hour inspection point and operators commonly refitted. Rejections and refits were both read as normal wear on an on-condition part and never rolled up into a fleet-wide trend (p. 35, p. 36 footnote). (5) The AW139's opposite thread went into effect in 2012 while the AW169 and AW189 actuators were being designed in the same period, and the handedness never entered the specification. The type family was assumed mature (p. 38, p. 214).</p>
+<p><strong>The point of escalation</strong>: after the 2012 service bulletin, the AW169 and AW189 load spectra were referenced to the AW139 and produced the same recommended life and the same inspection interval (p. 37); the actuator design specification had no line for thread handedness (p. 38); certification came in July 2015, the two failures were each classified catastrophic, split across two reports, and the nut's failure modes were limited to fracture and loosening under vibration (p. 38, p. 214). What 2012 left behind was two maintenance numbers. Where the torque went after the seizure has no sequel in the report, so the design input for the AW169 and AW189 remained a theoretical load spectrum (pp. 36 to 37). Those three actions together made the repetition of one failure mode on a second type into a question nobody had to answer. The July 2015 certification analysis never addressed how this shaft would rotate once the bearing seized (p. 214). There is no single signing moment. The signatures are scattered across three kinds of document: a service bulletin, a design specification, a type certification review.</p>
+<p><strong>Failure chain</strong>: technical layer. The hybrid bearing ran with a lubricant film that broke down under the contact pressures of ordinary manoeuvres, the ceramic balls went from rolling to sliding, and the raceway developed surface-origin rolling contact fatigue. The cage wore and fractured, the released material was ground to powder and re-plated into a new raceway surface, clearance disappeared and the bearing seized. After the seizure, tail rotor drive torque passed through the bearing into a control shaft that should have been stationary. The shaft rotated at speed, broke the lockwire and sheared the split pin. Hydraulic pressure held nut and seat in contact, the thread wound the whole way out, and friction heat welded the two together and pushed them off the end of the shaft. Mechanical feedback failed, the control shaft travelled to the end of its range under hydraulic pressure, and the blades reached the physical limit at negative pitch. With main rotor torque no longer opposed, right yaw accelerated, and the yaw rate coupled through the airframe into a change of 43 degrees pitch and 25 degrees roll inside half a second (p. 62). Organizational layer. The bearing belonged to the tail rotor assembly and the control shaft and nut belonged to the actuator: two systems, two reports, two failure analyses. The actuator manufacturer stated it had not been told the effects of failure in connected parts. Both failures were classified catastrophic, which by regulation removed the requirement to analyse knock-on effects (pp. 38 to 39). Incentive layer. Certification is a reconciliation of compliance methods, and an item with no clause passes on the existing acceptable means. Once a failure is classified catastrophic the risk is carried by the statistical basis, and system-side mitigation never enters the review's scope (p. 218). On the in-service side the cost sits on the discard life and the 600-hour hand check, both from a service bulletin and neither from an airworthiness directive (pp. 35 to 36). The boundary break sits between the organizational layer's system boundary and the technical layer's torque path: the drawings put the bearing and the actuator in two systems, and physically they are the two ends of one shaft.</p>
+<p><strong>Minimum counterfactual</strong>: the design specification for the AW169 and AW189 actuator states that the actuator-end lock nut is left-hand thread, opposite to the direction the control shaft turns after a bearing seizure. One action, in the design specification, costing one line of text and one annotation on a drawing. The AW139 design proved itself in a real seizure in 2012 (p. 214). The manufacturer's early 2020 modification did exactly this, a left-hand thread plus a washer, mandated on 6 March 2020 by airworthiness directive 2020-0048 (p. 100). The action needed no new analysis. The AW139 drawing was on file and the 2012 result was on file; what was missing was copying one design conclusion from the type family into the specification. It does not prevent a bearing from seizing and does not guarantee that the 2018 night departure could have been landed. It changes the direction of the consequences: the nut tightens instead of backing out, the control path stays connected, and the blades stop at +10 degrees instead of running to the negative pitch limit.</p>
+<p><strong>Outcome and sources</strong>: AAIB issued 8 recommendations, numbered 2023-018 to 2023-025, all to EASA, aimed at critical-part bearings, load spectrum validation, the airworthiness status of lives, and system-level mitigation for catastrophic failures (p. 15, p. 218); the manufacturer issued 16 service bulletins and EASA issued 9 airworthiness directives (p. 15); steel ball bearings came in during September 2020 with an initial life of 400 hours (p. 100). The investigation also noted that other bearings removed from aircraft may have carried damage of varying degree, and that they were neither returned to the manufacturer nor given the same strip-down examination (p. 214). In June 2022 a UK AW139 was found with the same bearing failed at 2,750 hours during a ground check, and AAIB opened a separate investigation; the AW139 fleet had not embodied the modification, and the manufacturer considered it unaffected (p. 37, p. 100). Primary source: AAIB, Aircraft Accident Report 1/2023 (AAIB-25398), published 6 September 2023, Volume 1 of 224 pages with Volume 2 as appendices; link at Appendix B, av-040.</p>
+<p>Case One leaves the certification system with a structural problem. Two control functions were each certified and each found compliant, and their combined behaviour was on no checklist anywhere. The general name for the problem is the combined certification gap: the parts of a system are verified against single-part standards, each with its own limits and failure modes, and the interaction between parts is carried by a line of engineering judgement that no significant risk exists, usually an intuitive extrapolation from the single-part results (both passed, so the combination should pass). Criterion one of this chapter takes this form here: the certification list is the exact inverse of the shared-resource list. It registers every part and registers nothing between parts. Closing the gap does not require testing every combination, whose number explodes geometrically. It requires a combination list: the scenarios in which two functions may act at the same time, one analysis or one test attached to each entry, and everything off the list declared an unverified area. The list turns a geometric explosion into a manageable register, which is this chapter's mapping idea applied directly to certification.</p>
+<h3 id="case-two-software-one-permission-doubles-a-file">Case Two (Software): One Permission Doubles a File</h3>
+<p>sw-002. Cloudflare's global edge network, 18 November 2025. The official postmortem, read and checked for this book: a database permission change doubled the size of a feature file managed by Bot Management and pushed it past its limit. The bad file spread across the network through the deployment mechanism, and core traffic was down over a wide area for about three hours, 11:20 to 14:30 UTC, with full recovery at 17:06. The permission system and the feature distribution system are two governance regimes, two monitoring stacks, two ledgers. Their connection is one trivial database grant. At the moment the change review passed, nobody was asked the question: once this permission is granted, whose file grows?</p>
+<p>The decision point is the moment the permission change request is approved. On the desk: the rationale for the grant, the completeness of the change process, and one field that appears on no form, the downstream physical consequence of the grant.</p>
+<blockquote>
+<p><strong>Stop here. Decide before you turn the page.</strong></p>
+<p>You are in this seat, with the material above on the desk.</p>
+<ol>
+<li>What would you do? Write the action, not "pay more attention".</li>
+<li>Which item here are you most likely to miss, and why does it look unimportant?</li>
+<li>If you may set one checkpoint, when is it and what does it check?</li>
+</ol>
+</blockquote>
+<p><strong>What happened</strong>: core traffic was interrupted for about three hours. The handling was to stop the bad file spreading and roll back to the last-known-good configuration. Primary source: Cloudflare, 2025. Link at Appendix B, sw-002.</p>
+<p>Case Two has a second lesson worth taking separately, in the propagation mechanism itself. The bad file was not pushed by hand. It travelled to the whole network on the deployment mechanism, on its own. A deployment pipeline is a genuine advance in efficiency, and it is also the fastest path any coupling can travel (the prefix withdrawal in Case Five spread through deployment and synchronisation machinery too). The coupling properties of a pipeline deserve a paragraph in its own design document: it trusts by default whatever enters it, and the oversized bad file was admitted, and it synchronises everywhere by default, so the bad file travelled at network speed. Two gates belong on the pipe. Artifact validation, meaning size, signature and schema, as a precondition for propagation. Staged propagation, meaning batches across the network with a health check between them. Both gates aim at the path this case used, and both are the general answer to the class of incident in which one bad file takes the whole network down.</p>
+<h3 id="case-three-chemical-the-relief-line-became-a-propagation-path">Case Three (Chemical): The Relief Line Became a Propagation Path</h3>
+<p>ch-005. Dow's Louisiana Glycol II ethylene oxide plant, 14 July 2023, Plaquemine, Louisiana. The CSB report (No. 2023-03-I-LA), PDF read and checked for this book: a fragment of a portable work light left behind during maintenance punctured a rupture disk, causing an explosion and fire, the release of more than 31,000 pounds of ethylene oxide, and shelter-in-place for hundreds of nearby residents. The designed coupling sits in the relief routing. The relief line was piped back to the ethylene oxide reflux drum, so the system meant to send an abnormal release to a safe location became the path by which explosion energy entered the process. The vessel's closure procedure had no step for confirming the drum was empty, and nothing on the paperwork knew the work light was inside it.</p>
+<p>The decision point has two moments. The first is the design and change review that tied the relief system back to the reflux drum: the review passed on process grounds, and nobody examined the tie as a disaster propagation path. The second is the closeout of the maintenance and the sealing of the vessel: the checklist had no emptiness confirmation, and the light stayed inside. On the desk at the first: the relief capacity calculation, and the way the existing drawings showed the routing. On the desk at the second: the completion status of the job, and the tick boxes on the checklist.</p>
+<blockquote>
+<p><strong>Stop here. Decide before you turn the page.</strong></p>
+<p>You are in this seat, with the material above on the desk.</p>
+<ol>
+<li>What would you do? Write the action, not "pay more attention".</li>
+<li>Which item here are you most likely to miss, and why does it look unimportant?</li>
+<li>If you may set one checkpoint, when is it and what does it check?</li>
+</ol>
+</blockquote>
+<p><strong>What happened</strong>: explosion, fire, and a large release. Primary source: CSB, No. 2023-03-I-LA, 2026. Link at Appendix B, ch-005.</p>
+<p>The relief line in Case Three also carries a design philosophy question. Why was the relief system tied back into the process at all? The answer is capacity and environmental protection, recovering the relieved material instead of venting it, and every one of those reasons holds under the process-rationality terms of the change review. What was missing is a review under a different set of terms: how this connection behaves in an accident scenario, with explosion energy running back along it. The safety review and the process review answer their own questions on the same change form, and the coupling point falls in the gap between the two answers. The three classes of query under Device 2, downstream system, shared resource, emergency path, aim at exactly that gap: the emergency path question forces someone to answer where the relief line sends energy in an explosion. Chemical readers can keep this case as a sentence pattern. Any path meant to lead to safety gets one further question: what is at the other end of it.</p>
+<h3 id="case-four-maritime-non-oem-bearings-and-a-ship-that-could-not-anchor">Case Four (Maritime): Non-OEM Bearings and a Ship That Could Not Anchor</h3>
+<p>ma-001. The survey vessel Kommandor Susan, 25 January 2025, Firth of Forth, Scotland. The MAIB report (Report 10/2026), PDF read and checked for this book: the main generator was destroyed and caught fire and the ship lost all electrical power; one engineer suffered serious lung, kidney and eye injuries from smoke during the evacuation. The chain ran on from the blackout, since the anchor windlass could not work, and the vessel could not anchor in coastal waters. The root cause points to non-OEM bearings fitted during an out-of-yard overhaul in 2019, which wore out early, and to the fact that the swap was made without the owner's knowledge (the report's wording: non-OEM components, fitted without Hays Ships' knowledge). One supply chain decision, taken to save money and time, connects to an emergency capability six years later: the windlass depends on the main power plant.</p>
+<p>The decision point is the approval of the overhaul plan with non-OEM parts in it, and the failure to disclose that to the owner. On the desk: the price and lead time of the spares, the equivalence statement for the OEM part, and one question outside the scope of the overhaul contract review: on some night six years from now, what will this generator be unable to carry away?</p>
+<blockquote>
+<p><strong>Stop here. Decide before you turn the page.</strong></p>
+<p>You are in this seat, with the material above on the desk.</p>
+<ol>
+<li>What would you do? Write the action, not "pay more attention".</li>
+<li>Which item here are you most likely to miss, and why does it look unimportant?</li>
+<li>If you may set one checkpoint, when is it and what does it check?</li>
+</ol>
+</blockquote>
+<p><strong>What happened</strong>: one person seriously injured, the main generator destroyed. Primary source: MAIB, Report 10/2026, 2026. Link at Appendix B, ma-001.</p>
+<p>The non-OEM bearing in Case Four leaves one contract-layer patch worth writing down: who verifies the equivalence statement in an overhaul contract. The supplier states equivalence, meaning comparable performance, and the duty to verify is assigned in most contracts to nobody. In this case the swap happened without the owner even knowing (MAIB's wording), so the duty to verify landed on a party that had no knowledge. The credibility of an equivalence statement is a core subject in supply chain coupling management. The price gap on an OEM part is the market price of the statement's risk. Whether to buy OEM is a fair argument. Once a non-OEM part is bought, converting the statement into verifiable material, meaning material certificates, life test data and service records from the same type fleet, has to be nailed into the contract. Equipment readers can generalise the line: every word of an equivalence claim is owed a verification document.</p>
+<h4 id="case-five-software-an-empty-parameter-means-all-full-card">Case Five (Software): An Empty Parameter Means All (full card)</h4>
+<p>sw-003.</p>
+<p><strong>When and where</strong>: 20 February 2026, 17:56 (UTC), at the prefix announcement layer of Cloudflare's global edge network; impact ended at 23:03 (UTC) the same day. The body of the postmortem gives the start as 17:48 (UTC), the timeline gives the start of impact as 17:56 (UTC). Both markers stand, and the report does not say where the difference comes from; the total duration in the report is 6 hours 7 minutes. The postmortem was published on blog.cloudflare.com, and every time in it is UTC.</p>
+<p><strong>What and who</strong>: the Cloudflare network team and the Addressing API team. The business side is BYOIP (Bring Your Own IP), where customers bring their own address space onto the platform; the affected downstream products were Core CDN and Security Services, Spectrum, Dedicated Egress, and Magic Transit. Scale: that BGP neighbour carried 6,500 announcements, of which 4,306 were BYOIP prefixes; 1,100 were withdrawn in error, 25 per cent of the BYOIP total. Responsibility is recorded only to the level of role: the person who made the change, and the person who approved the deployment; the postmortem names teams and subtasks and no individuals. Its wording uses "our addressing system" and "our own software", pointing at systems and software rather than at one operator's mistake. Two classes of object were hit: BYOIP prefixes, and service bindings.</p>
+<p><strong>What they were doing</strong>: on 5 February 2026 at 21:53 (UTC) a line of code was merged to main. The background is Code Orange: Fail Small, a programme whose aim is to make every change pushed to the network as controlled as a software release, mediated by health signals and quick to revert. Removing a BYOIP prefix at a customer's request had been a manual operation, and it sat on the list of manual actions the programme existed to eliminate. The change turned it into a cleanup subtask that runs on a schedule: scan for BYOIP prefixes due for deletion, then delete them. A prefix can carry many associated objects, so batch processing was the inevitable way to build it. The subtask does more than the prefix. BYOIP prefixes hold service bindings on the platform, each product with its own (CDN, Spectrum, Magic Transit), and when the prefix is removed the product configuration hanging off it loses its host. In the manual version a person worked through those in order. Rewritten as a subtask, one function deleted the whole set at once.</p>
+<p>The request the subtask issues is <code>GET /v1/prefixes?pending_delete</code>: the parameter name is there, the value is not. The server implementation reads <code>if v := req.URL.Query().Get("pending_delete"); v != ""</code>, so only a non-empty value enters the branch that returns pending-delete prefixes alone. The client sends nothing, the server reads an empty string, the condition is false, the branch is skipped, and execution drops into the default path that returns every prefix. The subtask treats each returned item as already queued for deletion and begins systematically deleting prefixes together with every dependent object, service bindings included.</p>
+<p>At 17:46 (UTC) on 20 February the Address API version carrying this subtask finished deploying. At 17:56 (UTC) the subtask ran for the first time and prefix announcements began to disappear. Fifteen days separate merge from deployment; ten minutes separate deployment from effect. The consequence of a withdrawn announcement is not slowness. The prefix is gone from BGP, so the internet holds no route to it, and end connections enter BGP Path Hunting, trying alternative paths until they time out. What a customer sees is failure after failure to connect, never an error page.</p>
+<p><strong>The decision point</strong>:</p>
+<p>One. 5 February 2026, 21:53 (UTC), the merge. The vehicle is the code review and merge record. The review's frame was "turn manual removal into an automated flow", and the object of review was the customer journey, meaning what happens after a customer clicks remove in the console. Nobody asked what the server returns when this parameter is empty. In the postmortem's own words, initial testing and code review focused on the BYOIP self-service API journey and completed successfully, and the testing did not cover the scenario where "the task runner service independently executes a change to user data with no explicit input". Those two paths are not the same path in test design. A customer journey needs a human to press a button; a task runner needs the clock to reach a time. A passing review proves only that the first is safe. Three things sit behind the failure to stop this. In framing, the review asked whether the flow was correct and never what the server returns for an empty parameter, which cannot occur on the customer journey because a customer pressing the button always carries a specific prefix. In path, the subject of the test case is a person and the subject of the path that caused the incident is a clock. In motive, the change belonged to a risk-reduction programme whose direction needed no defending, so review attention went to whether the automation faithfully reproduced the manual flow, and under non-empty parameters it did.</p>
+<p>Two. 20 February 2026, 17:46 (UTC), the deployment. The vehicle is the Address API release record. Before deployment the health-mediating configuration rollback system was not yet in production (the postmortem's phrasing: "that system is not in Production today"), so this step had no gate that stops on error by itself. The change went out iteratively rather than in one pass over all BYOIP customers. That existing practice left 75 per cent of prefixes untouched, but it is a rollout method and not a safeguard built for this change, and all 1,100 were withdrawn before anything stopped. The deployment step looks reversible, on the logic that a mistake can be changed back. The postmortem says that assumption did not hold at the time: deleting a prefix took its service bindings with it, so reverting had to run three paths for three damaged states, and the longest of them required pushing configuration to machines worldwide one at a time.</p>
+<p>Three. 20 February 2026, 18:21 to 18:46 (UTC), locating and stopping. At 18:13 someone engaged because one.one.one.one was failing; at 18:18 an internal incident was declared; at 18:21 the Addressing API team was paged; at 18:46 an engineer identified the subtask, terminated it and disabled the schedule. Fifty minutes passed between the start of impact and the stop, and the withdrawals also completed inside those fifty minutes.</p>
+<p><strong>What was visible then</strong>: on the desk on 5 February, the request line and the parameter definition; the subtask's functional description; the existing house style of calling the API with a parameter name and no value in comparable tasks; and the server's handling of that parameter, readable in the repository. On the desk between 5 and 20 February: a staging environment with data as close to production as the team could make it; test records showing the BYOIP self-service customer journey passing; simulated data. On the desk on 20 February: the 17:46 deployment completion record; from 17:56 one.one.one.one returning 403 with "Edge IP Restricted", while resolution of 1.1.1.1 including DNS over HTTPS was unaffected; on the BGP side, the prefix count on that neighbour falling continuously between 17:56 and 18:46, with individual customers' services dropping off the network. In the same period the progress of alternatives was visible to the team: staged test mediation and correctness validation for the Addressing API were already under way in parallel, while health-mediating configuration rollout and snapshot rollback were not yet in production (the postmortem's words: "critical work was already ongoing", "preventative measures weren't fully deployed before the outage"). Information that arrived only afterwards: empty was read on the server as no filter; the deletions included service bindings, not prefixes alone; and the full list of withdrawn prefixes and the three damaged states only came together during the recovery.</p>
+<blockquote>
+<p><strong>Stop here. Decide before you turn the page.</strong></p>
+<p>You are in this seat, with the material above on the desk.</p>
+<ol>
+<li>What would you do? Write the action, not "pay more attention".</li>
+<li>Which item here are you most likely to miss, and why does it look unimportant?</li>
+<li>If you may set one checkpoint, when is it and what does it check?</li>
+</ol>
+</blockquote>
+<p><strong>What happened</strong>: between 17:56 and 18:46 (UTC), 1,100 prefixes were withdrawn, 17 per cent of the 6,500 announcements on that neighbour and 25 per cent of the 4,306 BYOIP prefixes. Around 20:20 (UTC) the rollback was in place and 800 prefixes were announcing again. At 19:19 (UTC) guidance went out so that customers could re-announce from the console themselves. The remaining roughly 300 had lost their service configuration at the edge, with no service binding left in the console to switch to, so they could only come back once engineers completed a global machine configuration push at 23:03 (UTC). The count is of BGP announcements: on a curve of the 6,500 announcements on one neighbour over time, the 1,100 are the segment that vanishes. It is not a count of customer reports and not a count of affected domains. The report states that most of the 6 hours 7 minutes went into restoring prefix configuration to its pre-change state. Back to the three questions. The most common answer to the first is to add a confirmation dialog to the cleanup task, but a confirmation guards against misoperation and cannot guard against the automatic path through a semantic gap, since with an empty parameter no human is in the loop. The item most often missed under the second question is the empty value itself: too inconspicuous, with review attention on the main functional path. The third question lands on making parameter semantics explicit: empty is either forbidden by a required-field check or explicitly defined as no operation, one of the two, written into the code and into the review checklist. Primary source: Cloudflare, 2026. Link at Appendix B, sw-003.</p>
+<p><strong>Options ruled out</strong>: automatic rollback through the health-mediating system (a Code Orange build, not in production at the time; rollback could only run on database snapshots plus per-machine configuration push, the first 800 took that route and the last 300 took a longer one; the postmortem's wording is that engineers had to use database snapshots rather than reconcile desired state with actual state); customer self-service from the console (guidance from 19:19, effective for the 800 and useless for the remaining 300, whose service bindings were already deleted so the console had nothing to switch to, and that failure is a signal in itself); running the task runner once in staging with an empty parameter (the postmortem judged the simulated data insufficient, and the scenario was not in the test design either, which covered the customer-presses-a-button path); a global cap or circuit breaker on the withdrawal action (the follow-up item is to monitor for withdrawals that are too fast and too broad and stop the rollout, and nothing of the kind existed at the time); verification at a per-minute rate (1,100 in 50 minutes averages 22 a minute, derived from the two timeline points and the count, and entry-by-entry checking could not keep up with that); a health check between batches (the batching at the time was iterative rollout carrying no checks).</p>
+<p><strong>Early signals</strong>: (1) pending_delete was interpreted as a string, and client and server had trouble aligning on the value of that flag, which is the postmortem's own attribution. It was buried because the parameter was optional, the code was compact, and the customer journey test passed. (2) The cleanup subtask ran on a schedule and changed user data on its own, sitting on no customer path at all. It was buried because eliminating manual action was the point of the change, so automation read as reduced risk, and when the program misbehaved nobody was there to stop it. (3) Manual removal was a routine low-frequency customer request, one prefix at a time, with an operator who knew exactly which prefix was going. Automation turned it into a batch that could reach every prefix. It was buried because batching answered the fact that a prefix may have many associated objects, and nobody matched the step from one at a time to all at once with a limit. (4) The configuration change had no production-side snapshot rollback. It was buried because Code Orange was building one and it was nearly ready; before the outage the item was a line on a schedule, never a line in the risk register. (5) The subtask executed ten minutes after going live, with no observation window for the first run. It was buried because this was a routine task that had run countless times, and the fifteen days between merge and deployment spanned two iterations, so the context of the review was no longer in the room on deployment day.</p>
+<p><strong>The point of escalation</strong>: the merge at 21:53 (UTC) on 5 February 2026 is that step. The line turned an empty parameter from a harmless input into a trigger for deleting everything, and it handed the deletion to a scheduled execution that asks no one. Deployment came at 17:46 on 20 February and execution at 17:56; from then on every deleted prefix took its service bindings with it, and the recovery path degraded from change it back to push configuration to every machine again. The postmortem does not list the approvers of the merge or of the deployment, so the signatures of this escalation are scattered across two kinds of record. Reading the merge as the escalation holds because it changed two quantities at once: the width of the trigger, from a named prefix to every prefix, and the executing subject, from a person to a clock. With the width changed, the cost of an error moved from one object to a set. With the subject changed, nobody was present to see the error. The line sat on main for fifteen days between 5 and 20 February, and nobody blocked it on the grounds of what an empty value returns. The only possible interception point in that window was the merge review; after it, every step was automatic until someone called a halt at 18:46. The escalation has no minutes, only a merge timestamp and a deployment timestamp.</p>
+<p><strong>Failure chain</strong>: technical layer. The client treated the query parameter as a presence switch, sending the name without a value, and the server judged it by its value, where an empty string is false. The empty string carries two meanings on the server at once: this parameter is absent, and this parameter is present with no value. The second was read as the first, the filter disappeared, and everything came back; the subtask read all as all pending deletion; deleting took the service bindings; BGP announcements were withdrawn; end connections entered BGP Path Hunting, changing paths until they timed out. Organizational layer. The review followed the customer journey and never covered the task runner acting on its own; the first run of a scheduled task had no observation window, and the first signal of the fault came from the customer side, with one.one.one.one returning 403, which is what brought someone in at 18:13, while resolution through 1.1.1.1 was unaffected, so that signal pointed neither at the root cause nor at the affected object; the staging data was insufficient; there was no production-side snapshot system for rollback, and recovery split into three paths by three damaged states, the longest requiring a global machine-by-machine push. Incentive layer. The change was justified as reducing the risk of manual work, and the direction itself, that more automation is safer, needed no defence in review; iterative rollout saved 75 per cent, but it was standard practice and not a measure aimed at this change. The boundary break sits between two parameter conventions: in HTTP a parameter name present means true, in Go a retrieved empty string means false, and the value empty has a reading on each side while the deletion fell exactly between them, in a stretch where no human was in the loop.</p>
+<p><strong>Minimum counterfactual</strong>: the server parses pending_delete as a boolean, accepts only true, and returns 400 for a missing or empty value. One action, taken in the code review before the merge, costing three lines of validation and one test case. Empty then has exactly one reading, and a subtask that gets a 400 deletes nothing. Cloudflare's own follow-up item does this in substance (API schema standardization, so that client and server align on the value of the flag), and the implementation at the time treated it as a string with each side interpreting for itself. That line is visible to the eye in the 5 February diff. It needs no new system, no scheduling, and no judgement made on the day of the outage. It adds one question to the review checklist: when this parameter is empty, what does the server return. The action does not stop anyone writing a wrong request. It stops a wrong request from being executed as all of them, and it does not stop a prefix from being deleted either, only requires that the answer all be stated once, explicitly.</p>
+<p><strong>Outcome and sources</strong>: 1,100 prefixes withdrawn, 25 per cent of BYOIP; 800 came back with the rollback; about 300 came back at 23:03 (UTC) through a global configuration push, for a total of 6 hours 7 minutes. The postmortem explicitly excludes network attack and malicious behaviour. It carries three follow-up items: standardising the API schema; separating operational state from configuration state with snapshot rollback; and a circuit breaker for withdrawals that are too fast and too broad. It places this change in the first category of Code Orange: Fail Small, in which any configuration change pushed to the network gets a controlled rollout on the same terms as a software binary release. The page notes a 12-minute read and carries a table of affected products and an itemised timeline. The report does not state how many customers were affected. Primary source: Cloudflare, "Cloudflare outage on February 20, 2026", David Tuber, February 2026, all times UTC; the postmortem is a web report, so the figures here are cited to timeline entries rather than to page numbers. Link at Appendix B, sw-003.</p>
+<h4 id="case-six-software-a-regex-outside-the-load-test-condensed">Case Six (Software): A Regex Outside the Load Test (condensed)</h4>
+<p>sw-001. Cloudflare's edge WAF, July 2019. The official postmortem, read and checked for this book: one regular expression triggered catastrophic backtracking in the global environment, exhausted CPU, took the network down worldwide for 27 minutes, and about 80 per cent of traffic was lost. The handling decision recorded in the postmortem is this chapter's best sample of stopping well: at 14:02 the proposal to disable the WAF globally, at 14:07 the execution, five minutes to stop the bleeding instead of working the problem point by point. The coupling sits in the environment. The same regex was safe in the load-test environment, where input volume is small, and in the global environment, at the scale of real traffic, its backtracking complexity exploded; a rule that takes effect across environments does not carry its performance characteristics across them, which is the standard shape of software coupling. Minimum counterfactual: performance-test each rule at production input scale before it goes live, and give every global rule its own kill switch. Primary source: Cloudflare, 2019. Link at Appendix B, sw-001.</p>
+<h4 id="case-seven-software-customer-retries-became-the-attack-condensed">Case Seven (Software): Customer Retries Became the Attack (condensed)</h4>
+<p>sw-004. Cloudflare's control plane, September 2025. The official postmortem, read and checked for this book: after a tenant service failed, retry mechanisms on the customer side all fired at once, the retry storm came back and crushed the control plane, and the control plane was unavailable or partly available for about an hour. The coupling crosses a system boundary. Customer systems, each with its own retry policy, and the platform system, with its control plane capacity, are joined into one thing by collective behaviour at the moment of failure. No review on either side alone sees that line, because it only becomes live during a failure. The standard patch after the handling combination of rate limiting, capacity and rollback is to write backoff and jitter requirements for retries into the client contract. Minimum counterfactual: put the client retry policy into the platform's public contract, with backoff mandatory. Primary source: Cloudflare, 2025. Link at Appendix B, sw-004.</p>
+<h4 id="case-eight-aviation-an-unlatched-door-and-a-lying-pitot-condensed">Case Eight (Aviation): An Unlatched Door and a Lying Pitot (condensed)</h4>
+<p>av-026. A 747 freighter, February 2024, United Kingdom. The AAIB report (2026), read and checked for this book: the L1 door had not been properly closed in rain, water came through the drip shield into the electronics bay, the airspeed data went wrong, the aircraft pitched down 7.6 degrees at one point with a descent rate of 6,240 feet per minute, and the crew recovered and landed safely. The coupling chain: the open state of a cargo door, a ground handling item; the sealing of the drip shield, a design assumption about water ingress; and the pitot, an air data item. Three parts belonging to three specialisms were joined into one path by rainwater. The decision point is the dispatch after working with the cargo door open in rain, with no requirement to re-check the shield seal. Minimum counterfactual: add a visual seal check after any work with the door open in rain. Primary source: AAIB, 2026. Link at Appendix B, av-026.</p>
+<h4 id="case-nine-agriculture-and-food-the-invisible-end-product-condensed">Case Nine (Agriculture and Food): The Invisible End Product (condensed)</h4>
+<p>ag-008. A stabilizer ingredient carrying bacteria reached food plants in several states. The FDA enforcement report (F-1333-2024), API record read and checked for this book: the contaminated stabilizer went to downstream bakeries in 23 states plus Canada and Mexico, and 7,257.6 kilograms were recalled (Class I). The end product of a business-to-business ingredient is invisible: the ingredient supplier knows what was shipped and not which bag of flour became which item on which shelf. Supply chain coupling adds one layer of invisibility at every packaging conversion. Minimum counterfactual: keep a batch-level flow ledger for B2B ingredients, with conversion into end product mapped finely enough to recall. Primary source: FDA, F-1333-2024, 2024. Link at Appendix B, ag-008.</p>
+<h2 id="214-what-shows-up-earliest">21.4 What Shows Up Earliest</h2>
+<p>Six weak signals, each with the reason normally used to bury it.</p>
+<ol>
+<li>The question "who is affected if this goes down" needs a meeting before it can be answered. The reason: "the system is complex, that is normal."</li>
+<li>Fault reports repeatedly carry "propagation path unclear" or "recovered for unknown reasons". The reason: "it is in the knowledge base now."</li>
+<li>The maintenance windows and change windows of two systems overlap almost exactly. The reason: "one shutdown is less trouble."</li>
+<li>There is no list of shared resources (accounts, certificates, piping, the grid, people), or the list has not been updated in years. The reason: "it is all in people's heads."</li>
+<li>After a merger or an outsourcing deal, the old system's ledger was never merged in. The reason: "the function has already moved over."</li>
+<li>On the review record of some change, the impact field says "none". The reason: "it was a small change."</li>
+</ol>
+<p>Put the six back against the nine cases. Signal one, the impact question that needs a meeting, belongs to Case Five: before the incident nobody could have said who the 1,100 prefixes would hit. Signal two, the unknown cause that goes into the knowledge base, belongs to Case Six: the performance of that regex failed across environments, and the first attribution in the fault report was difficult. Signal four, the missing shared-resource list, belongs to Case Two: the connection between the permission system and the feature distribution system sat on no list at all. Signal five, the unmerged ledger, belongs to Cases Three and Four: the closure checklist in the maintenance procedure, and the information boundary in the overhaul contract. Signal six, impact written as "none", is the change-form signature of every software case here.</p>
+<p>The nine cases sort again by what carries the coupling, and this second sorting is the more practical one. Resources carry some of it: a permission, piping, a bearing, water. Behaviour carries some: retry, propagation, rollback. Semantics carry the rest: how an empty parameter is read, how a rule fails when it crosses environments. Each carrier has its own detection method. Resource carriers are checked against a register (Device 4). Behaviour carriers are checked by looking at collective behaviour during a failure, and by making retry policy contractual. Semantic carriers are checked with a review checklist (Device 2 plus a line for explicit semantics). The trivial thing that criterion one names has three aliases on these carriers: shared resource, collective behaviour, default semantics. Running all three classes during a mapping pass finds dark lines faster than working system by system.</p>
+<p>There is a fourth carrier, the most hidden of the four and worth its own heading: people. A shared person, meaning the one person who understands a system, the duty officer holding three posts, the specialist who only appears in the key meetings, is the commonest shared resource in any organisation and almost never appears on a resource list. In the HR system he is a headcount in a department. In the technical system he is a critical path. Human coupling behaves at failure time exactly as any resource coupling does. The person is absent, through leave, departure, or being occupied by two incidents at once, and both lines break together. The case counterpart is the engineer on Kommandor Susan, seriously injured during the evacuation, after which nobody aboard could deal with the engine room; the vessel's emergency plan assumed that a person able to get back into the engine room would exist. Registering people, meaning a list of the sole skilled holder for each key post plus a proxy matrix, is the first chapter the register should be given. Chapter 18's two-line instruction, a name and a deputy, joins this chapter here: the proxy matrix is the redundancy design for human resources.</p>
+<p>True rehearsal, the Chapter 22 principle, has one form reserved for people: the deputy actually stands the watch. A name on the matrix does not mean the post can be covered. The deputy of a sole skilled holder has to have done that person's work at least once, stood the watch, run the operation, chaired the key meeting, with the date entered in the matrix. The crew's emergency training in Case Four, evacuation and abandon ship, is human proxy rehearsal in its purest form: a trained movement is the only one that has somewhere to come from once the smoke is thick. Rehearsing people is harder to schedule than testing equipment, since a person cannot be turned over once a quarter the way a pump can. The substitute is rehearsal at the level of the task: every six months the deputy actually performs three of the key person's most frequent tasks, and the key person writes the list of three. Six months is the right sampling rate for the decay of a human skill (Chapter 26).</p>
+<p>Beyond sampling rate, human coupling has an organisational symptom that belongs on the weak-signal list: the meeting cancellation rate when one person is on leave. Move a key person's calendar and a string of meetings reschedules or cancels, which says the line runs through him alone. Measuring it needs no instrument, only the calendar. The names with the highest cancellation rates are the names the register most needs a deputy for. The usual misreading in the organisation is "this person is important", taken as credit. The correct reading is that there is no second line where this person sits, taken as risk. The two readings are settled at failure time: importance is counted in days, exposure is counted in occurrences, and one simultaneous occupation, with him caught between two incident scenes, is enough to break both lines at once.</p>
+<p>Simultaneous occupation has a dedicated amplifier in a crisis: every scene wants the same capable person. The first reflex of a command post is to call for the most familiar name; he is sent to the first scene, the second loses him at the same moment, and the third call finds him already on the road. The staffing principle for a crisis, the crisis version at the end of Chapter 18, therefore needs one line: the commander's call list is ordered by availability and not by familiarity alone, and the call list and the proxy matrix come from one source.</p>
+<p>Sharing the source has a second use, in drills: the drill's sampling rule deliberately skips the first name on the call list and calls the deputy up. One drill then tests two things, the deputy's ability to hold the post (Chapter 22's true rehearsal) and whether the call list is ordered sensibly. Two fixed debrief questions follow: did the deputy hold (human redundancy), and how far did the scene degrade once the first name was taken away (the price of the coupling). Both answers go into the annual revision of the matrix and the plans. The sampling rule meets resistance in small organisations, where the mainstay idles on drill day. The answer to the resistance is to cast the mainstay as the failure party, since the person who knows the system best plays failure most convincingly; no labour is wasted and the drill gains realism.</p>
+<p>Past realism, this chapter owes the reader one more line of extension across industries: data. Two datasets with nothing to do with each other can be joined, through an ID number, a device identifier, a latitude and longitude, a timestamp, and the join can turn apparently anonymous records back into a personal profile after the fact. The carrier here is the key, and the object of mapping is key sharing between data flows. The consent conflicts in Case Five of Chapter 17 are at bottom keys moving across systems beyond the coverage of the compliance map. A data dependency graph, recording which datasets share which keys, at what granularity, going where, is the register mirrored into data governance. Privacy engineers can port the method as it stands: draw the key graph, register the keys, and ask about a key's blast radius at change review.</p>
+<p>The last stop is finance. In trading systems the carriers are the clock and the market data feed. Every strategy shares one feed and one time reference, so a jitter in the feed revalues every strategy at once, and a small failure at a market data vendor is a regular industry-wide stress test. The register translated for finance: a shared list of feed sources, time sources, risk parameter sources and clearing channels, each entry carrying its users and its failure impact. Regulatory technology has already written this chapter into several trading rules, in the requirements for backup market data feeds and redundant timing. The register's incremental value is turning the requirement from a clause into a checkable graph. Nine cases plus three extensions, data, finance and people, close the chapter's reach: wherever there is sharing there is coupling, wherever there is coupling there is a mapping debt, and wherever there is a mapping debt there is a bill that arrives when the line is energised.</p>
+<p>One clause in how that bill is delivered is worth knowing in advance: a dark line's bill is almost always larger than a lit line's. A lit failure, where a part the design depends on breaks, comes with a plan, a spare and a drill. A dark failure, where a line nobody knew about goes down, has none of the three: the plans were written from the drawn diagrams, the spares were stocked for the known single points, the drills were scheduled around the known scenarios. With none of the three, handling falls back on improvisation, and its duration is set by how fast the line is found. A good part of Case Two's three hours went into locating the propagation path, and the customer self-service portion of Case Five's six hours was guided only after location was finished. Location speed is the only lever on a dark failure, and the training material for it has exactly one source: archived propagation lines from past failures, the three debrief questions above. The thicker the archive, the more improvisation converges on table lookup, and table lookup is an order of magnitude faster than a divergent search.</p>
+<p>The gain is delivered only if the archive can be queried: debriefs indexed by propagation line, as a triple of origin, carrier and destination, and looked up by symptom when the next failure starts. Index maintenance is another view of the register. The two views, the graph for prevention and the index for response, share one underlying dataset, so the cost is paid once. Four devices, two views, one staffing recommendation and one review checklist are now delivered. What remains is a last reminder: a dark line does not respect an organisational boundary. It runs through the outsourced function, through the supplier, through the customer's system, so the mapping boundary cannot stop at the organisation's edge either. Register entries run out to the external system, with the counterparty's contact and the counterparty's failure impact, because the lines that cross a boundary are usually the ones that bill the most.</p>
+<p>The evidence sits in the four main cases. A helicopter's set of control interactions crossed the boundary between supplier and airworthiness authority. One permission grant crossed the boundary between platform and customer. One relief line crossed the boundary between contractor maintenance and owner process. One bearing swap crossed the boundary between repair yard and shipowner. All four lines cross a seam between organisations, and all four bills are split between the two sides of the seam. Cross-boundary entries get registered down to the other party's name, and the annual mapping asks one layer beyond the boundary. The last line of the chapter belongs to everyone who works at a seam: the line under your feet has probably never been drawn by the person on the other side of it, and drawing it is the only map the two of you will ever share. The cost is one more column in the plan. The benefit is that a crisis scene stops being a contest over the same person.</p>
+<h2 id="215-how-to-prevent-it">21.5 How to Prevent It</h2>
+<p>Device 1: the annual dependency map. Once a year, draw the real dependency graph, working from the bottom up. Start with the least conspicuous shared resources, the accounts, the piping, the certificates, the people, and ask of each one who uses it and who is affected if it breaks. Whatever cannot be drawn is the risk area, and it is registered on its own, at which point criterion two becomes a ledger entry by itself. One organisational note decides whether the map is real: the questions are asked by someone who does not know the system and answered by someone who does. A person who knows the system and draws it alone will draw the system in his memory, which is not the system as built.</p>
+<p>Device 2: a mandatory impact field in change review. The impact field on a change form may not say "none". It has to name at least three classes of party that were consulted, downstream system, shared resource, emergency path, and the consultation has to be recorded. The permission form at Cloudflare and the piping change form at Dow both need that question on them. The purpose of a mandatory field is not to make anyone smarter. It is to make "nobody asked" a matter of record.</p>
+<p>Device 3: independent validation of emergency paths. Once a year, take each critical emergency capability, anchoring, relief, evacuation, rollback, and run an exercise on the assumption that the main system is unavailable, to check what the capability actually depends on. The windlass on Kommandor Susan and the failover drills of Chapter 22 meet here. An emergency capability's dependence on the main system is the most expensive line on the coupling graph, because it only becomes live at the worst moment.</p>
+<p>Device 4: the shared-resource register. Every resource used by two or more systems gets its own entry: name, users, failure impact, owner. The register is the skeleton of the dependency graph. Without it, the graph starts from zero every year.</p>
+<p>Set the four devices against this chapter's cases. Device 1 on Case Four: start from the least conspicuous shared resource, the bearing, feeding the main engine, the standby and the windlass chain, and draw the dependency lines between generation and emergency capability. Device 2 on Case Five: add a parameter-semantics question to the three consultation classes on the change form. Device 3 on Case Three: the annual exercise on the relief system carries a mandatory answer to what is at the other end of the path. Device 4 on Case Two: the permission entry records the downstream files and distribution chain the grant feeds.</p>
+<p>The four devices also have four ways of dying. The annual map dies when the drawing is finished and nobody uses it, with the graph on the wall and the change review never citing it; the patch is to make the change form cite the relevant node by number, which binds the graph to the change process. The mandatory impact field dies of perfunctory consultation, with every party returning the templated answer no impact; the patch is to sample-audit the consultation records and treat a perfunctory record as no consultation. The emergency validation dies of being done on paper, with the annual exercise turned into a slide review; the patch is to require one physical action in every exercise, a real cutover or a real anchor drop, scheduled alongside the true rehearsal of Chapter 22. The register dies of not being updated, when a resource is removed, merged or swapped and no edit follows; the patch is to link register entries to change forms, so a change touching a resource automatically raises the entry for update. The shared health check for all four: when was the device's output last cited, and by whom.</p>
+<p>One acceleration rule on cadence deserves its own line: tighten the interval during change-dense periods. The annual map assumes a system changes once a year, and a software system changes ten times a month. Where change density is high, the mapping follows the change rhythm, with a dependency recheck after each large change instead of a wait for the annual pass. The empty-parameter subtask in Case Five and the permission change in Case Two both sit in change-dense territory. In such places the annual pass is deadline management rather than a discovery mechanism, and discovery comes from mapping triggered by change.</p>
+<h2 id="216-boundaries-with-neighbouring-mechanisms">21.6 Boundaries with Neighbouring Mechanisms</h2>
+<p>Against the illusion of redundancy (Chapter 22): the illusion is redundancy contaminated from a common source, with the backup dying alongside the primary. Hidden coupling is independent systems tied by a dark line, with two systems that should not die together dying together. The test: if the systems involved were supposed to back each other up, go to Chapter 22. If they were supposed to have nothing to do with each other, stay here.</p>
+<p>Against cascading failure (Chapter 33): that chapter covers the concentration of dependency and the scale of propagation, through suppliers, cloud providers and logistics networks. This chapter covers the cognition of connection, where nobody knows the line exists. The dependency register of Chapter 33 is this chapter's mapping restricted to a supply chain subgraph.</p>
+<p>Against crossing a scale threshold (Chapter 24): scale multiplies the search space of coupling, since the number of unmapped connections grows faster than the number of nodes. An organisation in rapid expansion should tighten the annual map to quarterly. The interval follows geometry, not choice.</p>
+<h2 id="217-the-five-self-checks">21.7 The Five Self-Checks</h2>
+<ol>
+<li>Name three things in your system that are shared by two or more subsystems. If you cannot name three, how long has the mapping been owed?</li>
+<li>Where is the debrief for the most recent "unknown cause" failure filed? Dark lines usually hide in the second debrief.</li>
+<li>Which item on your emergency capability list has never been validated on the assumption that the main system is unavailable?</li>
+<li>When did your organisation last go through a merger, an outsourcing deal or a large restructuring, and was the old system's ledger merged in at the time?</li>
+<li>Take a recent change form and read the impact field. If it says "none", ask the three consultation questions today, and see what comes back.</li>
+</ol>
+<p>(This chapter: 15,585 characters.)</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../ch20/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Chapter 20 The Slack of Success (Failure of Success, Sitkin)">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                Chapter 20 The Slack of Success (Failure of Success, Sitkin)
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../ch22/" class="md-footer__link md-footer__link--next" aria-label="Next: Chapter 22 The Illusion of Redundancy">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                Chapter 22 The Illusion of Redundancy
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Free and open · continuously revised
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.sections", "navigation.top", "navigation.footer", "navigation.tracking", "toc.follow", "search.suggest", "search.highlight"], "search": "../assets/javascripts/workers/search.a7633da7.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.c21346df.min.js"></script>
+      
+        <script src="../assets/shelf-counter.js"></script>
+      
+    
+  </body>
+</html>

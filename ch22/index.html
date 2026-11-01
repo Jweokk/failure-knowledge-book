@@ -1,0 +1,3162 @@
+
+<!doctype html>
+<html lang="zh" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="跨领域失效结构手册：二十四个机制、十四个领域、一百五十九个案例">
+      
+      
+      
+        <link rel="canonical" href="https://tkf.fly2ai.top/ch22/">
+      
+      
+        <link rel="prev" href="../ch21/">
+      
+      
+        <link rel="next" href="../ch23/">
+      
+      
+        
+          <link rel="alternate" href="/" hreflang="zh">
+        
+          <link rel="alternate" href="/en/" hreflang="en">
+        
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.8.0">
+    
+    
+      
+        <title>第 22 章 冗余的假象 - 失败的知识</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.57a0d79d.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.fb2fffe2.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Serif+SC:300,300i,400,400i,700,700i%7CNoto+Sans+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Noto Serif SC";--md-code-font:"Noto Sans Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/extra.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="custom" data-md-color-accent="custom">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#22-illusion-of-redundancy-common-cause-failure" class="md-skip">
+          跳转至
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="页眉">
+    <a href=".." title="失败的知识" class="md-header__button md-logo" aria-label="失败的知识" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            失败的知识
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              第 22 章 冗余的假象
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="custom" data-md-color-accent="custom"  aria-label="深色"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="深色" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="custom" data-md-color-accent="custom"  aria-label="浅色"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="浅色" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+      <div class="md-header__option">
+  <div class="md-select">
+    
+    <button class="md-header__button md-icon" aria-label="选择当前语言">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m12.87 15.07-2.54-2.51.03-.03A17.5 17.5 0 0 0 14.07 6H17V4h-7V2H8v2H1v2h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2zm-2.62 7 1.62-4.33L19.12 17z"/></svg>
+    </button>
+    <div class="md-select__inner">
+      <ul class="md-select__list">
+        
+          <li class="md-select__item">
+            <a href="/" hreflang="zh" class="md-select__link">
+              中文
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="/en/" hreflang="en" class="md-select__link">
+              English
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</div>
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="搜索" placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="查找">
+        
+        <button type="reset" class="md-search__icon md-icon" title="清空当前内容" aria-label="清空当前内容" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            正在初始化搜索引擎
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/Jweokk/failure-knowledge-book" title="前往仓库" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="导航栏" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="失败的知识" class="md-nav__button md-logo" aria-label="失败的知识" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    失败的知识
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/Jweokk/failure-knowledge-book" title="前往仓库" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    首页
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../preface/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    前言：读者契约
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第一部　元问题
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    第一部　元问题
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ch01/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第 1 章 失败的知识为什么最贵，又最没人整理
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ch02/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第 2 章 三种偏斜：记录、幸存、归因
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ch03/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第 3 章 五个认真记录失败的领域
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ch04/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第 4 章 这套方法为什么没有扩散出去
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第二部　解剖学
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    第二部　解剖学
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ch05/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第 5 章 案例卡的十二个字段
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ch06/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第 6 章 当时可见
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ch07/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第 7 章 决策点与不可逆点
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ch08/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第 8 章 加码
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ch09/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第 9 章 失效链：三层结构与交界断点
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ch10/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第 10 章 最小反事实与证据等级
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第三部　二十四个机制
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    第三部　二十四个机制
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ch11/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第 11 章 偏差的正常化
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ch12/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第 12 章 指标替代目标
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ch13/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第 13 章 叙事先于证据
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ch14/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第 14 章 专家直觉的失效区
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ch15/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第 15 章 程序漂移
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ch16/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第 16 章 信息在层级中衰减
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ch17/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第 17 章 激励错位
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ch18/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第 18 章 责任稀释
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ch19/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第 19 章 说真话的人先被淘汰
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ch20/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第 20 章 成功的松弛
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ch21/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第 21 章 隐蔽耦合
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第 22 章 冗余的假象
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第 22 章 冗余的假象
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1 它是什么
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2 它怎么长出来
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3 四个领域的形态
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3 四个领域的形态">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        案例一（航空）：被当作防撞系统的地图
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        案例二（建筑与基础设施/铁路）：两条撒砂同时沉默
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="案例二（建筑与基础设施/铁路）：两条撒砂同时沉默">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        案例五（航空）：一次破损与两套液压（展开版）
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        案例三（医疗）：紫色注射器与第二双眼睛
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        案例四（化工）：一起断电的兜底方案
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="案例四（化工）：一起断电的兜底方案">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        案例六（海事）：应急包里的两道同时失效（压缩版）
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        案例七（航空）：做完规定动作之后的复发（压缩版）
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        案例八（航空）：没被任何一道拦住的性能误差（压缩版）
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4 最早能看出什么
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5 怎么防
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6 与相邻机制的边界
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7 自检五问
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ch23/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第 23 章 边界条件外推
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ch24/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第 24 章 规模跨越阈值
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ch25/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第 25 章 安全边际被吃掉
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ch26/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第 26 章 自动化与技能退化
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ch27/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第 27 章 沉没成本与加码
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ch28/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第 28 章 期限错配
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ch29/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第 29 章 维护的不可见
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ch30/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第 30 章 交接断层
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ch31/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第 31 章 监管滞后与俘获
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ch32/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第 32 章 合规但不安全
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ch33/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第 33 章 连带失效
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ch34/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第 34 章 路径锁定
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第四部　十四个领域
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    第四部　十四个领域
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../domain-01/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    航空
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../domain-02/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    化工与流程工业
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../domain-03/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    核电与能源
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../domain-04/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    医疗
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../domain-05/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    药品与器械
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../domain-06/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    建筑与基础设施
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../domain-07/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    海事与运输
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../domain-08/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    软件与互联网服务
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../domain-09/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    金融
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../domain-10/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    创业与产品
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../domain-11/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    公共政策与行政
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../domain-12/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    军事
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../domain-13/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    制造业与供应链
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../domain-14/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    农业与食品
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第五部　怎么用
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    第五部　怎么用
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ch35/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第 35 章 处境定位表
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ch36/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第 36 章 决策前的三十分钟
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ch37/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第 37 章 设计评审问句清单
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ch38/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第 38 章 复盘怎么写才能在三年后还有用
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ch39/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第 39 章 九十分钟的死亡预演会
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第六部　边界
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    第六部　边界
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ch40/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第 40 章 该鼓励的失败
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ch41/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第 41 章 正常事故理论与黑天鹅
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ch42/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第 42 章 这套东西不管用的时候
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9" >
+        
+          
+          <label class="md-nav__link" for="__nav_9" id="__nav_9_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    附录
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_9">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    附录
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../appendix-a/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    附录 A 机制 × 领域矩阵
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../appendix-b/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    附录 B 案例总表
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../appendix-c/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    附录 C 证据等级与重建方法
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../appendix-d/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    附录 D 机制家系
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../glossary/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    术语表
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1 它是什么
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2 它怎么长出来
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3 四个领域的形态
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3 四个领域的形态">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        案例一（航空）：被当作防撞系统的地图
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        案例二（建筑与基础设施/铁路）：两条撒砂同时沉默
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="案例二（建筑与基础设施/铁路）：两条撒砂同时沉默">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        案例五（航空）：一次破损与两套液压（展开版）
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        案例三（医疗）：紫色注射器与第二双眼睛
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        案例四（化工）：一起断电的兜底方案
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="案例四（化工）：一起断电的兜底方案">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        案例六（海事）：应急包里的两道同时失效（压缩版）
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        案例七（航空）：做完规定动作之后的复发（压缩版）
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        案例八（航空）：没被任何一道拦住的性能误差（压缩版）
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4 最早能看出什么
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5 怎么防
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6 与相邻机制的边界
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7 自检五问
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="22-illusion-of-redundancy-common-cause-failure">第 22 章 冗余的假象｜Illusion of Redundancy; Common-Cause Failure</h1>
+<blockquote>
+<p>本章讲什么：两套备份为什么同时失效；共因失效的三条判据、四个现场、冗余的算术与"异构且真演"的验证标准。
+何时翻回来：评审冗余设计、采购备份系统、或者有人用"我们有两套"回应单点质疑的时候。
+读完约需：50 分钟。</p>
+</blockquote>
+<p>"我们有两套"是工程对话里最需要追问的一句话。追问的不是"第二套在哪"，而是三个更贵的问题：它和第一套有什么不同？谁验证过它可以独立工作？切换到它的动作在真实压力下做过吗？三个问题问完，很多"两套"会缩水成"一套半"甚至"一套带说明书"。本章讲的就是这个缩水过程：冗余如何在采购、设计与演练的每一环里失去独立性，直到那个共因到来的日子，所有"套"一起失效。</p>
+<h2 id="1">1 它是什么</h2>
+<p>定义：冗余的假象指纸面上并存的多个防线实为一线，它们共用同一电源、同一厂商、同一图纸、同一班组或同一假设，共因（common cause）一到，多套同时失效。工程界的名称是共因失效；"假象"强调其认知面：审计者数防线的个数，攻击者数防线的种类。</p>
+<p>三条启动判据（任何一条出现，机制即已启动）：</p>
+<p>① 两套"独立"防线存在共同项：电源、厂商、算法、图纸、人员、位置或同一份假设；
+② 冗余从未被单独验证：关掉主系统试备份的事从未发生；
+③ 切换从未在真实压力下演练过（所有切换演练都在计划窗口、低负载、有退路的条件下完成）。</p>
+<h2 id="2">2 它怎么长出来</h2>
+<p>生成条件三条。条件一：采购的规模逻辑：同一家的第二套系统更便宜、更好集成、运维团队不用再学一遍；异构意味着双倍的学习与运维成本，预算理性地走向同源。没有人决定"要同源"，只是每一步局部优选都指向它。条件二：设计复用：备份沿用主系统的图纸与假设，设计里的错误被忠实复制进备份，连错误都冗余了。条件三：演练的成本规避：真切换有风险、真压力有业务影响，于是切换被安排成双方都熟悉的仪式：计划窗口、低负载、随时可以退回。仪式完成，演练记录上写着"成功"。</p>
+<p>共因失效的算术是本章的要点：设单套防线年失效概率为 p，独立双套的联合概率约为 p²：冗余的收益来自乘法。但若两套共享共因失效概率 c，联合概率约为 c＋p²：数量级由乘法回到加法，冗余的收益蒸发。共因不除，冗余的算术是假的；这也是为什么判据①问的是"共同项"而不是"套数"。</p>
+<p>共因的家谱值得列全，因为登记（装置一）要按家谱查。第一族是环境共因：同一电源、同一机房、同一场洪水、同一片电磁环境（Arkema 的洪水是本族的标本）。第二族是设计共因：同一张图纸、同一个算法、同一份假设（地图案例的假设是"屏幕即全部交通"）。第三族是运维共因：同一支运维团队、同一次配置变更、同一套监控（监控案例的共同点是人）。第四族是行为共因：同一种使用习惯、同一份信任的分配（撒砂案例里自动与手动的分工假设）。四族之外还有第五族最隐蔽：认证共因，两套系统通过了同一次同标准的认证，认证方法的盲区成为两套的共同盲区（本章案例四的取证假设与第 20 章案例四同源）。登记时按族查询，比按直觉扫描可靠：直觉最容易漏的是环境与认证两族，因为它们平时完全不在视野里。</p>
+<p>算术再往下推一步，是工程可靠性里著名的贝塔因子思路的定性版：把两套系统的失效概率拆成独立部分与共因部分，共因部分占的比重（贝塔）决定冗余的实际收益。贝塔接近零，双套近似乘法收益；贝塔接近一，双套近似单套。贝塔的估计不靠理论靠清单：把判据①的共同项逐条数出来，每条共同项的贡献大体可见。本章不引入公式细节，只保留一个给管理者的换算：你买的冗余的折扣率就是贝塔，共同项越多，折扣越狠；采购合同里省下的异构成本，就是贝塔升高的价格。</p>
+<h2 id="3">3 四个领域的形态</h2>
+<h3 id="_1">案例一（航空）：被当作防撞系统的地图</h3>
+<p>av-022。Bell 206L-4（N193AL）与浮筒飞机 DHC-2（N97EL），2023 年 9 月 4 日，阿拉斯加 King Salmon 上空约千英尺。NTSB 终报（ANC23LA071，已经本书下载核读）：两机空中相撞，直升机 1 人轻伤、飞机 7 人无伤。直升机机组将 ADS-B 电子地图作为交通态势与避撞的参考运行，而相撞的 DHC-2 根本没有安装 ADS-B：直升机屏幕上的交通图景天然不含这类目标。防撞的纸面冗余（目视瞭望＋电子地图）在现实中只剩一条腿：机组的目视扫描习惯已经部分让渡给了屏幕，而屏幕对他们看不见的目标保持沉默。</p>
+<p>停在决策点上：直升机机组把地图画面当作交通态势依据的那段飞行。桌面上的信息：屏幕上的目标列表、"看到了就躲"的运行习惯、以及一个没人核对过的问题：屏幕上不显示的东西有多少。〔结局〕空中相撞。一手来源：NTSB, ANC23LA071, 2024，链接见附录 B av-022。</p>
+<p>案例一给冗余清单的启示是把"感知"纳入防线定义。目视瞭望与电子地图本该是两条独立的感知线（眼睛与屏幕的失效模式不同），让渡发生之后，眼睛的扫描动力被屏幕的存在削弱（屏幕说没有目标，眼睛就不再用力找）：冗余的各支路之间不只是物理独立性问题，还有行为依赖问题。一支路的存在改变了另一支路的使用强度，这是冗余理论里较少被讨论的一层，航空人机工程的叫法是自动化自满的感知版。清单条目因此要加一行：支路之间的使用依赖（A 的存在是否降低了 B 的使用强度）；撒砂案例的自动与手动、核案例的紫色注射器与双人核对，同属此条目的记录对象。</p>
+<h3 id="_2">案例二（建筑与基础设施/铁路）：两条撒砂同时沉默</h3>
+<p>ce-001。</p>
+<p><strong>时间与地点</strong>：2024 年 10 月 21 日 19 时 26 分；英国威尔士波伊斯郡（Powys）Talerddig 会让环线以西的单线区间，相撞点在环线西端出站道岔以外约 890 米、在 block marker MH1078 以外 1,080 米。列车自 19 时 22 分起在环线东端进站制动。</p>
+<p><strong>主体</strong>：Transport for Wales Rail Limited（TfWRL），运营坎布里安线（Cambrian lines）客运服务。当事车为 158 型内燃动车组 158841（前导车 57841，后车 52841），司机于 2022 年 3 月取得该线该型车驾驶资格，此前在铁路行业做过 13 年其他岗位。线路基础设施、Talerddig 环线道岔与 Machynlleth 信号控制中心属 Network Rail 威尔士与边境路线；当班信号员有 8 年资历。车辆所有人 Angel Trains；坎布里安线 ERTMS 信号由 Ansaldo STS（现 Compagnie des Signaux）供货。车辆检修、加油点检查与撒砂测试由 TfWRL 在 Machynlleth 车辆段执行。</p>
+<p><strong>事发前在做什么</strong>：出事前 24 小时，这列车在走它当天的第七个交路，而它的撒砂系统刚连着通过三次"可用"确认。10 月 18 日凌晨，158841 在 Holyhead 车辆段过夜，车下砂箱补入三袋 5 kg 砂（CCTV 记录）。19 日夜至 20 日凌晨，该车在 Machynlleth 车辆段做加油点检查（约每 1,500 英里一次），按规程按下砂箱上的撒砂测试钮，看到出砂，记为通过。20 日早晨出车前，司机教员与学员整备，再按一次测试钮，再次出砂（p.19）。20 日全天该车跑四条线路；因运行紊乱，原定在 Crewe 过夜改为停在 Chester 站台过夜。21 日早晨在 Chester，当班司机够不到车下设备，撒砂测试未做，规程也不要求做（p.19）。9 月 25 日，年度撒砂量测试记录为"完成"，而 TfWRL 的维护计划系统没有填重量的字段，只留勾选（p.90）。10 月 12 日，B 级检修（约每 7,500 英里一次）中的轮滑保护测试通过（p.50、p.90）。21 日晚，158841 与 158828 重联，在 Shrewsbury 解挂后转作 1J25，18 时 33 分发车，晚点 2 分钟，车上 31 人；对向 1S71（158824，车上 6 人）19 时 08 分从 Machynlleth 开出，两车都准点，按计划在 Talerddig 会让：信号员把 1J25 排进 Up Loop 停车等，1S71 走 95 km/h 的 Down Loop 通过（p.20）。19 时 22 分，列车以 125 km/h 接近环线，司机断牵引，39 秒内两次施加 1 级制动，速度降到 94 km/h；19 时 23 分选 2 级，三至四秒后在距停车点 640 米处施加全常用制动（ETCS 同时施加，司机称自己也施加了）；约 1 秒后 WSP 介入；再过 6 秒，ETCS 下达紧急制动指令，此时距停车点约 500 米（p.21）。</p>
+<p><strong>决策点</strong>：2008 年 1 月，《Overrun Risk Assessment ERTMS Level 2 Movement Authorities Cambrian》EDSCL-DES-004000 第 0.2 版第 10 次发行，7 页，覆盖全坎布里安线，不按地点分。文件援引 GI/RT7006 第 4.4 b i 条，理由是"线路信号的标准不适用于驾驶室信号系统""坎布里安 ERTMS 不装 AWS"，据此免做详细越行风险评估；文件给出的越行率上限是每小时每列车 2×10⁻⁹，等于断言 ETCS 监督下的列车不会越过 overlap（p.72）。2009 年 9 月，ERTMS 项目据此取得 overlap 豁免：MH1078 之后只有 81 米，标准要求 180 米（p.71）。overlap 缩短之后，越行防护的裕度落在列车的制动性能上，而低黏着下的制动性能依赖撒砂；RAIB 找不到任何证据表明参与该项目的各方意识到这层依赖（p.89）。这份文件把"ETCS 持续监督，不会出现越过 overlap 的越行"写成了整条线的前提；也因为免了详细评估，MH1078 之后"低黏着高风险区＋1:56 长下坡＋进入单线"这个组合从未被评估过（p.72）。</p>
+<p>2024 年 9 月 25 日，Machynlleth 车辆段，检修技师做年度撒砂量测试：袋子套在出砂软管上，按测试钮 30 秒，规程要求每根软管出砂 0.75 至 1.0 kg；系统里只勾了"完成"，没有重量（p.90）。</p>
+<p>10 月 20 日凌晨的加油点检查（19 日夜班）与 21 日晨的出车整备，把"撒砂可用"又确认了两遍，两遍都用砂箱上的测试钮。这个钮独立供电，绕开撒砂隔离开关（SIS）与低速继电器（LSR4）（p.90）。同一条绕行电路在 10 月 12 日的 B 级检修里也用过。</p>
+<p>10 月 21 日 19 时 23 分至 19 时 26 分，57841 驾驶室。ETCS 先施加全常用制动，随后紧急制动；司机用普通 GSM-R 呼叫信号员，报"正在打滑通过 Talerddig，估计会越过 block marker"（p.55）。19 时 24 分列车以 54 km/h 越过 MH1078，190 米后以 33 km/h 冲过环线西端道岔，进入 1:56 的下坡单线；紧急撒砂钮全程未被按下（p.55、p.56）。紧急撒砂在紧急制动设定下即生效，此刻条件已经成立（p.51）。</p>
+<p><strong>当时可见</strong>：19 时 22 分之前的驾驶室：DMI 计划区显示 130、115、95、50 km/h 四级限速台阶，进入 Up Loop 的 50 km/h 台阶落在环线入口（p.56、p.61）；线路旁 MH1078 处立着"低黏着"警示牌（p.23）；天已黑，司机在接近段没有看到降雨（p.36）。TfWRL 2023 年 9 月第 2 版《秋季季节风险指南》把 Talerddig 标为低黏着高风险区（p.67）；出车整备的固定项目里有紧急撒砂两盏健康指示灯，当天亮着（p.52）。19 时 23 分起：95 km/h 的提示序列还没走完，DMI 就切到 50 km/h，预指示被前一段提示遮蔽，直接跳到黄色（p.62）；司机的陈述是：察觉还要再减速，来自黄色速度钩压向指针，没有声音告警的回忆（p.63）。随后出现超速消息与 ETCS 制动符号；WSP 在首次全常用制动后约 1 秒介入，这一条只在数据记录里，驾驶室没有单独显示。驾驶台上与撒砂有关的只有紧急撒砂钮和那两盏健康灯，夜间罩着遮光罩，罩下仍看得见点亮；没有任何显示告诉司机自动撒砂正在出砂（p.29、p.52）。当天的纸面记录是：18 日补砂 15 kg，20 日两次测试出砂，12 日 B 级检修通过，25 日年度量测"完成"，21 日晨未测。事后才知道的信息：SIS 触点在"开"位呈高阻，LSR4 继电器线圈在底座内间歇断路，前导车两根出砂软管被树叶类有机物堵死（p.43 至 p.48）；WSPER 反演出的黏着峰值从 MH1078 之前的 0.06 降到下坡段的 0.035（p.39、p.67）；自动撒砂若以每分钟 1.5 至 2.0 kg 出砂，列车会停在 MH1078 之前或刚好越过（p.50）。</p>
+<p>〔停点：读者先判断，翻页再看〕</p>
+<p>你现在坐在这个位置上，手上是上面这些材料。</p>
+<ol>
+<li>你会怎么做？（写下具体动作，不要写"更重视"）</li>
+<li>这些材料里，哪一条最可能被你忽略？为什么它看起来不重要？</li>
+<li>如果只允许你设一个检查点，设在什么时候、检查什么？</li>
+</ol>
+<p>〔结局〕1 名乘客死亡（Tudor Evans），1J25 上 3 人重伤（含列车员）、18 人轻伤；1S71 司机重伤，其余 5 人轻伤（p.7、p.12）。两车均未脱轨，前导车严重变形，1S71 驾驶室变形最重；1J25 冲过环线西端未为其开通的道岔并将其损坏；线路 10 月 28 日重开，停运 7 天（p.12）。RAIB 出 9 条建议、3 条安全观察、1 条学习点（p.9）。回头看三问：第一问最常见的答案是"察觉打滑就按紧急撒砂"，这个动作的成本是一次单发砂和回段补装，报告算过它的效果：在 ETCS 紧急制动那一刻按下，列车停在 MH1078 稍外（p.54）；第二问最容易被忽略的是"测试钮通过"这一条，它在纸面上最像安全证据，而它的电路恰好绕开了两个故障点；第三问的落点在撒砂测试的设计：要证明的是电路通、阀门开、砂到轨面，不是砂箱里有砂。</p>
+<p><strong>被排除的选项</strong>：环线西端设脱轨器（trap points）：1968 年设过，1986 年改 RETB 时拆除，ERTMS 上线未恢复；Network Rail 的用法限定在车辆段、货场、侧线出口，因为脱轨器靠故意脱轨起作用（p.70、p.71）。按地点做详细越行风险评估：2008 年那份 7 页文件已用"简单评估"覆盖全线（p.72）。把 MH1078 的 overlap 补到标准的 180 米：2009 年 9 月以 ETCS 持续监督为由获得豁免（p.71）。RHTT 冲洗之后施加黏着改良剂：威尔士与边境路线的政策是不用，理由是对效果没有把握，也担心改良剂把叶子粘在刚冲净的轨面（p.77、p.95）。越行时向其他列车自动发停车指令：ERTMS 无此功能，属客户需求项，Network Rail 未提；信号台虽有区域紧急停车功能，但规程把 GSM-R 通话列为第一优先（p.73）。给驾驶室加自动撒砂的出砂指示：要动设计与取证，事故前没有技改计划提出（p.108）。自动撒砂的出砂量监测：Angel Trains 在事故之后才启动技术评审（p.108）。</p>
+<p><strong>早期信号</strong>：① 2010 年 Stonegate 事故（RAIB 报告 18/2011）：另一列车自动撒砂不工作（砂箱几乎空），冲过计划停车点 4 公里；经过黏着改良剂处理的路段，减速度比未处理段好约 0.5%g。压过去的理由：单点数据，无法量化（p.77）。② 2010 年 9 月《Braking Using ERTMS for the Cambrian Project》5.0 版第 4.1 节写明"极低黏着需要司机自行调整操纵以安全控制速度"。压过去的理由：适用标准把低黏着列为范围之外（p.87、p.88）。③ 2000 年 GI/RT7006 明文把"低黏着导致的越行"排除在越行防护标准之外，配套指南给的三条理由是低黏着难以预测、会逐年消失、另有措施可以应对（撒砂、轨面处理、植被管理）。压过去的理由：既然别的措施管得住，越行防护就不必管（p.88）。④ ERTMS 早期测试阶段，ORR 就提出紧邻的级联限速会让提示互相遮蔽，建议避免这种布置；RAIB 查不到项目方的正式回应记录（p.64）。⑤ 司机每周可能遇到一次 ETCS 干预，158824 在事故前 21 天内有 17 次服务制动干预；TfWRL 没有读 JRU 的软件，只能从 OTDR 里找痕迹，识别到的次数远少于实际（p.92）。压过去的理由：干预被当成系统照常工作。⑥ Talerddig 被列为低黏着高风险区已多年，区段长 5.9 公里，起因是上坡列车爬不上去。压过去的理由：已经登记为高风险，等于已经处理（p.67）。</p>
+<p><strong>加码点</strong>：10 月 20 日凌晨的加油点检查（19 日夜班）。这一项写在 TfWRL 的维护计划里（约每 1,500 英里一次），执行人是 Machynlleth 段的检修技师，方法是按砂箱上的测试钮、看软管出砂。测试通过，勾选完成。这一天之后，地面检查对自动撒砂的下一次可能的发现要等下一个 B 级检修，最长两周（p.90）。这个两周的窗口来自 B 级检修周期（约 7,500 英里）；故障可以在这两周里的任何一天出现，而检查只在窗口两端发生。绕行电路让这次检查在系统已失效的情况下照样通过；21 日晨的出车整备是第二道，因站台位置够不到车下设备而未做，流程允许不测。两次纸面确认之后，列车带着一套不出砂的自动撒砂系统进入 10 月 21 日的第七个交路。从这一刻到相撞，再没有任何一道地面检查会碰到这套系统；驾驶室里也没有任何一道显示会暴露它。</p>
+<p><strong>失效链</strong>：技术层。自动撒砂的出砂指令要四个条件同时成立：SIS 闭合、LSR4 触点闭合、SWR 触点闭合、方向与制动级选择继电器到位（p.45）。事故后查出前两个都不成立：SIS 触点在"开"位呈高阻，LSR4 线圈与底座端子之间间歇断路，任一存在都会让砂阀不励磁（p.43 至 p.47）。前导车两根出砂软管同时被树叶类有机物堵死，正常工作时的背压足以把这种堵塞冲开（p.44、p.48）。驾驶室没有出砂指示（p.29）。轮滑保护本身工作正常，恰恰因此，"WSP 有动作"不能反证撒砂在工作（p.42）。组织层。测试钮电路独立供电，绕开 SIS 与 LSR4（p.90），同一个按钮在加油点检查、出车整备、年度量测里都是主要证据，于是每次测试都成功。年度量测规程要求称重，维护系统没有称重字段（p.90）。JRU 记录了每一次 ETCS 干预，TfWRL 没有读它的软件，调数据要经 Network Rail 转（p.92）。越行防护一侧：81 米 overlap、西端无脱轨器、2008 年那份全线通用的简单评估（p.71、p.72）。激励层。RHTT 只冲洗、不加黏着改良剂，理由是效果没把握、怕叶子粘轨（p.95）；撒砂出砂量监测被列为"技术评审"，起点在事故之后（p.108）；把 180 米 overlap 换成 81 米，换来的是线路容量与既有信号布置都不必改。交界处的断点在组织层与激励层的接缝：测试电路的设计目标是证明砂能出来，不是证明电路是通的，这个便宜的选择让技术层的两个静默故障在两周一次的检查里永远不可见。</p>
+<p><strong>最小反事实</strong>：19 时 23 分 ETCS 下达紧急制动指令的那一刻，按下驾驶台上的紧急撒砂钮。一个动作，条件在当时成立：紧急撒砂只在紧急制动设定下可用，那一刻已在设定中；按钮就在驾驶台，两盏健康灯亮着，两个压力瓶在绿区，这套系统在事故后测试时正常出砂（p.52、p.53）。不靠运气：按钮是车内固定装置，撒砂压力与砂量都经过检验，RAIB 的仿真也把这一动作算过：在那一刻按下，列车停在 MH1078 稍外，不进入单线（p.54）。成本是一次单发砂，用后回段补装。这个动作在 19 时 23 分之后的每一秒都有效，效果随距离衰减：越过 MH1078 时按，列车停在环线出口道岔之外；出环线约 18 秒后按，停在 MH1081 附近；越过 MH1078 之后 75 秒再按，相撞仍会发生，只是速度降到约 14 km/h（p.54）。</p>
+<p><strong>结局与来源</strong>：1 名乘客死亡，4 人重伤（1J25 上 3 人、1S71 司机），23 人轻伤（1J25 上 18 人、1S71 上 5 人）；两车未脱轨；Talerddig 环线道岔损坏，线路 10 月 28 日重开（p.7、p.12）。RAIB 于 2026 年 6 月 18 日发布本报告，9 条建议分致 RSSB、Angel Trains、Network Rail、TfWRL，另有 3 条安全观察、1 条关于安全关键通话的学习点（p.9）。RAIB 同时写明：若 1S71 被铁路紧急呼叫（REC）叫停，相撞不会避免，但碰撞能量会降低（p.8）。报告对关键判断留了措辞余地：自动撒砂失效的原因写作"可能"，被堵的软管"大概"会被正常工作的系统冲开（p.7、p.48）。TfWRL 在事故后发出两份全国事件通报（软管堵塞、电气故障），并改了 158 型的撒砂测试钮电路，使其经过 SIS 与 LSR4（p.108）。一手来源：RAIB, Report 08/2026, Collision between two passenger trains near Talerddig, Powys, 21 October 2024, June 2026，140 页，链接见附录 B ce-001。</p>
+<p>案例二的行为分配问题还有一层值得拆：自动与手动的分工假设（自动为主、手动兜底）在告警正常时是合理的，它的缺口在"自动悄悄坏"的场景：系统坏了但不告警，司机读到的信号（无告警）与系统的真实状态（失效）相反。无告警被读成正常，是自动化的通用陷阱（故障的静默模式），冗余清单的共同项登记因此要包括"静默失效"条目：每套系统标注它的失效是吵闹的（会告警）还是安静的（无告警）；安静的系统必须配周期性的主动验证（查状态而不是等告警），因为等待告警的监控策略对静默失效完全无效。</p>
+<p>监控策略的共因还有一层递归值得点破：两套系统的监控本身可能同源（同一套采集脚本、同一个告警平台、同一个值班判断流程），监控的共因让"备份失效"这件事本身不可见（主备的告警管道一起坏，你连知道备份死了的机会都没有）。监控冗余的验证是冗余验证的元层级：先验证告警链路活着（注入测试告警），再验证冗余可用（真切换）；顺序不能反，链路死了的切换演练是给空气拍的合影。元层验证的频率高于本体验证（月度注入 vs 年度切换），成本却低得多：它应该成为所有冗余体系的第一项例行动作。</p>
+<p>例行动作之后，冗余体系还差最后一块拼图：退役管理。被替代的旧系统（切到新系统后的旧主站、换代的旧设备）往往保留在清单上一段时间，清单读者会把它们继续计入防线；旧系统不维护、不升级、不演练，是纯纸面防线。退役管理的规则因此要写死：正式宣布退役的日期起，该系统从防线计数中删除，清单同步更新；过渡期的双系统（新旧并行）要明确谁算防线谁算影子。清单的读者永远是未来的某个人（审计者、接任者、监管），清单对他们的诚实是本章全部装置的最后出口：账本不说谎，冗余才算数。</p>
+<p>才算数的冗余还要面对最后一个对手：时间对异构的侵蚀。异构不是一次采购的属性，是持续管理的属性：第二供应商会被收购（变同源）、第二团队会轮岗合并（变同队）、第二算法会随框架升级收敛（变同栈）。异构的衰减是慢变量，五年为周期观测：每年更新共因清单时，对比上一年的异构维度，维度减少的条目标注"异构侵蚀"。侵蚀的对策按维度不同（换供应商重新异构，或接受降级并把该冗余对从防线计数中打折）。慢变量最容易在静默中归零：本章把它写成清单条目的年度对比，就是给它一个不会静默的观测点。</p>
+<p>最后把本章放进全书的图里。第三部的机制多数是"多因出一果"，本章是"一因出多果"的镜像结构：共因一到，多道防线同时失效，多个机制的舞台同时搭好（冗余塌了之后，偏差正常化、维护不可见、成功的松弛各自的代价在同一场事故里兑现）。这个镜像结构让本章成为很多事故报告的钥匙：报告里"多重防线失效"的表述，多数要回到本章找那个"一因"。找因的方法就在五族清单里：把报告里每道失效的防线拉出来，找它们的交集，交集就是那个共因。交集法是本章给事故读者的工具，也是给设计者的镜子：你设计的每道防线，迟早会同台面对一个你没想到的共因；它们有没有准备，账本上早就写好了。</p>
+<p>写好的账本里还有一页是给采购读者的：冗余采购的验收标准。验收不看交付物的数量（两套到货），看三样：差异证明（两套的差异清单随交付归档）、独立验证报告（供应商在约定条件下对第二套的单独测试）、切换剧本（含最坏条件版本）。三样写进采购合同的验收条款，供应商的报价会变贵一些（测试与文档的真实成本），这正是本章要的价格信号：冗余的真实成本在验证里，不在复制里。免验证的冗余报价便宜，因为它卖的本来就不是冗余，是冗余的样子。</p>
+<p>样子的最后一个藏身处是保险与合规文书：投保的冗余条款、合规报告的防线清单，都是"样子"的集中地。它们有一个共同的好用法：拿保险与合规文书里的防线清单，与本章的账本对账，差异条目就是纸面防线的完整名单。名单通常是尴尬的（保险认为你有的，实测发现你没有），尴尬的价值在于它标注了两种账的差价：保单按纸面定价，事故按现实赔付，差价在出事那天由股东与遇难者家属分摊。对账每年做一次，做法是把保险申报表拉出来逐条过真演记录；这个动作的另一个名字是：让保单按现实重新定价。</p>
+<p>定价做完，冗余故事就完成了它在本章的闭环：从"我们有两套"的一句口头承诺，到差异清单、独立验证、真演记录、共因登记、异构维护、退役管理、保单对账的一套账本。闭环的每一环都不贵，环与环连起来之后，那句口头承诺才第一次有了工程含义。闭环的维护者要写进岗位（第 20 章的 owner 条款照抄：账本有 owner，owner 有考核），考核的口径就是各环的按时率。冗余的账本与第 21 章的依赖图、第 20 章的产出台账合并起来，是一个组织防线体系的三本总账：防线在哪（依赖图）、防线活吗（冗余账本）、防线干活吗（产出台账）。三本总账每年合并出一份防线年报，年报的第一页照第 20 章的格式：今年抓到了什么，今年验证了什么，今年降级了什么。</p>
+<p>年报之外给攻击者视角最后一段篇幅，因为它是"数种类"思维的完整来源。攻击者（这里的攻击者广义指一切寻找系统最弱路径的力量：火灾、洪水、市场冲击、恶意入侵）做本题的方式从来不是逐个击破防线，是找防线的最大公约数：一个能同时杀死几道的条件。安全设计的对策因此是攻击者思维的镜像：给自己的每一组防线写下最大公约数（五族清单），然后决定要么消灭它（异构、隔离、分散），要么给它定价（剩余风险的预算科目）。两件事做完的组织，攻击者思维反而帮了它：所有能同时杀死多道防线的条件都被登记在册，册子的厚度就是系统的真实安全度。册子薄的组织不是安全，是还没数过。</p>
+<p>数过之后的手感会变：评审会上听到"双重保障""多层防护"，受过本章训练的读者的第一反应不再是安心，是把这句话拆开。拆开的标准动作是三连问（差异、独立验证、最坏条件，第 7 节的追问），三问之后的"双重保障"通常露出两种底色：真冗余（差异与验证俱在）或纸面冗余（同源与没演过）。两种底色的后续完全不同：真冗余进年报的资产栏，纸面冗余进降级清单与保单对账的差价栏。本书在这一章想留给读者的，就是这套把形容词变成台账的手艺：安全这个词在这个行当里的价值，全看它有没有被拆开过。两套撒砂若都能安静失效，共同项就是同一个：等待。</p>
+<h4 id="_3">案例五（航空）：一次破损与两套液压（展开版）</h4>
+<p>av-007。</p>
+<p><strong>时间与地点</strong>：2024 年 8 月 12 日 21 时 10 分推出，21 时 39 分起飞，8 月 13 日 01 时 12 分落地；日本千叶县成田国际机场（北纬 35 度 44 分 25 秒、东经 140 度 23 分 34 秒附近）。轮胎破裂的位置在 A 滑行道 W6 至 W5 附近，起飞与落地都走 16R 跑道，原定目的地洛杉矶国际机场。21 时 40 分的地面观测是南南东风 3 米/秒、能见度 10 公里、晴、气温 27℃、露点 26℃、海面气压 1,005 百帕（p.1、p.2、p.3、p.5）。</p>
+<p><strong>主体</strong>：阿特拉斯航空（Atlas Air, Inc.）定期 7106 班，波音 747-400F，注册号 N404KZ（美国籍），制造序号 34283，2007 年 3 月 5 日制造，总飞行时间 64,170 小时 56 分。机上 7 人：机长 47 岁，PF，左座，总飞行 9,140 小时、本型 1,181 小时 14 分；副驾驶 55 岁，PM，右座，总飞行 3,830 小时、本型 161 小时 14 分；同乘者 5 名。左机身主起落架在报告里简称"同主脚"，下文的两套液压都装在它身上。调查机关为日本运输安全委员会航空部会，2024 年 8 月 13 日指定主管调查官一名，8 月 28 日追加一名；美国作为设计制造国与登记国派代表参加（p.1、p.4、p.5）。</p>
+<p><strong>事发前在做什么</strong>：这架飞机当天以仁川—成田航段抵达，四次检查都没有发现机身起落架异常。出仁川之前，机务按日次定期点检逐条量过各轮胎压，机组另做一次机体外部点检；落地成田后机务绕机一次，出车前机组再绕机一次（p.5）。四次检查都碰到了轮胎，碰到的方式是看，其中一次加一个读数。报告没有记载这四次检查各自的执行时刻，也没有记载任何一次读数偏离（p.5）。带数字的只有胎压，在仁川那一次；此后到事发，再没有第二个读数。</p>
+<p>两只问题胎的履历在案。机身起落架 No.7 位是二次更生胎，2024 年 6 月 21 日装上，到事发飞了 89 个航段；No.8 位是一次更生胎，2024 年 8 月 9 日装上，飞了 2 个航段（p.6）。两个轮组件都按公司维修规程做了检查与整备（p.5）。</p>
+<p>21 时 10 分，飞机从停机位推出，滑向 16R，29 分钟后离地。经 A 滑行道 W6 至 W5 附近时，机组感到一次"像碾过什么东西"的振动，没有听到声音，滑行继续。此后到跑道口的滑行没有异常。起飞滑跑段没有振动，也没有任何异常仪表显示（p.2）。</p>
+<p><strong>决策点</strong>：① 21 时 10 分推出之后、21 时 39 分之前，A 滑行道 W6 至 W5。一次振动，没有第二次，没有声音，没有告警。机长在左座担任 PF，副驾驶在右座担任 PM。滑行继续。这一段的载体是机组的口述与 21 时 39 分的起飞时刻，没有文件。② 起飞后不久，驾驶舱 EICAS 出现"HYD QTY LOW 4"（Advisory）。No.4 系统在报告里的定位是「ブレーキの主作動油圧系統」（刹车主作动液压系统），告警内容是油量低；机组在 EICAS 上确认油量正在快速减少，执行 No.4 系统故障的非常操作检查单，此时没有别的异常（p.2）。机长决定继续飞往洛杉矶，报告给出的两条理由是检查单执行完未见其他异常，以及返航落地需要先把机体总重降到最大着陆重量以下，得先耗油（p.2）。同一时段，机组判断起飞滑跑中可能有液压油漏到跑道上，请成田塔台检查 16R 道面（p.2）。报告没有给出这个决定的具体时刻，只把它系在 No.4 告警的处理之后、21 时 52 分的客舱告警之前（p.2）。③ 21 时 52 分，高度 12,000 英尺附近，EICAS 出现"CABIN ALTITUDE"（Warning），客舱高度表指示 10,300 英尺。机组在 FL150 附近停止上升，向管制员发紧急通报，执行客舱失压检查单，按检查单下降到 10,000 英尺并决定返航成田（p.2）。这一条之后，航向不再有第二种可能，剩下的问题只有重量。④ 8 月 13 日 00 时 06 分起在海上放油。放油中 EICAS 先出"HYD QTY LOW 1"（Advisory），随后出"HYD PRESS SYS 1"（Caution）；No.1 系统在报告里的定位是「ブレーキの代替作動油圧系統」（刹车备用液压系统）（p.2、p.3）。机组执行 No.1 与 No.4 双系统丧失的检查单；确认总重已低于最大着陆重量后，按该检查单用备用方式放起落架，而不是正常放架（p.3）。落地阶段转向与自动刹车都不可用，机组改用手动刹车（p.3）。</p>
+<p><strong>当时可见</strong>：滑行段一次"碾过什么"的振动，无声音，之后无异状（p.2）。起飞滑跑段无振动，无异常显示（p.2）。起飞后 Advisory"HYD QTY LOW 4"，No.4 油量在读数上快速下降（p.2）。21 时 52 分 Warning"CABIN ALTITUDE"，客舱高度 10,300 英尺，飞机高度 12,000 英尺（p.2）。放油中 Advisory"HYD QTY LOW 1"，随后 Caution"HYD PRESS SYS 1"（p.3）。落地后转向与自动刹车不可用（p.3）。当晚晴、能见度 10 公里、气温与露点只差 1℃，道面没有降水（p.5）。驾驶舱里与轮胎有关的显示一处也没有：该机未装胎压指示系统 TPIS（p.7）。纸面上：四次检查记录无异常（p.5）；No.7 位 89 个航段、No.8 位 2 个航段的装机记录（p.6）；两个轮组件按维修规程维护（p.5）。报告没有记载机组在滑行段与塔台就振动通过话（p.2）。</p>
+<p>事后才知道的信息：No.7 胎的胎面在 W6 至 W5 段就已经剥离，剥离的胎面没有飞走，而是随轮子一起转，反复打在同一根减震支柱上（p.7、p.8）。起飞滑跑段出现的白色薄雾是刹车液压管路破口的征兆（p.7、p.8）。收轮时轮毂碎片撞穿主轮舱顶部压力隔壁，缺口前后约 25 厘米、左右约 38 厘米（p.3、p.8）。胎压下降的原因报告没能查明（p.8）。轮胎制造者的调查结论是：回收件的制造时不良没有发现，更生时贴合面的粘接被认定充分（p.6）。飞行记录仪没有记到与本次事故相关的振动或冲击，驾驶舱语音记录已被落地后的录音覆盖（p.7）。关键视频来自机场附近的拍摄者，事后才交到调查方手上（p.7）。</p>
+<p>〔停点：读者先判断，翻页再看〕</p>
+<p>你现在坐在这个位置上，手上是上面这些材料。</p>
+<ol>
+<li>你会怎么做？（写下具体动作，不要写"更重视"）</li>
+<li>这些材料里，哪一条最可能被你忽略？为什么它看起来不重要？</li>
+<li>如果只允许你设一个检查点，设在什么时候、检查什么？</li>
+</ol>
+<p><strong>被排除的选项</strong>：滑行中停住，请机务上滑行道目视查轮：报告没有记载这一项被讨论过，成本是延误与滑行道占用。起飞后立即返航落地：报告写的是要先耗油把总重降到最大着陆重量以下，所以先朝洛杉矶方向飞（p.2）。超重落地：报告没有记载这个选项的评估，只写了"需要减重"这一条约束（p.2）。给这一型选装 TPIS：747-400 系列有此选装，该机没装（p.7）；报告在分析里把它写成"若装了，机组可能在滑行中察觉胎压异常"（p.8）。把同一根支柱上的两套刹车液压管路在物理上分开：属设计更改，报告未提这一项被考虑过；事故后营运人的 8 项整改全在维修规程一侧（p.9）。日检胎压改在冷却后测量：事故后才写进作业指示书（p.9）。按正常方式放起落架：检查单要求改用备用方式，机组照做了（p.3）。</p>
+<p><strong>早期信号</strong>：① 2024 年 6 月 21 日，二次更生胎装到机身起落架 No.7 位，至事发 89 个航段（p.6）。压过去：整备按公司维修规程执行（p.5），规程当时不禁止在 No.7、8、11、12 位装更生胎，事故后才禁（p.9）。② 胎压点检的结果此前不作为整备管理系统里的记录留存，事故后才要求录入并使其可追踪（p.9）。压过去：纸质记录在案，读得到，拼不成趋势。③ 日检的胎压测量没有冷却时点要求，事故后才补上"原则上在刹车冷却、温度稳定后（块进 2 小时以上）测"（p.9）。压过去：按作业卡做就算合规，热胎读数偏高这件事不在卡上。④ 日检作业指示书里原有这样一条：发现需要更换的轮胎或刹车、而更换可能造成运航延误时，可以把处置往后放（p.9，事故后删除）。压过去：条款本身授权。报告没有写这一条在本案里被用过。⑤ 驾驶舱对胎压零可见（p.7）。压过去：TPIS 是选装件，适航不要求。</p>
+<p><strong>加码点</strong>：21 时 39 分，16R 跑道，抬轮。抬轮之前，唯一看得见轮子的位置在机外：滑行道旁的拍摄者录到了"バン"的打击音与随轮转动的胎块（p.7）。抬轮之后，机上没有任何一处显示能看见轮胎，飞机带着一个已经裸露的轮子离地。这一段的加码没有文件，没有签字，载体是一次推油门。报告能给出的时间锚点只有两个：21 时 39 分的起飞时刻，和 13 分钟后才出现的第二条告警（p.2）。这 13 分钟里，报告的记录只有两件事：No.4 系统检查单，以及对塔台的跑道检查请求（p.2）；飞机在这段时间里爬到了 12,000 英尺，推定航迹画在报告图 2 上（p.2、p.3）。告警的级别与损伤的分量不成比例：两套刹车液压在同址受损这件事，是用最低级别的 Advisory 报到的；级别最高的那一条 Warning，指向的是另一套系统（客舱增压）。第三条又回到 Advisory，出现在两个半小时之后（p.2、p.3）。</p>
+<p><strong>失效链</strong>：技术层。No.7 胎压下降（原因未查明，p.8）使接地面压塌，胎面与胎侧交界处受力，胎面龟裂并剥离（p.8）。剥离的胎面没有脱离轮子，随轮转动，在滑行段反复拍打同一根减震支柱，该支柱上 No.1 与 No.4 两套刹车液压的管路因此破损（p.8）。起飞滑跑段可见白色薄雾，配管被推定在这一段破裂（p.8）。裸露的轮子继续滚行，轮毂部件断裂飞散，收轮时碎片撞穿主轮舱顶部压力隔壁（p.8）。一个源头，三处损伤：No.4 液压、No.1 液压、客舱增压。组织层。两套刹车液压的管路装在同一根减震支柱上，报告的原文是「同主脚ショック・ストラットのＮｏ.１及び４ブレーキ油圧系統は損傷した」（p.8）；两套的功能分工是主用与备用（p.2、p.3），物理上同址。驾驶舱没有胎压显示，TPIS 未装（p.7）。四次检查都发生在破损之前；破损之后到离地之间，没有任何一次地面检查（p.2、p.5）。胎压记录不入系统，趋势看不见（p.9）。滑行中"感到碾过什么"没有对应的处置条款，报告里也找不到一条量化触发条件。激励层。日检作业指示书写明了更换可能造成延误时可以往后放（p.9）；胎压在热态下测，读数偏高，检查照样通过（p.9）。交界处的断点在组织层与设计层的接缝：设计与维修规程各自都合规，一个把两条管路放在同一根支柱上，一个把胎压交给每天一次的读数和一次绕机；没有任何一方为"同一个物理事件能同时碰到两套"负责。</p>
+<p><strong>最小反事实</strong>：一次振动之后，把飞机停在滑行道上，请机务从地面看一眼 No.7 与 No.8 位。一个动作，落在 21 时 39 分之前，成本是一次延误和一段滑行道占用。不靠运气：剥离的胎面当时没有脱落，还随轮子转，视频里看得见（p.7）；机组感到振动的位置与视频记录到打击音的位置是同一段（p.2、p.7）。这个动作不需要运气，也不需要新的判断依据，它只需要把"碾过什么"当成一次真实的破损而不是一次路面颠簸。报告对"提前发现"给出的唯一判断是关于 TPIS 的"可能性"（p.8）；报告没有评估停机目视这一条。这个动作的后半段也写在报告里：一旦确认胎面剥离，处置是换轮；事故后的整改把"径向胎的胎面一旦剥离就必须更换"写成了明文（p.9），事发时的作业卡上没有这一条。</p>
+<p><strong>结局</strong>：8 月 13 日 01 时 12 分落地 16R，越过跑道中线标志后停住，手动刹车减速；到飞机被移往停机位，跑道封闭约 7 小时（p.3）。机体中破：主轮舱顶部压力隔壁缺口前后约 25 厘米（10 英寸）、左右约 38 厘米（15 英寸），属大修理范围；No.7 与 No.8 轮组件损伤；减震支柱的液压部件破断与座屈；起落架舱门部分缺失；左机身下外板与左平尾等约 80 处裂纹与凹陷（p.3、p.4）。机上 7 人无伤（p.1）。地面：跑道道面有直线与曲线状刮痕、灯具损坏；A 滑行道找到舱门碎片与胎片，跑道找到含胎片与刹车件的多件碎片（p.5）。报告 2025 年 7 月 11 日议决，共 9 页（p.1）。回头看三个问题：第一个问题最常见的答案是"起飞后密切监控液压"，但监控改变不了共因已经发生的物理事实，停机检查才是把事件拦在滑行道的动作；第二个问题里最常被忽略的是"坏一套还有一套"这句信心的适用范围：它对独立失效成立，对共因失效不成立，而轮胎舱恰恰是两套系统物理共处的区域；第三个问题的正确落点在滑行异常的处置标准：异常振动加轮胎怀疑的组合，处置标准应该是停下目视，而不是继续观察。一手来源：JTSB, 2025，链接见附录 B av-007。</p>
+<p><strong>结局与来源</strong>：JTSB《航空事故調査報告書》，阿特拉斯航空波音 747-400F（N404KZ），事故种类"離陸時の機体損傷"，成田国际机场，2024 年 8 月 12 日，令和 7 年 7 月 11 日运输安全委员会航空部会议决，9 页，PDF 已由本书下载核读。报告的原因段通篇用"推定"，No.7 胎压下降的原因明写无法查明（p.8）。再发防止措施分两段：5.1 建议把握胎压下降趋势，并把 TPIS 列为有效手段（p.9）；5.2 列出营运人在事故后对日检作业指示书的 8 项改动，含冷却后测量、热态与冷态许用压力直接印在作业卡上、删除延误先送行条款、禁用更生胎的位置、记录录入系统、量具编号与校准日期可追踪（p.9）。一手来源：JTSB, AA2025-6-2, 2025，链接见附录 B av-007。</p>
+<h3 id="_4">案例三（医疗）：紫色注射器与第二双眼睛</h3>
+<p>me-003。英国儿科，择期肾活检前镇静。HSIB 报告（Inadvertent administration of an oral liquid medicine into a vein，2019，存档快照已经本书核读）：口服咪达唑仑被抽入静脉注射器误注静脉。防线有两道：口服药专用紫色注射器（器械级隔离：颜色让口服与静脉的器具在物理上不可混用）、给药前双人核对（流程级隔离）。事件中两道同时失效：注射器被替换使用，双核对退化为形式。患儿无明显不良影响；报告引用的全国口径为 61 例错误途径给药，并提出四条安全建议（2019/028–031）。</p>
+<p>停在决策点上：准备给药、双人核对开始之前的那个准备间。桌面上的信息：紫色注射器缺货或不在手边、两位忙碌的同事、核对表上的两个签名栏。两道防线的共同项是"条件正常"：紫色注射器在位、第二人有空：这个前提一破，两道一起破。〔结局〕错误途径给药，未致伤害。一手来源：HSIB, 2019，链接见附录 B me-003（存档链接，等级 A−）。</p>
+<p>案例三的"条件正常"共因还有一条推广线：防线对资源的依赖。紫色注射器是耗材（会缺货），第二人是人力（会忙碌）：两道防线共享的隐含前提是资源充足。资源充足在多数日子里成立，成立的日子越长，防线对它的依赖越不被看见（第 20 章的机制在冗余上的投影）。补法是给防线的资源依赖做压力登记：这道防线在耗材缺货、人手不足、外包换人的条件下还剩多少效力。登记的产出通常是残酷的：多数多防线设计在资源紧张时的真实防线数是一。残酷的好处是它把"双保险"的话术拉回算术：保险的保费（异构与冗余资源）要在最紧的日子也付得起，否则保单是周末版。</p>
+<h3 id="_5">案例四（化工）：一起断电的兜底方案</h3>
+<p>ch-003。Arkema 有机过氧化物工厂（得州克罗斯比），2017 年 8 月末。CSB 报告（页面已经本书核读）：飓风哈维的洪水使厂区制冷系统断电失效，储存的有机过氧化物升温，8 月 31 日首批自燃，其余拖车于 9 月 3 日被人为点燃处置。应急预案把"断电后转移至冷藏拖车"作为兜底：兜底方案与主系统暴露在同一共因之下：洪水既淹了厂房的制冷，也淹了拖车的冷藏与场内道路。备份在纸面上独立，在洪水的拓扑里与主系统同一条命。</p>
+<p>停在决策点上：应急预案把冷藏拖车列为失效兜底、并获批准的时刻。桌面上的信息：拖车冷藏能力清单、厂区历史从未被淹的水位假设。共因审查要问的问题只有一句：主系统失效的原因，会不会同样作用于你？洪水给出了否定的答案。〔结局〕连环燃爆，周边疏散。一手来源：CSB, Arkema Inc. Chemical Plant Fire, 2018，链接见附录 B ch-003。</p>
+<p>案例四的洪水还值得从预案写作的角度再读一次：预案是分场景写的（断电场景、洪水场景分开写），兜底方案在断电场景里被批准时，作者的思维停留在场景内（断电了怎么办），共因的问题（断电的原因是什么、它还会碰到什么）属于场景之间的地带。预案写作的补法是加一个跨场景阅读步骤：每个兜底方案写完，回到触发它的事件的物理原因，沿原因把别的场景再读一遍（洪水既触发断电也淹拖车，那就把断电兜底拿到洪水场景重读）。这一步的成本是每份预案半天，它拦住的正是场景缝隙里的共因：多数共因不活在场景里，活在场景的边界上。</p>
+<h4 id="_6">案例六（海事）：应急包里的两道同时失效（压缩版）</h4>
+<p>ma-009。尾拖渔船 Ocean Way，2014 年 11 月，英国海域。MAIB 报告（2015，页面已经本书核读）：顺浪航行甲板积水倾覆，3 人死亡、2 人生还。应急装备的冗余在本案成对失效：救生筏被筏架困住未释放；EPIRB（应急示位标）无 GNSS 定位，搜救坐标延迟 47 分钟才建立。两条应急线（撤离工具与定位工具）各自纸面在位，各自在真实场景里失灵；它们的共同项是"从未在真实场景被验证"（筏架释放试验、示位标定位实测）。最小反事实：应急装备按真实场景年检（真释放一次、真测一次定位）。一手来源：MAIB, 2015，链接见附录 B ma-009。</p>
+<h4 id="_7">案例七（航空）：做完规定动作之后的复发（压缩版）</h4>
+<p>av-027。767 货机，2025 年 10 月，英国。AAIB 报告（2026，页面已经本书核读）：爬升中副翼操纵卡阻，安全落地；该机型有积冰卡阻先例，规定改装与检查均已完成。防线（改装加检查）在纸面完备之后复发，说明防线的有效性口径与实际暴露口径之间有缝：改装覆盖的场景与实际遭遇的积冰条件不完全重合。冗余的假象在此的形态是"规定动作即安全"的假设：动作完成了，防线被记为在位。最小反事实：把先例复发条件纳入改装有效性验证的对照。一手来源：AAIB, 2026，链接见附录 B av-027。</p>
+<h4 id="_8">案例八（航空）：没被任何一道拦住的性能误差（压缩版）</h4>
+<p>av-028。波音 737-8（G-CRUX），2025 年 4 月，伦敦卢顿。AAIB 通信级调查（2026，页面已经本书核读）：机组按全跑道计算性能却从交叉口起飞，爬升极浅，13 英尺过跑道头。机场的放行防线有多道（性能单复核、跑道头确认、FDM 事后监控），误差未被现场任何一道拦截，仅事后 FDM 数据发现。多道防线的共同盲区是假设"计算与执行的机场参考点一致"；防线之间的独立性没有覆盖这个共享假设。最小反事实：性能单与实际起飞点的一致性检查列为放行固定项。一手来源：AAIB, 2026，链接见附录 B av-028。</p>
+<h2 id="4">4 最早能看出什么</h2>
+<p>弱信号六条，每条附它通常被什么理由压过去。</p>
+<ol>
+<li>备份系统与主系统的供应商、实施方或运维团队是同一家。理由："兼容性好、响应快。"</li>
+<li>切换演练全部在夜间低负载窗口完成，从未在业务高峰真演。理由："业务不能冒险。"</li>
+<li>两套系统的监控告警汇入同一个值班台、同一个人处理。理由："集中监控效率高。"</li>
+<li>备份的规格书基于主系统的图纸改编。理由："保证一致性。"</li>
+<li>应急预案的兜底环节从未列出它与主系统共同的失效条件。理由："预案是分场景写的。"（Arkema 的洪水就是场景间的公共变量。）</li>
+<li>"我们有两套"这句话的完整版从来没有被追问过：两套什么、什么不同、谁验证过。理由："问这么细干什么。"</li>
+</ol>
+<p>把六条信号放回本章八个案例。信号一（同一家供应商）与案例四的拖车对应：兜底与主系统同处一个采购半径。信号二（演练只在低负载窗口）与全部案例对应：八个案例没有一起经过过真切换或真场景验证。信号三（同一值班台）与案例二的撒砂对应：自动与手动状态汇入同一个驾驶室判断。信号四（规格书改编）与案例五的液压对应：两套管路在同一张总体图纸的约束下走线。信号五（预案场景间公共变量）与案例四的洪水对应。信号六（追问缺席）是案例一的问题：ADS-B 地图与目视的"两套"从未被追问对方装没装。</p>
+<p>八案例按五族共因归位：环境族（案例四洪水）、设计族（案例五管路走线、案例八的参考点假设）、运维族（案例七的改装与检查覆盖缝）、行为族（案例一让渡、案例二分工、案例三条件正常）、认证族（案例六的纸面验证、案例三的器械与流程双认证）。五族的分布提示登记的次序：环境族与认证族最难自查（它们在组织视野之外），先请外部视角补这两族，再自查行为族与设计族，运维族最后（它最容易被日常感覆盖）。</p>
+<h2 id="5">5 怎么防</h2>
+<p>装置一：共因清单。每个冗余对强制登记共同项：电源、网络、厂商、算法、场地、人员、假设，逐项标注"该共因失效时两套是否同时失效"。清单每年更新，登记册与依赖图（第 21 章）互为索引。Arkema 案例的审查条目就是从这里来的：兜底方案的清单里必须有一行"与主系统共同的失效条件"。</p>
+<p>装置二：异构标准。关键冗余至少一个维度强制异构：不同原理、不同厂商、不同团队。撒砂的自动与手动、注射器的颜色与核对、地图与瞭望：失效都发生在同构处。异构的采购成本是真实的，它的对价要写在采购单上：你多付的钱买的是"共因不共享"。</p>
+<p>装置三：真切换。冗余的验证标准写死：切换必须关闭主系统、在真实负载下完成，每年至少一次；不可真切换的冗余，其状态从"冗余"改标为"纸面备份"，不参与防线的计算。这个降级的实质是把防御算术从乘法改回加法：数字难看了，但那是真实的数字。</p>
+<p>四个装置放到本章案例上。装置一（共因清单）在案例四上的用法：兜底方案的登记行"与主系统共同的失效条件"填上"洪水位、场内道路、场外电网"。装置二（异构标准）在案例三上的用法：紫色注射器缺货时的替代规程（临时双人独立准备加口头复诵），异构维度的替代方案预先写好而不是临场发明。装置三（真切换）在案例二上的用法：手动撒砂的真演安排在湿轨条件（真模拟黏着异常），而不只是干轨按按钮。装置四（兜底同因审查）在案例六上的用法：救生筏释放与 EPIRB 定位的年检在"模拟倾覆"前提下做，而不是在甲板上做。</p>
+<p>四个装置的失败形态。共因清单死在清单颗粒度：登记"同厂商"却漏掉"同厂商的同一产品线"（共因在产品线层）；补丁是清单条目落到型号与批次。异构标准死在形式异构：换了厂商但两家的上游芯片/钢材同源（二阶同源）；补丁是对关键部件追问二级供应商。真切换死在切换的范围缩水：只切了核心功能，边缘功能留在主系统；补丁是切换范围按功能清单逐项勾选并留证。兜底审查死在一次性：预案批准时审了一次，后续修订不再过审；补丁是预案版本号与审查记录绑定。四个死法共享一个体检句：这套冗余最近一次"在坏条件下"工作是什么时候。答"没有"的，冗余状态自动降为纸面备份（装置三的降级条款照执行）。</p>
+<p>冗余的采购与设计还有一个经济学提示值得写明：异构的溢价是真实的（第二供应商的学习成本、集成成本、备件双线），把它压下去的每个决定都在加贝塔。预算表的诚实写法是把两列并排：同源方案与异构方案的全生命周期成本，第三列写两条风险差异（共因暴露的差异）。多数组织的采购比较只有前两列：第三列的缺失让"省钱"在纸面上永远获胜。第三列的成本估算不需要精确（区间即可），它需要的只是有人被要求填：填的人按第 17 章的写法三（外部性折算入账），共因风险从此有了价格。</p>
+<p>价格确定之后，还有一个心理侧的障碍要处理：同构的舒适感。运维团队对同源系统的熟悉是真实的效率（故障排查快、备件通用、值班培训共享），异构方案在这些维度全面变差；异构的真实收益（共因不共享）是概率的、延迟的、看不见的。拿确定的效率换概率的安全，组织会反复选择效率，除非概率的那一边被高频提醒。提醒的载体是共因清单的季度过会（把每条共同项念一遍，念的对象是运维团队自己），念的成本极低，它维持的是异构收益在决策者心中的存在感。存在感衰减的周期就是贝塔回升的周期：清单过会的季度化不是仪式，是给概率安全续费的频率。</p>
+<p>冗余思想的历史也值得一提，因为它解释了判据的来源。冗余设计的黄金时代来自航空与核电（故障树、双通道、多样化设计），那个时代的工程师对共因有近乎偏执的敏感（三哩岛与切尔诺贝利是行业记忆）；软件行业后来居上接过了冗余的实践（多可用区、多活架构），但共因的敏感度滞后了：云厂商的可用区共用同一控制面的案例（第 21 章案例二、五都发生在控制面）说明多可用区的"区"是物理冗余，不是逻辑冗余。两代冗余实践的接力有个明确的交接点：物理时代的共因查环境，逻辑时代的共因查控制面与假设。今天的读者两代都要查：你的系统里既有电缆与机房，也有算法与默认语义，五族共因是按两代冗余的失效史整理的家谱。</p>
+<p>装置四：兜底方案的同因审查。应急预案的每个兜底环节必答一题："主系统失效的原因，会不会同样作用于你？"这一问的成本是一行字，收益是把 Arkema 类场景在纸面上拦住。</p>
+<h2 id="6">6 与相邻机制的边界</h2>
+<p>与隐蔽耦合（第 21 章）：耦合是独立系统间的暗线（没人知道它们相连），假象是冗余对内的同源（大家都知道它们相连，只是没当回事）。第 21 章的测绘画出来的暗线，落进冗余清单就是本章的共因条目。</p>
+<p>与成功的松弛（第 20 章）：松弛让备份不验证（没人觉得需要演），假象让备份不异构（采购时就不独立）。松弛是时间病，假象是结构病；长时间松弛的组织，冗余清单会自动向同源退化。</p>
+<p>与合规但不安全（第 32 章）：合规检查数防线的个数，本章数防线的种类。监管要求"具备冗余"而验收只看存在性的领域，是假象的高发区。</p>
+<h2 id="7">7 自检五问</h2>
+<ol>
+<li>写出你组织引以为豪的三个冗余，各自的共同项清单在哪？没有清单，冗余两个字先打个引号。</li>
+<li>你的备份系统上一次独立于主系统运行是什么时候？"独立"的验证人是谁？</li>
+<li>最近一次切换演练，主系统真的关了吗？业务流量是真的吗？</li>
+<li>你的应急预案里，兜底环节与主环节共享的失效条件写了吗？拿一条洪水或断电过一遍。</li>
+<li>屏幕上、清单上、图纸上"存在"但从未被单独验证过的防线，你现在数得出几个？</li>
+</ol>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  回到页面顶部
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="页脚" >
+        
+          
+          <a href="../ch21/" class="md-footer__link md-footer__link--prev" aria-label="上一页: 第 21 章 隐蔽耦合">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                上一页
+              </span>
+              <div class="md-ellipsis">
+                第 21 章 隐蔽耦合
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../ch23/" class="md-footer__link md-footer__link--next" aria-label="下一页: 第 23 章 边界条件外推">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                下一页
+              </span>
+              <div class="md-ellipsis">
+                第 23 章 边界条件外推
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      免费公开 · 持续校订
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.sections", "navigation.top", "navigation.footer", "navigation.tracking", "toc.follow", "search.suggest", "search.highlight", "content.code.copy"], "search": "../assets/javascripts/workers/search.a7633da7.min.js", "tags": null, "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.c21346df.min.js"></script>
+      
+        <script src="../assets/shelf-counter.js"></script>
+      
+    
+  </body>
+</html>

@@ -1,0 +1,3094 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="A cross-domain manual of structural failure: twenty-four mechanisms, fourteen domains, 159 cases">
+      
+      
+      
+        <link rel="canonical" href="https://tkf.fly2ai.top/en/ch33/">
+      
+      
+        <link rel="prev" href="../ch32/">
+      
+      
+        <link rel="next" href="../ch34/">
+      
+      
+        
+          <link rel="alternate" href="/en/" hreflang="en">
+        
+          <link rel="alternate" href="/" hreflang="zh">
+        
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.8.0">
+    
+    
+      
+        <title>Chapter 33: Cascading Failure - The Knowledge of Failure</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.57a0d79d.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.fb2fffe2.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Serif:300,300i,400,400i,700,700i%7CNoto+Sans+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Noto Serif";--md-code-font:"Noto Sans Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/extra.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="custom" data-md-color-accent="custom">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#chapter-33-cascading-failure-contagion" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="The Knowledge of Failure" class="md-header__button md-logo" aria-label="The Knowledge of Failure" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            The Knowledge of Failure
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Chapter 33: Cascading Failure
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="custom" data-md-color-accent="custom"  aria-label="Dark"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Dark" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="custom" data-md-color-accent="custom"  aria-label="Light"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Light" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+      <div class="md-header__option">
+  <div class="md-select">
+    
+    <button class="md-header__button md-icon" aria-label="Select language">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m12.87 15.07-2.54-2.51.03-.03A17.5 17.5 0 0 0 14.07 6H17V4h-7V2H8v2H1v2h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2zm-2.62 7 1.62-4.33L19.12 17z"/></svg>
+    </button>
+    <div class="md-select__inner">
+      <ul class="md-select__list">
+        
+          <li class="md-select__item">
+            <a href="/en/" hreflang="en" class="md-select__link">
+              English
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="/" hreflang="zh" class="md-select__link">
+              中文
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</div>
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/Jweokk/failure-knowledge-book" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="The Knowledge of Failure" class="md-nav__button md-logo" aria-label="The Knowledge of Failure" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    The Knowledge of Failure
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/Jweokk/failure-knowledge-book" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../preface/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Preface
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Part I　Meta-questions
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Part I　Meta-questions
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ch01/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 1: Why Failure Knowledge Is the Most Expensive, and the Least Organized
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ch02/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 2 Three Biases: Recording, Survivorship, Attribution
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ch03/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 3 The Five Fields That Record Failure in Earnest
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ch04/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 4 Why This Method Did Not Spread
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Part II　Anatomy
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Part II　Anatomy
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ch05/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 5 The Twelve Fields of the Case Card
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ch06/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 6 Visible at the Time
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ch07/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 7 Decision Points and Points of No Return
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ch08/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 8: Escalation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ch09/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 9 The Failure Chain: Three Layers and the Breaks at Their Boundaries
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ch10/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 10 The Minimum Counterfactual and Evidence Grades
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Part III　Twenty-four mechanisms
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Part III　Twenty-four mechanisms
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ch11/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 11 Normalization of Deviance (Vaughan, 1996)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ch12/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 12 Goal Displacement; Goodhart's Law
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ch13/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 13 Narrative before Evidence; Motivated Reasoning
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ch14/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 14 Where Intuitive Expertise Breaks Down (Kahneman & Klein)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ch15/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 15 Practical Drift (Snook)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ch16/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 16 Information Attenuation up the Hierarchy
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ch17/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 17 Misaligned Incentives
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ch18/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 18 Diffusion of Responsibility
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ch19/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 19 Why the Truth-Teller Goes First
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ch20/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 20 The Slack of Success (Failure of Success, Sitkin)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ch21/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 21: Hidden Coupling
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ch22/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 22 The Illusion of Redundancy
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ch23/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 23 Extrapolating Past the Validated Domain
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ch24/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 24: Crossing a Scale Threshold
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ch25/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 25: Margin Erosion (Dekker)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ch26/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 26 Automation and Skill Decay
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ch27/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 27: Sunk Cost and Escalation (Staw)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ch28/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 28 Horizon Mismatch; Short-Termism
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ch29/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 29 The Invisibility of Maintenance
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ch30/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 30 Handover Rupture; Organizational Forgetting
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ch31/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 31 Regulatory Lag and Capture
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ch32/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 32 Compliant and Unsafe (Hollnagel: Safety-I and Safety-II)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 33: Cascading Failure
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 33: Cascading Failure
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#331-what-it-is" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        33.1 What It Is
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#332-how-it-grows" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        33.2 How It Grows
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#333-four-domains-four-shapes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        33.3 Four Domains, Four Shapes
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="33.3 Four Domains, Four Shapes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#case-one-software-one-thousand-one-hundred-prefixes-withdrawn-by-mistake" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Case One (Software): One Thousand One Hundred Prefixes Withdrawn by Mistake
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#case-two-agriculture-one-bag-of-stabilizer-and-ovens-in-many-states" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Case Two (Agriculture): One Bag of Stabilizer and Ovens in Many States
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#case-three-aviation-one-tyre-and-two-hydraulic-systems" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Case Three (Aviation): One Tyre and Two Hydraulic Systems
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#case-four-drugs-and-devices-a-component-makers-wrinkle-a-whole-kit-recalled" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Case Four (Drugs and Devices): A Component Maker's Wrinkle, a Whole Kit Recalled
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Case Four (Drugs and Devices): A Component Maker&#39;s Wrinkle, a Whole Kit Recalled">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#case-five-agriculture-and-food-another-name-inside-the-kit-condensed" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Case Five (Agriculture and Food): Another Name Inside the Kit (condensed)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#case-six-healthcare-the-safety-needle-that-left-the-catalogue-condensed" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Case Six (Healthcare): The Safety Needle That Left the Catalogue (condensed)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#334-what-shows-up-earliest" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        33.4 What Shows Up Earliest
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#335-how-to-prevent-it" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        33.5 How to Prevent It
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#336-boundaries-with-neighbouring-mechanisms" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        33.6 Boundaries with Neighbouring Mechanisms
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#337-the-five-self-checks" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        33.7 The Five Self-Checks
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ch34/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 34: Path Lock-in (David; Arthur)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Part IV　Fourteen domains
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Part IV　Fourteen domains
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../domain-01/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Aviation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../domain-02/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chemical & Process
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../domain-03/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Nuclear & Energy
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../domain-04/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Healthcare
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../domain-05/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Drugs and Devices
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../domain-06/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Construction and Infrastructure
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../domain-07/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Maritime and Transport
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../domain-08/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Software and Internet Services
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../domain-09/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Finance
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../domain-10/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Startups and Products
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../domain-11/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Public Policy and Administration
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../domain-12/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Military
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../domain-13/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Manufacturing and Supply Chain
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../domain-14/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Agriculture and Food
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Part V　How to use it
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Part V　How to use it
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ch35/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 35 The Situating Table
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ch36/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 36 Thirty Minutes Before the Decision
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ch37/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 37 Design Review Question List
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ch38/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 38 Writing a Postmortem That Lasts
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ch39/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 39 The Ninety-Minute Dry Run
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Part VI　Boundaries
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Part VI　Boundaries
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ch40/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 40 The Failures Worth Encouraging
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ch41/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 41 Normal Accidents and Black Swans
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ch42/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 42 When This Does Not Work
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9" >
+        
+          
+          <label class="md-nav__link" for="__nav_9" id="__nav_9_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Appendices
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_9">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Appendices
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../appendix-a/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Appendix A: Mechanism × Domain Matrix
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../appendix-b/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Appendix B: Case Index
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../appendix-c/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Appendix C: Evidence Grades and the Reconstruction Method
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../appendix-d/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Appendix D: A Genealogy of Mechanisms
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#331-what-it-is" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        33.1 What It Is
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#332-how-it-grows" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        33.2 How It Grows
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#333-four-domains-four-shapes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        33.3 Four Domains, Four Shapes
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="33.3 Four Domains, Four Shapes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#case-one-software-one-thousand-one-hundred-prefixes-withdrawn-by-mistake" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Case One (Software): One Thousand One Hundred Prefixes Withdrawn by Mistake
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#case-two-agriculture-one-bag-of-stabilizer-and-ovens-in-many-states" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Case Two (Agriculture): One Bag of Stabilizer and Ovens in Many States
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#case-three-aviation-one-tyre-and-two-hydraulic-systems" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Case Three (Aviation): One Tyre and Two Hydraulic Systems
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#case-four-drugs-and-devices-a-component-makers-wrinkle-a-whole-kit-recalled" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Case Four (Drugs and Devices): A Component Maker's Wrinkle, a Whole Kit Recalled
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Case Four (Drugs and Devices): A Component Maker&#39;s Wrinkle, a Whole Kit Recalled">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#case-five-agriculture-and-food-another-name-inside-the-kit-condensed" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Case Five (Agriculture and Food): Another Name Inside the Kit (condensed)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#case-six-healthcare-the-safety-needle-that-left-the-catalogue-condensed" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Case Six (Healthcare): The Safety Needle That Left the Catalogue (condensed)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#334-what-shows-up-earliest" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        33.4 What Shows Up Earliest
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#335-how-to-prevent-it" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        33.5 How to Prevent It
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#336-boundaries-with-neighbouring-mechanisms" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        33.6 Boundaries with Neighbouring Mechanisms
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#337-the-five-self-checks" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        33.7 The Five Self-Checks
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="chapter-33-cascading-failure-contagion">Chapter 33: Cascading Failure | Contagion</h1>
+<blockquote>
+<p>What this chapter covers: how a failure at one point amplifies along dependency chains into a wide area; the criteria, four field sites, and a method for managing a critical dependency as if it were your own single point.
+When to turn back: supplier consolidation, cloud migration, a just-in-time squeeze on inventory, and the moment before your risk register is updated for the last time.
+Reading time: 50 minutes.</p>
+</blockquote>
+<p>The amplification mechanism sits inside one line of business advice: focus on what you are good at and outsource the rest. Each half of that sentence holds on its own. Put together, they are the entire condition of this chapter. Outsourcing creates a dependency. Focus removes the backup. And the dependency graph is never a required field on the decision form. Then one point fails (an ingredient plant, a piece of automation code, a component's packaging), and the failure runs down the dependency chain into every downstream that focused on its own strength. Each downstream's continuity measures fail at the same moment, because all of them lean on the same upstream. Scale makes this worse. The more concentrated the dependency, the larger the radius of the single point, and the larger the radius, the more of the industry's risk register needs rewriting. Registers are rarely rewritten.</p>
+<h2 id="331-what-it-is">33.1 What It Is</h2>
+<p>Definition: cascading failure is failure that propagates along dependency relations and amplifies at each step. A single node (a supplier, a cloud region, an ingredient plant, a first-tier component) develops a problem, concentration carries it into many downstreams, and the continuity measures downstream all fail together because they depend on the same upstream. The division of labour with Chapter 21, hidden coupling, runs like this: that chapter deals with lines nobody knows exist, this one deals with lines that exist and are already concentrated. Concentration is what translates a local event into a system event.</p>
+<p>The arithmetic of that translation is worth stating first. The radius of a concentration grows linearly with the number of downstreams: one upstream, N downstreams, radius N. Secondary damage grows faster than linearly, since each of the N downstreams has downstreams of its own, and the radius multiplies at every layer. The consequence is blunt for anyone who has to sign the decision. Only two levers control the radius. Reduce the number of downstreams hanging on one point, which means diversifying upstream. Or cut the propagation layer, which means giving downstreams an alternative path. Both are expensive. Diversification gives up the volume discount. An alternative path is idle capacity. The price of either lever has to appear in a decision table before anyone can compute with it, which is the arithmetic under Device 2 in this chapter, single-point pricing. Most memos on centralisation decisions carry one column, efficiency. The work of this chapter is to get the second column onto the same page: expected loss from a supply interruption.</p>
+<p>One further layer belongs on the translation. A concentrated upstream failure turns a technical event into a public event: an industry-wide shortage, a recall spanning several countries, an outage across a whole network. Public events are handled by a different logic from technical ones, since they bring in regulators, press, and recall coordination across legal jurisdictions. That leaves a third hidden column in the cost of centralisation, the premium on handling a public event, meaning the coordination cost of a multi-jurisdiction recall and the opportunity cost of a regulatory inquiry. A decision table with all three columns (efficiency, interruption loss, public-event premium) is the minimum a centralisation decision deserves. Most organisations have the first column only. This chapter fills the table out to three.</p>
+<p>Three criteria start the mechanism. Any one of them is enough.</p>
+<ol>
+<li>Concentrated dependency: the number of suppliers, paths or regions for a critical input sits below the threshold you set yourself.</li>
+<li>No isolation: downstreams share one upstream and hold no switchover path to another.</li>
+<li>The third party's risk is not on your own risk register: "the supplier's problem is not my risk".</li>
+</ol>
+<h2 id="332-how-it-grows">33.2 How It Grows</h2>
+<p>Three generative conditions.</p>
+<p>Condition one is the homogenisation of efficiency. Just-in-time, centralised purchasing, multi-cloud collapsed to a single cloud, regional warehouses merged: each of these is a winner on current-period cost, and their combined effect is concentrated dependency. No individual decision is wrong. Their sum is.</p>
+<p>Condition two is the homogenisation of the downstream. Every firm in the industry makes the same "optimal" choice, so the whole industry shares one single point, and a failure at that point is promoted from a company event to an industry event.</p>
+<p>Condition three is a risk table that stops at the wall. Supplier management and risk management run as two systems that never read or write each other, so the risk of your supplier's supplier's supplier has never entered your field of view.</p>
+<h2 id="333-four-domains-four-shapes">33.3 Four Domains, Four Shapes</h2>
+<h3 id="case-one-software-one-thousand-one-hundred-prefixes-withdrawn-by-mistake">Case One (Software): One Thousand One Hundred Prefixes Withdrawn by Mistake</h3>
+<p>sw-003. Cloudflare's BYOIP (Bring Your Own IP) service, 20 February 2026. The official postmortem, read and checked for this book: a defect in the API query issued by an automated cleanup subtask, in which a pending_delete parameter sent empty by the client was read by the server as "all", caused about 1,100 BYOIP prefixes (roughly a quarter of that service) to be withdrawn from BGP announcement. The fault lasted 6 hours 7 minutes. What it hit was the thousand-plus customers who had entrusted IP assets to one shared piece of automation. A parameter whose meaning was ambiguous, carried through a shared automation base, became the simultaneous failure of a thousand customers.</p>
+<p>The decision point is the moment before the cleanup subtask went live, with the semantics of an empty parameter still undefined and untested. On the desk: the API's default behaviour, the test coverage of the automation pipeline, and one assumption, that nobody would ever pass this parameter empty.</p>
+<blockquote>
+<p><strong>Stop here. Decide before you turn the page.</strong></p>
+<p>You are in this seat, with the material above on the desk.</p>
+<ol>
+<li>What would you do? Write the action, not "pay more attention".</li>
+<li>Which item here are you most likely to miss, and why does it look unimportant?</li>
+<li>If you may set one checkpoint, when is it and what does it check?</li>
+</ol>
+</blockquote>
+<p><strong>What happened</strong>: 6 hours 7 minutes of fault. Recovery ran in two stages, a rollback that restored 800 prefixes, and the remaining ~300 whose service configuration had been deleted from the edge, restored by engineers by hand at 23:03 because self-service could not reach them. Primary source: Cloudflare, 2026. Link at Appendix B, sw-003.</p>
+<p>The recovery structure in Case One deserves a second look through this chapter's lens. The rollback restored 800. The remaining 300 came back because customers acted for themselves, and they could act because the automation base no longer worked for those prefixes at all. That split says dependency has two depths. A shallow dependency returns on its own when the upstream rolls back. A deep dependency needs the customer's own hand. The recovery radius is layered exactly as the failure radius is, and most continuity plans write only the shallow layer. Register granularity therefore has to carry the recovery path: which dependencies heal with an upstream rollback, and which need your own action. That information comes from only one place, a drill, and the layered map is one of the outputs of the interruption drill under Device 3. Its value shows up at night, during a real incident, when someone has to know which customers to telephone and which ones not to bother.</p>
+<h3 id="case-two-agriculture-one-bag-of-stabilizer-and-ovens-in-many-states">Case Two (Agriculture): One Bag of Stabilizer and Ovens in Many States</h3>
+<p><strong>Case ID</strong>: ag-008.</p>
+<p><strong>When and where</strong>: initiation 3 May 2024 (recall_initiation_date, identical across all 36 records); FDA classification 6 June 2024 (center_classification_date); enforcement report published 12 June 2024 (report_date); termination 4 September 2024 (termination_date). Site address: Danisco USA Inc., 4 New Century Pkwy, New Century, Kansas 66031-1144. Distribution field: 24 states in the United States (AZ, CA, CO, FL, IA, ID, IL, IN, KS, KY, MI, MN, MO, NE, NJ, NY, OH, OK, PA, TN, TX, UT, VA, WI), plus Canada and Mexico.</p>
+<p><strong>What and who</strong>: Danisco USA Inc., one plant, New Century, Kansas. Under event_id 94565 sit 36 food recall records, numbered F-1305-2024 through F-1340-2024 in an unbroken run, all Class I, all initiated on the same day, all classified on the same day, all terminated on the same day. The product field does not describe one product. It describes 36 formulations: 33 stabilizer and emulsifier systems, 2 preservatives (Germantown Gard, Germantown Gard (A)), and 1 sweetener blend (Reese, SG FR Sweetener Blend CM50). The brand field carries Grindsted, Germantown, Cremodan, Reese, Avicel-plus and CRE-90, along with unbranded GSD, ASC and GS series numbers. Packaging comes in three forms: 20, 22.68 and 25 kg bags, 907.2 kg and 2270 lb totes, and 1000 kg bulk bags. The classifying body is the FDA Center for Food Safety and Applied Nutrition (CFSAN). Responsibility is recorded by post: food safety and quality management at the plant own the release of finished goods; formulation and sales own the customer mapping. The records name no individual.</p>
+<p><strong>What they were doing</strong>: the shape of the production line can be checked item by item. One plant, 36 formulations in production at the same time, shipping at the same time. Three packaging forms running side by side say the plant held a small-bag line as well as tote and bulk lines, and that the product left the plant into somebody else's line: bakery, dairy, beverage, ice cream, seasoning. The quantity field orders a sequence from 50.00 kg to 61,871.04 kg: 50.00 (F-1331, CRE-90), 75.00 (F-1322, Cremodan SL-64-A), 500.00 (F-1332), 816.48 (F-1329), 884.52 (F-1319), 884.52 (F-1334), 989.00 (F-1327), 1,814.40 (F-1312), 1,814.40 (F-1313), 1,814.40 (F-1310), 2,721.60 (F-1337), 3,000 (F-1330), 3,628.80 (F-1323), 3,674.16 (F-1308), 4,490.64 (F-1340), 4,513.32 (F-1325), 5,443.20 (F-1307), 7,030.80 (F-1309), 7,257.60 (F-1333), 10,297.00 (F-1326), 11,000.00 (F-1328), 13,608 (F-1317), 14,991.48 (F-1324), 18,144.00 (F-1336), 19,028.52 (F-1305), 21,000.00 (F-1339), 31,865.40 (F-1318), 33,600.00 (F-1335), 35,448.84 (F-1306), 36,265.32 (F-1316), 36,288 (F-1315), 36,288 (F-1320), 36,741.60 (F-1314), 45,360.00 (F-1338), 61,826.80 (F-1311), 61,871.04 (F-1321). The total is 575,026.84 kg, which at the 22.68 kg standard bag works out to about 25,354 bags.</p>
+<p>The batch field is more informative still. Across the 36 records, code_info lists 688 non-duplicated batch numbers, every one of them beginning 1204, with the tail running from 1204520956 all the way to 1204633668. This is the heaviest single item of shape in the case. 688 batches judged suspect at once says the suspect object is not one kettle or one day but a long stretch of production. The record gives batch numbers only, never the production date attached to a batch number, and this book does not read the prefix as a date.</p>
+<p><strong>The decision point</strong>: the grade of the material decides that this section can reach the document and go no further. There is no person to sign for it. Four moments, listed by the record that carries each one, each with a note of what the record is missing.</p>
+<p>One. Initiation on 3 May 2024. The voluntary_mandated field reads "Voluntary: Firm initiated". 36 records generated on one day means the judgement covered all 36 formulations inside a single day rather than assessing them one at a time. The date the decision was taken, the test results it rested on, the signatory: not stated in the record.</p>
+<p>Two. The choice of notification channel. The initial_firm_notification field reads "Two or more of the following: Email, Fax, Letter, Press Release, Telephone, Visit". Six channels, any two or more. Which two were used, what day they went out, which customers received them: not stated. This choice is the most consequential in the whole case. Whether a downstream bakery heard before its finished product shipped depended on whether that column chose the telephone or chose the letter. B2B ingredient notification carries a structural problem of its own: the receiving party is purchasing and the warehouse, the using party is formulation and production, and a notice delivered to the first is not a notice delivered to the second. The record says "two or more" and does not say whose desk it reached.</p>
+<p>Three. Classification on 6 June 2024. The classifying body is the FDA, not the firm. The conclusion is Class I: reasonable probability that use of the product will cause serious adverse health consequences or death. The classification date sits 34 days after initiation. The basis for the judgement (positive samples, serotype, exposure assessment) is not stated, and the reason field holds six English words: Potential Salmonella Contamination. This is worth setting against the device records. A device record's reason field writes out the full spectrum of consequences (possibly no injury, local infection, rarely life-threatening). A food record gives a six-word conclusion and no layering of consequences. One enforcement database, two centres, two conventions of writing, and the food entry hands the reader less.</p>
+<p>Four. Termination on 4 September 2024. 124 days from initiation. The criteria for termination (recovery rate, verified destruction, downstream confirmation) are not stated. Three fields appear with the same value on the same day across 36 records, which says these 36 were handled as one thing. The action of handling them together is in the record. The reason is not.</p>
+<p><strong>What was visible then</strong>: on 3 May 2024 the plant held four classes of material that the record can confirm.</p>
+<p>One. The production and shipping ledger for 688 batches. Which batch, how many kilograms, to which customer in which state: the plant had it, the public record does not. Two. The composition tables for 36 formulations. Which components in a given formulation came out of the same blending step is a question only the formulation table can answer, and the record does not state it. Three. Environmental monitoring records. In a dry-blend facility a Salmonella positive usually appears in environmental sampling before it appears in finished product. Sampling dates, locations, results: all not stated. Four. The customer distribution list. 24 states plus two countries is the plant's shipping record, and it is also the source of the distribution_pattern field in the record.</p>
+<p>Information that arrived only afterwards: which process step the contamination occurred at, which input batch carried it in, the serotype of the positive sample, whether there were cases and how many. None of the four is in the record. This gap is not an omission by this book. It is the boundary of the material. A recall record is an enforcement ledger, not an investigation file.</p>
+<blockquote>
+<p><strong>Stop here. Decide before you turn the page.</strong></p>
+<p>You are in this seat, with the material above on the desk.</p>
+<ol>
+<li>What would you do? Write the action, not "pay more attention".</li>
+<li>Which item here are you most likely to miss, and why does it look unimportant?</li>
+<li>If you may set one checkpoint, when is it and what does it check?</li>
+</ol>
+</blockquote>
+<p><strong>What happened</strong>: all 36 Class I, all status Terminated. Total affected quantity, summing the product_quantity field across the 36 records, is 575,026.84 kg (this book's addition, not a figure the record states directly). Largest single record 61,871.04 kg (F-1321, bulk tote); smallest 50.00 kg (F-1331). Distribution 24 states plus Canada and Mexico. 124 days from initiation on 3 May to termination on 4 September. The records state no case count, no deaths, no recovery rate, no destruction tonnage. Back to the three questions. The most common answer to the first is to work down the downstream customer list, notifying each customer and stopping shipments, and the time cost of that route is exactly the 124 days, with the further condition that it depends on the downstream cooperating. The item most easily missed under the second is the packaging column: totes and bulk (the 36,288, 61,871.04 and 61,826.80 kg records) mean the product went into industrial vats rather than onto a kitchen counter, and once it is in a vat there is no batch left to separate. The third question lands on environmental monitoring rather than finished-goods testing: finished-goods testing is a sample, environmental monitoring is a trend, and a trend can tell you which day it started.</p>
+<p><strong>Options ruled out</strong>: the five below are actionable alternatives read back from the shape of the record. The record states no discussion of any of them and no reason for rejecting any.</p>
+<p>One. Recall only the high-risk uses. Stabilizer bound for ready-to-eat dairy recalled first, stabilizer for bakery products that get reheated deferred or released. In the record all 36 formulations go on the same day, at the same class, with a scope covering every use. Two. Recall only the positive batches. Split on test results and release the rest. The record gives each formulation a run of batch numbers, 688 in total, a scope set by formulation and every batch in it, not by positive result. Three. Compress the recall into one record. The FDA split it into 36 by formulation, in an unbroken numbering run, each one independent. Merging them would take 35 checking entries away from the downstream. Four. Stop shipments first and announce the recall once the investigation concludes. The record runs the other way: initiation on 3 May, classification on 6 June, the recall initiated 34 days before the classification, on the firm's own judgement rather than on a regulatory finding. Five. Handle by packaging form. Totes and bulk (into industrial vats, no traceability by bag) recalled first, bagged product (onto a kitchen counter, checkable by bag) deferred. The record makes no such distinction: the 50.00 kg bag (F-1331) and the 61,871.04 kg bulk tote (F-1321) are both Class I, both initiated the same day, both terminated the same day. The five share one property: every scope pulled out to the coarsest setting, with no intermediate layer left in place.</p>
+<p><strong>Early signals</strong>: (1) One plant supplying 36 formulations across the full range from bakery to dairy to beverage: the reuse surface of the single point is countable line by line in the product_description field. (2) 688 batches suspect at once, the tail running from 120452 to 120463: the suspect interval is long, which says the judgement was not extrapolated back from one kettle. (3) Quantities spanning three orders of magnitude, 50.00 kg to 61,871.04 kg: one cause landing on both a pilot batch and an industrial tote, with packaging form providing no isolation. (4) Distribution across 24 states plus two countries, while the name Danisco never appears on the end product: a B2B ingredient supplier's failure radius is visible only in the distribution_pattern field, and the consumer never sees it. (5) 124 days from initiation to termination: a Class I B2B ingredient recall is recovered through downstream cooperation, and that length says the resistance to recovery sits downstream, not upstream. One more item can only be recorded as "not seen": searching the openFDA food enforcement database by recalling_firm returns 36 records for Danisco, all from this event, with nothing earlier. The database's coverage is not complete, so this reads as "not in this database" and not as "never happened". It also says that anyone trying to predict this firm from its recall history would have received no warning at all beforehand.</p>
+<p><strong>The point of escalation</strong>: 6 June 2024, when the classification landed as Class I. That step rewrote "voluntary recall after the firm's own checks" into "regulator's judgement of a reasonable probability of serious harm". The date is in the record. The basis of the judgement is not. The cost of the escalation falls downstream: every bakery, dairy and beverage plant in 24 states and two countries that used these 36 formulations is pulled into one recall coordination, and the formulation sheet in their hands says "stabilizer", not which Danisco batch. Class I carries a second consequence at the finished-goods end. The cakes, yoghurt and ice cream the downstream made are already on shelves, and an ingredient recall has to travel upward into finished-product recalls, whose trigger conditions, deadlines and announcement language appear in none of the 36 records. The upstream 575 tonnes closed out inside 124 days. The downstream finished-product recalls are not on this case's account.</p>
+<p><strong>Failure chain</strong>: technical layer. Salmonella entered a dry-blend product (process step, input and date all unrecorded), and the finished goods left the plant still carrying it. Organizational layer. One plant supplied 36 formulations, 24 states and two countries; the recall was cut into 36 records by formulation, each record giving batch numbers and no batch-to-customer mapping, so the downstream has to match 36 records back to its own formulations. Incentive layer. Downstream gatekeeping relies on the certificate of analysis travelling with the goods, the certificate is a sample, and sampling cannot catch a distributed contamination; switching supplier would mean re-running formulation stability trials, which costs more than accepting the sampling risk. All three layers break at once. The boundary break sits between the organizational and the technical layer: contamination happens at the level of process step and batch, the recall is issued at the level of formulation (SKU), and the layer between them, batch to customer, is entirely absent from the record. What the downstream receives is a 36-line list, not a table it can match against its own stock. The cost of that gap can be estimated. Of the 688 batches, only a few lines probably entered any one downstream's stock, and without the mapping those few lines are handled at the full 36-formulation scope.</p>
+<p><strong>Minimum counterfactual</strong>: on 3 May 2024, at initiation, publish alongside the code_info of each of the 36 records a batch-to-customer table: which batch, how many kilograms, to which customer in which state. One action, taken on the day of initiation, requiring no luck, since the data sits in the plant's shipping system already. The effect is computable. The downstream need not pull a whole formulation; it can isolate by batch, and of 688 batches only a few lines entered any one stock. Without that table the downstream has one option left, treat the entire formulation as suspect. The same data is a shipping document in the plant's hands and 688 numbers in the public record. The distance between those two forms is the length of this failure chain.</p>
+<p><strong>Outcome and sources</strong>: 36 records, all Class I, totalling 575,026.84 kg (this book's addition), 24 states plus Canada and Mexico, terminated 4 September 2024. The eight largest are 61,871.04 (F-1321), 61,826.80 (F-1311), 45,360.00 (F-1338), 36,741.60 (F-1314), 36,288 (F-1315), 36,288 (F-1320), 36,265.32 (F-1316) and 35,448.84 (F-1306), which together come to 350,089.60 kg, 60.9 per cent of the total; the smallest is 50.00 kg, and the ratio between them is 1,237. One cause, landing on a 50 kg pilot batch and a 61 tonne bulk tote, handled on identical terms. No further record appears under the same event_id, so these 36 are the whole case. The handling channel for the two export countries (Canada's counterpart agency, Mexico's) is not in the record, which gives one phrase, "Canada, and Mexico". Primary source: FDA food recall enforcement report, event_id 94565, recall_number F-1305-2024 through F-1340-2024, openFDA food/enforcement endpoint, data updated 21 October 2026; link at Appendix B, ag-008.</p>
+<p>Case Two carries one detail worth taking separately, in recall coordination across three countries. Coordination across jurisdictions (the FDA, its Canadian and Mexican counterparts, the local regulators of each downstream bakery) is the bulk of the public-event premium from Section 33.1. The cost rises with the number of jurisdictions, since each one brings its own notification language, its own deadlines, its own reporting format, while contamination does not recognise borders; ingredient movement across North America is a natural consequence of logistics. A B2B ingredient supplier's compliance toolkit should therefore hold a multi-jurisdiction recall plan: jurisdiction tags on the downstream list, template versions in several languages, a contact table for local agencies. Upkeep costs a few hours a year. Its value on the day of a real recall is counted in days.</p>
+<h3 id="case-three-aviation-one-tyre-and-two-hydraulic-systems">Case Three (Aviation): One Tyre and Two Hydraulic Systems</h3>
+<p>av-007. An Atlas Air Boeing 747-400F (N404KZ), 12 August 2024, Narita. The JTSB report (aircraft accident investigation report, 2025, PDF downloaded and checked for this book): a tyre was damaged during taxi, both hydraulic systems failed after takeoff, and the aircraft returned; the 7 people on board were uninjured (死傷者はいなかった, wording checked against the original), the airframe took moderate damage, and the runway was closed for about 7 hours. Tyre, wheel well structure and hydraulic line form one physical dependency chain: damage at a single point travelled along a structural path into two independent hydraulic systems, and the redundancy of the hydraulics (the subject of Chapter 22) failed in the face of physical propagation.</p>
+<p>The decision point is the moment during taxi when abnormal vibration was felt and the decision was taken to keep taxiing rather than stop for an inspection. On the desk: the attribution of the vibration (the crew felt it "like running over something" but heard no abnormal noise, wording checked, report p. 2), the procedural cost of interrupting the taxi, and the configuration of tyre-state visibility from the flight deck (detail in the body of the JTSB report).</p>
+<p><strong>What happened</strong>: a return and landing, and the airport closed for about 7 hours. Primary source: JTSB, AA2025-6-2-N404KZ, 2025. Link at Appendix B, av-007.</p>
+<p>The physical dependency chain in Case Three has an engineering coda. The physical path through tyre, wheel well and hydraulic line is visible on the drawings; it is drawn on the layout. The reason a visible path still becomes a failure chain is that path risk is assessed within system boundaries. The hydraulics are assessed as hydraulics, the tyre as a tyre, and cross-system physical proximity, meaning what a fragment can strike, sits on no single system's assessment sheet. Cross-system proximity is shared territory between Chapter 21 and this chapter: the mapping chapter draws the line, this chapter assesses what the line can carry, meaning how large a failure it will transmit. The joint output is a physical proximity list, the groups of components that share a bay, a structure or a route, and every row of that list is a candidate path for an av-007 style failure.</p>
+<h3 id="case-four-drugs-and-devices-a-component-makers-wrinkle-a-whole-kit-recalled">Case Four (Drugs and Devices): A Component Maker's Wrinkle, a Whole Kit Recalled</h3>
+<p><strong>Case ID</strong>: ph-008.</p>
+<p><strong>When and where</strong>: initiation 12 June 2026 (recall_initiation_date); FDA classification 31 August 2026 (center_classification_date); enforcement report published 9 September 2026 (report_date). Address of the recalling firm: 3 Lakes Dr, Northfield, Illinois 60093-2753, United States. The distribution field reads US Nationwide distribution. The manufacturing address of the component maker is not in the record, which gives the recalling firm's address only.</p>
+<p><strong>What and who</strong>: Medline Industries, LP, kit assembler and initiating firm, Northfield, Illinois. This record, Z-3057-2026, covers two models: BLOOD CULTURE TRAY PEDIATRIC (model DYNDH1193) and BLOOD CULTURE KIT 2 W/CONNECT (model DYNDH1487A). The components named inside the kits are the BD ChloraPrep Clear 1 mL and FREPP Clear 1.5 mL applicators. Under the same event (event_id 99334) sit 16 device recall records, all initiated by Medline, all initiated on the same day. The classifying body is the FDA Center for Devices and Radiological Health (CDRH). Responsibility is recorded by post: quality and regulatory affairs at the assembler own the sterility claim of the kit; the component maker owns the packaging seal of the applicator. The records name no individual.</p>
+<p><strong>What they were doing</strong>: these 16 records describe a production shape that can be checked item by item. Initiated on one day, under one block of reason text, covering 16 kits whose clinical uses have nothing to do with each other: blood collection and blood culture (Z-3051, Z-3057, Z-3063), intravenous cannulation (Z-3056), arterial cannulation (Z-3055), pre-operative preparation and ophthalmology (Z-3058, Z-3061), caesarean section and delivery (Z-3059, Z-3060), interventional and orthopaedic (Z-3062), colorectal (Z-3052), breast ultrasound (Z-3053), tracheostomy and anaesthesia (Z-3048), kits listed by catalogue number with no product name (Z-3049, Z-3050), and emergency trays mixed with blood collection (Z-3054). The quantity field forms an extremely steep stair: 104 kits (Z-3048), 176 (Z-3052), 300 (Z-3053), 352 (Z-3060), 1,840 (Z-3055), 2,080 (Z-3061), 3,650 (Z-3057), 3,752 (Z-3059), 4,636 (Z-3049), 13,032 (Z-3058), 17,750 (Z-3051), 18,290 (Z-3062), 22,736 (Z-3056), 58,037 (Z-3050), 434,595 (Z-3054), 996,692 (Z-3063). The span is a factor of 9,583. What can put 104 and 996,692 inside one block of reason text is a component reused again and again: the 1 mL and 1.5 mL applicators entered every category of kit from rare procedures to routine blood collection.</p>
+<p>One earlier shape is in the record. On 12 June 2025 the same Medline firm recalled 15,700 units of the same component (Z-2155-2025, event_id 97154), with a reason field stating that the components "were recalled by BD due to potential to exhibit an open seal on its packaging", distribution limited to California, Florida, Pennsylvania and Texas, and the distribution field explicitly reading "No international distribution". The 2026 defect is described differently: wrinkles in the paper lidding may extend into the seal area. The two descriptions are not the same sentence, and the record does not say whether they involve the same process step, the same line, the same sealing machine. What can be established is the same component, the same brand, 12 months apart, and both times the assembler converting a component problem into a kit recall.</p>
+<p><strong>The decision point</strong>: the grade of the material decides that this section can reach the document and go no further. There is no person to sign for it. Four irreversible moments, listed by the record that carries each one, each with a note of what the record is missing.</p>
+<p>One. Fixing the component in the kit catalogue. The carrier is the product description field itself: all 16 records write "BD ChloraPrep Clear - 1 mL" and "FREPP Clear 1.5 mL" under the Medline kit's name, with model numbers and millilitres stated. This is the outcome of a fixing decision, and it says the kit's sterility claim was built on these two specifications and never changed specification afterwards. The review date, the review record and the signatory for that fixing: not stated. The weight of this item is that the design freedom of a kit sits entirely at the moment of component selection, and afterwards the component's packaging process becomes the ceiling on the kit's sterility claim.</p>
+<p>Two. Batch release. The carrier is the code_info field: 12 batch numbers for this record, 6 for each model (DYNDH1193: 24ABA808, 24BBV222, 24GBT333, 24IBU725, 23KBX578, 23LBP536; DYNDH1487A: 25BMG311, 24AME318, 24BMI775, 24CMJ550, 24IMG215, 23JME381). 12 batches named at once means all 12 passed the assembler's release criteria at the time of release. What the criteria were, which component certificate they rested on, who signed: not stated. Of everything on this card, this is the only check that passed. The check was not skipped. It was performed, it passed, and the kit failed anyway.</p>
+<p>Three. Initiation on 12 June 2026. The voluntary_mandated field reads "Voluntary: Firm initiated", and initial_firm_notification reads "Letter". 16 records generated together on one day says the scope of this recall was the catalogue, not a model-by-model assessment. The decision was taken before 12 June; the date it was taken and the signatory are not stated.</p>
+<p>Four. Classification on 31 August 2026. The classifying body is the FDA, not the firm. The conclusion is Class II: use of the product "may cause temporary or medically reversible adverse health consequences", with a low probability of serious harm. The reason field supplies the spectrum of consequences itself: possibly no injury, local infection, less commonly a need for medical attention, antibacterial treatment, an intervention or hospital admission, and in a very few cases critically ill or immunosuppressed patients may be at risk to life. This classification is the price struck in the case. A quantity of 1,578,022 kits bought a Class II, not a Class I.</p>
+<p><strong>What was visible then</strong>: before 12 June 2026 the assembler held five classes of material that the record can confirm.</p>
+<p>One. The kit structure list. The product description field states the component's brand, name and specification (1 mL, 1.5 mL), which says the component is a named item on the kit's bill of materials and not part of a bulk mixture. Two. Its own batch ledger. The 12 batch numbers in this record, and the batch numbers across all 16, are the assembler's own batch record numbers, and which component batch went into which kit batch can be matched only from the assembler's material issue records. Three. The public record of 12 June 2025 (Z-2155-2025). Same component, same brand, 15,700 units, four states, and a reason field reading "open seal", available to anyone who looks in the FDA enforcement database. Four. The component maker's inspection documents travelling with the goods. The kit's sterility claim rests on them; the record states neither their content, nor the sampling plan, nor the acceptance criteria. Five. Three of its own recalls between 2023 and 2024 caused by components inside its kits: 233,638 kits on 15 May 2023 for Turkuaz ultrasound gel inside the kits failing to meet sterility specification (Z-2321-2023); 86,699 units on 15 November 2023 for Nurse Assist saline inside the kits, classified Class I (Z-1117-2024); and 8 April 2024 for plastic syringes inside the kits (Z-2768-2024, quantity field empty). Three times, the same sentence pattern: the component goes wrong, the kit is recalled.</p>
+<p>Information that arrived only afterwards: the physical mechanism, a wrinkle in the paper lidding extending towards the seal area; the specific batch range of the affected component (the 2026 records give kit batch numbers and no component batch numbers); and whether there were infections, how many, in which state. None of the three is in the record.</p>
+<blockquote>
+<p><strong>Stop here. Decide before you turn the page.</strong></p>
+<p>You are in this seat, with the material above on the desk.</p>
+<ol>
+<li>What would you do? Write the action, not "pay more attention".</li>
+<li>Which item here are you most likely to miss, and why does it look unimportant?</li>
+<li>If you may set one checkpoint, when is it and what does it check?</li>
+</ol>
+</blockquote>
+<p><strong>What happened</strong>: Class II, status Ongoing (as at the 21 October 2026 data update read for this book). This record, Z-3057-2026, covers 3,650 kits; the 16 records under the event, summed on the product_quantity field, come to 1,578,022 kits (this book's addition, not a figure the record states directly), 432 times this record's own count. Distribution nationwide. The records state no casualties, no infection count, no recall completion rate, no destruction quantity. Back to the three questions. The most common answer to the first is to trace the component batch and recall only the kits that received the problem batch, but the 16 records are split by kit model and not by component batch, which says the key did not exist at the time. The cost of that one action is a single column of data; what it would have saved is the order-of-magnitude gap between 1,578,022 and 3,650. The item most easily missed under the second is the 15,700 unit record of June 2025, same component, same brand, which reads like last batch's business. The third question lands on batch release: look in the release records for a component batch number, and its absence is the answer.</p>
+<p><strong>Options ruled out</strong>: the four below are actionable alternatives read back from the shape of the record. The record states no discussion of any of them and no reason for rejecting any.</p>
+<p>One. Isolate by component batch. Recall only the kits that received applicators from the problem batch, release the rest. The record does the opposite: 16 records split by kit model, each listing every affected kit batch for that model, with no component batch number anywhere in them. Two. Handle by clinical risk. Blood culture and interventional kits recalled first, ophthalmology, pre-operative and obstetric deferred. In the record the 2,080 kit ophthalmology set (Z-3061) and the 352 kit caesarean set (Z-3060) go on the same day, at a scope covering every clinical use. Three. Merge the 16 records into one. The FDA's enforcement records are split by kit model, 16 independent numbers, and merging them would coarsen the traceability granularity and take 15 checking entries away from the downstream hospital. Four. Let the component maker recall alone and the assembler do nothing. That route does not close structurally: the recall strikes the kit's sterility claim, and once the kit is opened in use what the clinician sees is Medline's bag, not BD's box. A fifth shape deserves a note. Write the recall as "a potential sterility gap in the component" and leave the kit on the shelf. In the record all 16 pull the whole kit, and not one of them handles the component alone.</p>
+<p><strong>Early signals</strong>: (1) Z-2155-2025 on 12 June 2025: same component, open seal, 15,700 units, four states. Checkable at the time, in the public record. It was buried as "that was the last batch". (2) The component has two specifications only, and was built into 16 kits with entirely different clinical uses: the wider the reuse, the harder the single point. This one becomes visible only when 16 records appear on the same day; beforehand it is a single line on a bill of materials. (3) The quantity distribution spans a factor of 9,583 (104 to 996,692), which says the component entered both rare procedures and routine blood collection: the failure radius is set by the largest record, not by the average. (4) The applicator's sterile barrier has one interface only, paper lidding against seal. That interface is made by the component maker, and the assembler can verify it but cannot change it. The record states no second source for the component. (5) The same assembler recalled once in May 2023, once in November 2023 and once in April 2024 for components inside its kits (Turkuaz ultrasound gel, 233,638 kits; Nurse Assist saline, 86,699 units, Class I; plastic syringes, quantity field empty), and again in June 2025 for the applicator. Four times, one sentence pattern: the component goes wrong first. The pattern had to repeat a fourth time before anyone treated it as a structural problem.</p>
+<p><strong>The point of escalation</strong>: 12 June 2026, when 16 records were initiated on one day. That step rewrote "a component in some kits has a problem" into "the sterility claim of the entire kit catalogue cannot be defended". Who approved it is not in the record. The act of approving is: 16 records on one day, one block of reason text, one "Letter" notification method, one classification date. The price of the escalation appears at the same time, a Class II and not a Class I: the quantity reached a million kits and the probability judgement on health consequences did not keep pace with the quantity. One coincidence is visible in the fields. The 2025 recall (Z-2155-2025) was also initiated on 12 June. Two years, the same calendar day. The record states no link between that date and any internal milestone (annual quality review, supplier requalification), and this book draws no inference, recording it for later checking.</p>
+<p><strong>Failure chain</strong>: technical layer. The wrinkle in the paper lidding extended into the seal area, the applicator's sterile barrier held a gap, and the kit's single sterility claim failed with it. Organizational layer. One component specification was reused across 16 kit groups, the recall was cut into 16 records by kit model, and component batch numbers are entirely absent from the record. Incentive layer. The economics of a kit come from not making the component yourself; the fewer the components and the wider the reuse, the broader the catalogue and the lower the quoted price. All three layers break at once. The boundary break sits between the organizational and the technical layer: validation of the component's sterilisation belongs to the component maker, the sterility claim of the kit belongs to the assembler, and the two validation regimes share no batch key. The 2026 record holds 12 kit batch numbers and not one component batch number. That absent column is the interface of the failure chain. It also explains why the recall could only be cut by model: without a key there is no finer cut. The same defect reached four states and 15,700 units in 2025, and the whole country and 1,578,022 kits in 2026. What changed in a year is the component's distribution footprint, not the defect.</p>
+<p><strong>Minimum counterfactual</strong>: add one column to the kit release record, the batch number of the component loaded, entered on the same line as the kit batch number. One action, taken at any release before 12 June 2026, requiring no luck, since the data already sits on the assembler's goods-receipt documents and material issue ledger; what is missing is writing it into the release record. With that column, a notice from the component maker is answered by a lookup down the column, and the recall scope shrinks from 16 models to the batches that actually received the problem component. The record supplies its own evidence for the counterfactual: no component batch number appears in any of the 16 records, which says the column did not exist at the time. Cost: maintaining one column of batch numbers, one further data entry.</p>
+<p><strong>Outcome and sources</strong>: Class II, Ongoing, 3,650 kits in this record and 1,578,022 kits across the 16 records (this book's addition), 432 times as many. Later corroboration, all dated after this case: on 14 July 2026 AVID Medical initiated Z-3109-2026 for the same component (98 kits, distribution in Nebraska only); on 20 July Medline initiated Z-3073-2026 (222,653 units); on 22 July AVID initiated Z-3194-2026 (288 kits); on 23 July Medical Action Industries initiated Z-3181-2026 (6,420 kits). One component, four assemblers within six weeks. The four are independent recalling firms, and the only common item in the records is the component's name. The defect wording is not consistent across them (Z-3073 and Z-3181 read open or incomplete seal, Z-3194 adds mould contamination), and this book counts them on "same component" and not on "same defect". Primary source: FDA device recall enforcement report, recall_number Z-3057-2026, event_id 99334, openFDA device/enforcement endpoint, data updated 21 October 2026; link at Appendix B, ph-008.</p>
+<p>Case Four has a mirror image in brand responsibility worth looking at. The gain of private label is not having to build a line (asset light). The cost is that naming rights over a defect pass to the brand: the recall notice carries the brand's name, and the factory's name appears in a footnote. Naming and responsibility bind together in public perception, since consumers know only the name on the recall notice, so a brand's risk register has to manage the state of its private-label suppliers as its own state: the supplier's inspection records, change notifications and recall history all enter the brand's register, which is Chapter 29's maintenance ledger applied directly at the supplier dimension. The more common the private-label model, the more the brand's supplier ledger matters. It does not appear on the brand's balance sheet. It appears on the brand's recall notice.</p>
+<p>The four cases share one structure, and it can be closed into a single statement. A cascade is at bottom a mismatch between the granularity of responsibility and the granularity of dependency. Dependency runs fine, down to component and parameter; responsibility runs coarse, up at company and brand. Failure never enters at the wrong granularity, since it happens at the finest layer, while responsibility is always struck at the wrong one: a recall strikes the brand, an outage strikes the platform. Governance follows from that. Sink responsibility to the depth of the dependency: register whose part, define semantics at parameter level, put a clinical signature at catalogue level. The cost of sinking is amortised over years. The cost of not sinking is paid in one instalment.</p>
+<h4 id="case-five-agriculture-and-food-another-name-inside-the-kit-condensed">Case Five (Agriculture and Food): Another Name Inside the Kit (condensed)</h4>
+<p>ag-005. A pesto pasta salad kit. The FDA enforcement report (H-0090-2026, API record read and checked for this book): Listeria risk inside the kit, a Class I recall of 3,252 cases; the separately sealed components inside the kit were recalled in the same batch. The cascade logic is isomorphic with Case Four (a component's defect disappears inside the kit's name), and the incremental information here is the independent seal: components each packaged separately, touching nothing. Recalling the separately sealed components in the same batch says the recall scope has already moved from the contamination path to the kit as a whole. Tightening the scope is progress in the recall system. It is also the mark of a widening cascade radius, since the commercial loss on the whole kit exceeds the actual risk of the defective component. Minimum counterfactual: assess kit recall scope component by component, recalling the defective component and mitigating the sound ones. Primary source: FDA, 2026. Link at Appendix B, ag-005.</p>
+<h4 id="case-six-healthcare-the-safety-needle-that-left-the-catalogue-condensed">Case Six (Healthcare): The Safety Needle That Left the Catalogue (condensed)</h4>
+<p>me-002. The NHS in the United Kingdom, U-500 high-concentration insulin administration. The HSIB report (2022, archived snapshot read and checked for this book): a dedicated safety needle disappeared from the supply catalogue after a contract change, nurses were left drawing the concentrated solution with standard U-100 syringes, and two patients had hypoglycaemic episodes; 11 comparable insulin administration events occurred nationally between 2017 and 2022. One line of change in the supply chain (a catalogue withdrawal) rewrote clinical practice directly, since the substitute tool was never clinically assessed, and the path of that change (purchasing contract to nurses' bench) bypassed every assessment gate that should have stood in it. Cascading failure is present at both ends: upstream a supplier's contract decision, a single point; downstream the administration practice of many hospitals, exposed simultaneously to one catalogue change. Minimum counterfactual: make clinical assessment a precondition of any supply change affecting a clinical tool, by adding a clinical signature position to the change notification chain. Primary source: HSIB, 2022. Link at Appendix B, me-002 (archived link, grade A−).</p>
+<h2 id="334-what-shows-up-earliest">33.4 What Shows Up Earliest</h2>
+<p>Six weak signals, each with the reason normally used to bury it.</p>
+<ol>
+<li>The risk register has no supplier column, or suppliers are registered by purchasing category rather than by dependency criticality. The reason: "supplier management is purchasing's job."</li>
+<li>Your critical supplier's supplier, do you know who it is? Answering no means two layers of dependency is a black box.</li>
+<li>Has the isolation and degradation plan been drilled? No drill means the cascade takes everything.</li>
+<li>Has anyone estimated the exit cost from a single-source supplier? Not estimated means the exit capability is evaporating.</li>
+<li>A third party's incident report has never triggered a dependency check of your own. The reason: "they use a different model from ours."</li>
+<li>The "multi-active" cloud regions, data centres or logistics routes are in fact one physical region or one backbone link. The reason: "it looks separate on the topology diagram."</li>
+</ol>
+<p>Put the six signals back against this chapter's cases and two new ones. Signal one (no supplier column) matches Case Four: the risk of the private-label component has no row in the brand's register. Signal two (two layers is a black box) matches Case Two: the ingredient's ingredient, meaning where the stabilizer's own raw material comes from, sits two layers outside the bakery's field of view. Signal three (no drill, total loss) matches Case One: no BYOIP customer had ever drilled an alternative path against the shape of a mistaken prefix withdrawal. Signal four (exit cost never estimated) matches Case Six: the exit cost of the safety needle, a clinical risk, was never in the purchasing assessment. Signal five (a third party's incident triggers no check) matches the lesson of the two new cases: a recall in your own industry is a free dependency checklist. Signal six (multi-active in one region) is this chapter's physical criterion: the two hydraulic systems in Case Three are the sample of a topology that is separate on paper and co-resident in fact.</p>
+<p>The six sort again by cost of evidence. Signals one and five are cheapest, since they need only reading the register's structure and the response log to incident bulletins. Signals two and four are mid-priced, asking the supply chain about two layers and checking whether an exit assessment exists. Signals three and six are dearest, needing drills and physical verification. The starting recommendation is signal five: subscribe to industry incident bulletins (regulatory recall databases, safety notices), run every entry past your own dependencies, a question that costs ten minutes each, and mark into the register whatever the check confirms. The compounding pays out two years later, when the supplier column of the register has verifiable depth for the first time.</p>
+<h2 id="335-how-to-prevent-it">33.5 How to Prevent It</h2>
+<p>Device 1: the critical dependency register. Manage a critical dependency as your own single point: register the supplier, the alternative path, the switchover time and the last verification, item by item. Granularity reaches down to "whose part, inside which of your products". Below that level the register is decoration (the lesson of ph-008).</p>
+<p>Device 2: single-point pricing. For the most concentrated dependency, write the loss from an interruption scenario into the purchasing decision: the "discount" on a single source has to be compared on the same table as the expected interruption loss. Most memos on a single-sourcing decision have no such column.</p>
+<p>Device 3: the isolation drill. At least once a year, an "upstream disappears" drill: the critical input cut for 48 hours, switchover to the alternative path per plan. What it measures is not the ideal switchover time; it is the time taken to discover what is missing.</p>
+<p>Device 4: joint review of third-party events. When an upstream incident happens in your industry, complete a dependency check of your own within 72 hours (do we use the same firm, the same region, the same version) and put the conclusion into the register. A third party's incident is free intelligence, and declining it is waste.</p>
+<p>Set the four devices against this chapter's cases. Device 1 on Case Four: the kit's component list down to the item, whose disinfectant, whose culture bottle, whose bag, with the alternative possibility registered for each. Device 2 on Case Two: the single-source decision on the stabilizer ingredient gains the expected interruption loss column, with the coordination cost of a multi-state recall inside it. Device 3 on Case One: a BYOIP customer, or a simulated customer on the platform side, runs one switchover drill against a mistaken prefix withdrawal. Device 4 on Case Six: an industry bulletin about a catalogue-change event, a needle vanishing or a packaging change, checked against your own catalogue within 72 hours.</p>
+<p>The four devices also have four ways of dying. The critical dependency register dies of a granularity gamble, registering to the supplier and not to the part, betting that the failure will not be in that part; the patch is tiered granularity, class A critical parts registered to the part, class B to the supplier, with the tier set by failure radius. Single-point pricing dies of arithmetic laziness over expected loss, counting the direct interruption only and not the second-order loss from recall and reputation; the patch is a three-layer loss model, interruption, recall, public event, which is the three columns of Section 33.1. The isolation drill dies of a script that is too friendly, 48 hours, a weekday, notice in advance, when a real interruption is not friendly; the patch is a randomised script, with time, duration and break point drawn by lot, the same method as true rehearsal in Chapter 22. The joint review dies of being a one-off, checked and filed while the next incident starts the scramble over again; the patch is routine registration of check results, each check updating the matching register row, so the register is the sediment of the checks. The four patches share one health-check question: when was this register last updated by a real event.</p>
+<p>Governance of cascading failure has one further view that deserves its own line, at industry level: common resilience. Homogeneous downstreams (condition two) mean industry-level single points, ingredients, equipment and software shared across a whole sector, and an industry-level single point needs an industry-level plan, whether shared stockpiles, mutual backup agreements, or a shortage mutual-aid arrangement run by a trade body. The economics of common resilience, meaning the sector sharing the cost of redundancy, coexist with the prisoner's dilemma of who pays to build it first. The force that usually breaks the deadlock is a regulator, in the form of mandatory industry stockpiles on the strategic-materials model, or a large customer, whose supplier diversification requirements protect the whole sector as a side effect. Early examples of common resilience can be found in every industry, spare-part pools in aviation and mutual support arrangements in banking among them. Generalising those examples is the first item on this chapter's list of recommendations to industry bodies.</p>
+<h2 id="336-boundaries-with-neighbouring-mechanisms">33.6 Boundaries with Neighbouring Mechanisms</h2>
+<p>Against hidden coupling (Chapter 21): coupling is about the invisibility of a connection (the line exists and nobody drew it); cascade is about the propagation of concentration (the line can be drawn and has no isolation). The dependency graph of Chapter 21, taken down to the supply chain, is this chapter's register.</p>
+<p>Against the illusion of redundancy (Chapter 22): a cascade often has an illusion in front of it, where "multiple suppliers" turn out to be two brands out of one contract manufacturer. Chapter 22's common-cause list, projected onto the supplier dimension, is this chapter's single-point pricing.</p>
+<p>Against crossing a scale threshold (Chapter 24): scale amplifies the concentration of dependency and the radius of propagation; the dependency consolidation of a growth phase, which is Chapter 24's efficiency logic, is exactly where this chapter's concentration comes from. In a growing firm the two chapters have to be read together.</p>
+<h2 id="337-the-five-self-checks">33.7 The Five Self-Checks</h2>
+<ol>
+<li>Write down the top five critical dependencies of your product or service. Has a second supplier for each one been qualified?</li>
+<li>In your risk register, how deep is the deepest layer at which "the supplier's supplier" appears? If the answer is more than three layers, has anyone actually verified it?</li>
+<li>At the last upstream incident in your industry, did you organise a dependency check? How long did it take?</li>
+<li>Has the process you sit in ever run a 48-hour interruption drill? What was the first missing item it found?</li>
+<li>Your "multi-active" architecture, multiple supply sources, multiple routes: are they physically separate, and who verified that?</li>
+</ol>
+<p>(This chapter: 11,385 characters.)</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../ch32/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Chapter 32 Compliant and Unsafe (Hollnagel: Safety-I and Safety-II)">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                Chapter 32 Compliant and Unsafe (Hollnagel: Safety-I and Safety-II)
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../ch34/" class="md-footer__link md-footer__link--next" aria-label="Next: Chapter 34: Path Lock-in (David; Arthur)">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                Chapter 34: Path Lock-in (David; Arthur)
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Free and open · continuously revised
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.sections", "navigation.top", "navigation.footer", "navigation.tracking", "toc.follow", "search.suggest", "search.highlight"], "search": "../assets/javascripts/workers/search.a7633da7.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.c21346df.min.js"></script>
+      
+        <script src="../assets/shelf-counter.js"></script>
+      
+    
+  </body>
+</html>
