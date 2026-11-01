@@ -10,3 +10,7 @@ book/_evidence/
 .DS_Store
 ._*
 __pycache__/
+book/_evidence/
+book/素材/
+book/规范/
+book/en/_legacy/

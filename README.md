@@ -60,7 +60,7 @@ dist/            build output (PDF, not tracked)
 
 ## Errata and method
 
-`book/勘误.md` records every correction made during review, with the source each correction was checked against. `book/交付说明.md` records what changed from the delivered draft and why. The method itself is in appendix C, and no number in this book is stated without a source that can be opened.
+`book/勘误.md` records every correction made during review, with the source each correction was checked against. The method itself is in appendix C, and no number in this book is stated without a source that can be opened.
 
 ## License
 
